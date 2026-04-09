@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Marriage of Anansewa Quiz</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta property="og:title" content="The Marriage of Anansewa Quiz">
+    <meta property="og:description" content="A randomized quiz on Efua Sutherland's The Marriage of Anansewa.">
+    <meta property="og:url" content="https://lamla-quiz-hub.netlify.app/anansewa_quiz.html">
+    <meta property="og:image" content="/quizzes.jpg">
+    <meta property="og:type" content="website">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+        :root {
+            --bg: #f4efe7;
+            --panel: #fffaf2;
+            --ink: #171717;
+            --muted: #4a4036;
+            --accent: #1f5d4e;
+            --accent-2: #b46b2f;
+            --border: rgba(35, 35, 35, 0.12);
+            --success: #216e39;
+            --error: #b42318;
+            --shadow: 0 24px 80px rgba(44, 28, 13, 0.12);
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--ink);
+            font-family: 'IBM Plex Sans', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(31, 93, 78, 0.18), transparent 34%),
+                radial-gradient(circle at top right, rgba(180, 107, 47, 0.16), transparent 30%),
+                linear-gradient(180deg, #fff8ef 0%, #f4efe7 100%);
+        }
+        .wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 48px; }
+        .hero {
+            background: linear-gradient(145deg, rgba(35, 35, 35, 0.96), rgba(31, 93, 78, 0.96));
+            color: #f8f3ea;
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: auto -120px -120px auto;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            filter: blur(2px);
+        }
+        .kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: rgba(248, 243, 234, 0.78);
+            margin: 0 0 10px;
+        }
+        h1, h2 { font-family: 'Fraunces', serif; line-height: 1.05; margin: 0; }
+        h1 { font-size: clamp(2rem, 5vw, 3.8rem); }
+        .hero p { margin: 16px 0 0; max-width: 760px; color: rgba(255, 249, 240, 0.98); line-height: 1.65; }
+        .panel {
+            margin-top: 18px;
+            background: rgba(255, 250, 242, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(12px);
+        }
+        .hero-layout {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 18px;
+            align-items: stretch;
+        }
+        .hero-copy { position: relative; z-index: 1; }
+        .hero-side {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 18px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 0.82rem;
+            white-space: nowrap;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+        }
+        .feature-strip {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+        .feature {
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid var(--border);
+        }
+        .feature span {
+            display: block;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .feature strong {
+            display: block;
+            font-size: 0.98rem;
+            line-height: 1.35;
+        }
+        .setup { padding: 24px; }
+        .setup-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 18px; align-items: end; }
+        .card {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 18px;
+        }
+        .flow-list {
+            margin: 10px 0 0;
+            padding-left: 20px;
+            color: #2f281f;
+            line-height: 1.7;
+        }
+        .flow-list li { margin-bottom: 6px; }
+        label { display: block; font-weight: 600; margin-bottom: 8px; }
+        input[type="number"] {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: #fff;
+            font: inherit;
+            font-size: 1rem;
+        }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+        .actions a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button { font: inherit; border: 0; border-radius: 14px; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; }
+        button:hover { transform: translateY(-1px); }
+        .btn-primary { background: var(--accent); color: #fff; padding: 14px 20px; font-weight: 700; box-shadow: 0 10px 28px rgba(31, 93, 78, 0.24); }
+        .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--border); padding: 14px 20px; }
+        .btn-light {
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .hidden { display: none !important; }
+        .quiz-shell { margin-top: 18px; }
+        .stats {
+            position: sticky;
+            top: 10px;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            padding: 7px 8px;
+            background: rgba(255, 250, 242, 0.92);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(8px);
+            scrollbar-width: thin;
+        }
+        .stat {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 10px;
+            white-space: nowrap;
+        }
+        .stat span {
+            display: inline;
+            color: var(--muted);
+            font-size: 0.64rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0;
+        }
+        .stat strong { font-size: 0.92rem; line-height: 1; }
+        .progress-bar {
+            flex: 0 0 130px;
+            height: 8px;
+            border-radius: 999px;
+            background: rgba(35, 35, 35, 0.08);
+            overflow: hidden;
+            margin-left: 2px;
+        }
+        .progress-bar div { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width 0.2s ease; }
+        .question-card {
+            margin-bottom: 18px;
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(44, 28, 13, 0.06);
+        }
+        .question-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+        .question-tag {
+            display: inline-flex; align-items: center; gap: 8px; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; color: var(--accent); background: rgba(31, 93, 78, 0.08); border-radius: 999px; padding: 8px 12px;
+        }
+        .question-card p { margin: 0; font-size: 1.05rem; line-height: 1.65; }
+        .options { display: grid; gap: 10px; margin-top: 16px; }
+        .option {
+            width: 100%; text-align: left; padding: 14px 16px; background: #fff; border: 1px solid rgba(35, 35, 35, 0.14);
+            border-radius: 16px; color: var(--ink);
+        }
+        .option:disabled { cursor: default; transform: none; }
+        .option.correct { background: rgba(33, 110, 57, 0.12); border-color: rgba(33, 110, 57, 0.38); color: var(--success); font-weight: 700; }
+        .option.incorrect { background: rgba(180, 35, 24, 0.12); border-color: rgba(180, 35, 24, 0.38); color: var(--error); font-weight: 700; }
+        .feedback { margin-top: 12px; min-height: 1.2em; font-weight: 600; }
+        .feedback.good { color: var(--success); }
+        .feedback.bad { color: var(--error); }
+        .submit-wrap {
+            position: sticky;
+            bottom: 16px;
+            z-index: 15;
+            margin-top: 20px;
+            padding: 12px;
+            background: rgba(255, 250, 242, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .submit-wrap .hint { color: var(--muted); font-size: 0.95rem; }
+        .submit-actions { display: flex; align-items: center; gap: 8px; }
+        .btn-compact { padding: 10px 12px; font-size: 0.9rem; }
+        .results { padding: 28px; text-align: center; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+        .result-card { border-radius: 20px; padding: 18px; background: rgba(255, 255, 255, 0.72); border: 1px solid var(--border); }
+        .result-card span { display: block; color: #2f281f; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+        .result-card strong { font-size: 1.5rem; }
+        .scoreline { font-size: clamp(2rem, 7vw, 4rem); margin: 14px 0 10px; font-family: 'Fraunces', serif; }
+        @media (max-width: 820px) {
+            .wrap { padding: 14px 10px 32px; }
+            .hero { padding: 20px; border-radius: 20px; }
+            .panel { border-radius: 18px; }
+            .hero-layout, .feature-strip, .results-grid { grid-template-columns: 1fr; }
+            .setup-grid, .results-grid { grid-template-columns: 1fr; }
+            .submit-wrap { flex-direction: column; align-items: stretch; }
+            .question-top { flex-direction: column; }
+            .stats { top: 6px; gap: 6px; padding: 6px; }
+            .stat { padding: 5px 8px; gap: 5px; }
+            .stat span { font-size: 0.58rem; }
+            .stat strong { font-size: 0.84rem; }
+            .progress-bar { flex-basis: 96px; height: 7px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <section class="hero">
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <p class="kicker">ENGL 263</p>
+                    <h1>The Marriage of Anansewa</h1>
+                    <p>Choose how many questions you want, then get a random set from the Anansewa question bank. Every question gives instant feedback, and grading is based only on what you answered.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-light" href="index.html">Back to Literature index</a>
+                        <a class="btn btn-light" href="#setup-panel">Choose questions</a>
+                    </div>
+                </div>
+                <div class="hero-side">
+                    <div class="hero-badges">
+                        <span class="hero-badge">Randomized questions</span>
+                        <span class="hero-badge">Instant feedback</span>
+                        <span class="hero-badge">Answer any count</span>
+                    </div>
+                    <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Built to match the hub, so the transition between pages feels the same while keeping the quiz separate.</p>
+                </div>
+            </div>
+            <div class="feature-strip">
+                <div class="feature">
+                    <span>Mode</span>
+                    <strong>Single-page quiz with a question selector.</strong>
+                </div>
+                <div class="feature">
+                    <span>Flow</span>
+                    <strong>Choose count, answer, then submit at any time.</strong>
+                </div>
+                <div class="feature">
+                    <span>Source</span>
+                    <strong>Built from the Anansewa summary and book material.</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="setup-panel" class="panel setup">
+            <div class="setup-grid">
+                <div class="card">
+                    <label for="qCount">How many questions do you want to answer?</label>
+                    <input id="qCount" type="number" min="1" max="36" value="20">
+                    <div class="actions">
+                        <button class="btn-primary" id="start-btn">Start quiz</button>
+                        <button class="btn-secondary" id="fill-70-btn">Use 20</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <strong>Simple flow</strong>
+                    <ol class="flow-list">
+                        <li>Enter a number up to 36.</li>
+                        <li>Answer the randomized questions on one scrollable page.</li>
+                        <li>Submit anytime to grade only the questions you actually answered.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-panel" class="panel quiz-shell hidden">
+            <div class="stats">
+                <div class="stat"><span>Selected</span><strong id="selected-count">0</strong></div>
+                <div class="stat"><span>Answered</span><strong id="attempted-count">0</strong></div>
+                <div class="stat"><span>Correct</span><strong id="score-count">0</strong></div>
+                <div class="stat"><span>Remaining</span><strong id="remaining-count">0</strong></div>
+                <div class="progress-bar"><div id="progress-fill"></div></div>
+            </div>
+            <div id="questions-container"></div>
+            <div class="submit-wrap">
+                <div class="hint" id="submit-hint">Answer as many as you want, then grade the ones you completed.</div>
+                <div class="submit-actions">
+                    <button class="btn-secondary btn-compact" id="to-top-btn" type="button">Back to top</button>
+                    <button class="btn-secondary btn-compact" id="to-bottom-btn" type="button">Go to bottom</button>
+                    <button class="btn-primary btn-compact" id="submit-btn" type="button">Submit and grade</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-panel" class="panel results hidden">
+            <h2>Quiz complete</h2>
+            <div class="scoreline" id="final-score">0 / 0</div>
+            <p id="final-percent" style="font-size:1.1rem; color: var(--muted); margin:0;"></p>
+            <div class="results-grid">
+                <div class="result-card"><span>Answered</span><strong id="result-attempted">0</strong></div>
+                <div class="result-card"><span>Correct</span><strong id="result-correct">0</strong></div>
+                <div class="result-card"><span>Unanswered</span><strong id="result-unanswered">0</strong></div>
+            </div>
+            <p id="grade-comment" style="max-width: 700px; margin: 0 auto 22px; color: var(--muted); line-height: 1.7;"></p>
+            <div class="actions" style="justify-content:center;">
+                <button class="btn-primary" id="restart-btn">Try another set</button>
+                <a class="btn-secondary btn" href="https://lamla-ai.vercel.app" target="_blank" rel="noopener noreferrer">Visit Lamla AI</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const questionBank = [
+            { q: 'Who wrote The Marriage of Anansewa?', a: ['Efua Theodora Sutherland', 'Ama Ata Aidoo', 'Wole Soyinka', 'Kofi Awoonor'], c: 0, s: 'Author' },
+            { q: 'Efua Sutherland was born in which year?', a: ['1920', '1924', '1930', '1946'], c: 1, s: 'Author' },
+            { q: 'Which of these was NOT founded by Efua Sutherland?', a: ['Ghana Society of Writers', 'Ghana Drama Studio', 'Ghana Experimental Theatre', 'National Film Archive'], c: 3, s: 'Author' },
+            { q: 'The play was published in:', a: ['1962', '1967', '1975', '1996'], c: 2, s: 'Author' },
+            { q: 'The play aims to expose modern vices such as:', a: ['Greed and manipulative marriage practices', 'War and hunger', 'Migration and trade', 'Rebellion and exile'], c: 0, s: 'Theme' },
+            { q: 'The story is narrated from the point of view of:', a: ['First person', 'Second person', 'Third person omniscient', 'Dramatic monologue'], c: 2, s: 'Plot' },
+            { q: 'Ananse is trying to find the best suitor for:', a: ['Christie', 'Aya', 'Anansewa', 'Ekuwa'], c: 2, s: 'Plot' },
+            { q: 'How many chiefs receive marriage proposals?', a: ['Two', 'Three', 'Four', 'Five'], c: 2, s: 'Plot' },
+            { q: 'Which of these is one of the chiefs named in the play?', a: ['Chief of Sapaase', 'Chief of Kumasi', 'Chief of Cape Coast', 'Chief of Tamale'], c: 0, s: 'Plot' },
+            { q: 'Ananse sends the marriage letters mainly to:', a: ['Make Anansewa famous', 'Extort money', 'Move to a new town', 'Teach Anansewa writing'], c: 1, s: 'Plot' },
+            { q: 'Ananse wants the money to pay for:', a: ['A car', 'A house', 'Anansewa’s school fees', 'A business trip'], c: 2, s: 'Plot' },
+            { q: 'The climax occurs when:', a: ['Ananse leaves town', 'The chiefs all show interest', 'Aya argues with Christie', 'The play opens'], c: 1, s: 'Plot' },
+            { q: 'The four chiefs also send:', a: ['Enemies', 'Presents and money', 'Police officers', 'Farm tools'], c: 1, s: 'Plot' },
+            { q: 'Anansewa and Ananse plan to fake her:', a: ['Wedding', 'Departure', 'Death', 'Illness'], c: 2, s: 'Plot' },
+            { q: 'The falling action begins when the messengers of the chief bring:', a: ['Funeral and burial items', 'School books', 'Food for a feast', 'A court summons'], c: 0, s: 'Plot' },
+            { q: 'Chief-Who-Is-Chief is seen as:', a: ['The least serious suitor', 'A good and loving husband', 'A coward', 'An enemy of Ananse'], c: 1, s: 'Plot' },
+            { q: 'The resolution involves Ananse speaking with his daughter’s:', a: ['Voice', 'Shadow', 'Soul', 'Diary'], c: 2, s: 'Plot' },
+            { q: 'The play ends with Anansewa being:', a: ['Banished', 'Resurrected', 'Sent to school', 'Married to all four chiefs'], c: 1, s: 'Ending' },
+            { q: 'The protagonist of the play is:', a: ['Christie', 'Aya', 'Ananse', 'Ekuwa'], c: 2, s: 'Characters' },
+            { q: 'Ananse’s key trait is that he is:', a: ['Shy and silent', 'Cunning and deceitful', 'Gentle and passive', 'Rich but honest'], c: 1, s: 'Characters' },
+            { q: 'Anansewa is best described as:', a: ['Completely independent', 'Unable to make decisions without her father', 'Uninterested in marriage', 'A chief’s messenger'], c: 1, s: 'Characters' },
+            { q: 'Ananse threatens not to pay Anansewa’s fees if she:', a: ['Travels to Accra', 'Refuses the marriage plan', 'Writes too slowly', 'Speaks to Christie'], c: 1, s: 'Characters' },
+            { q: 'Anansewa represents the commodification of:', a: ['Education', 'Women', 'Food', 'Leadership'], c: 1, s: 'Theme' },
+            { q: 'Christie is presented as:', a: ['A shy village girl', 'A fashionable and modern woman', 'A chief’s wife', 'A messenger'], c: 1, s: 'Characters' },
+            { q: 'Christie’s emotional weakness is linked to her pursuit of:', a: ['Aya', 'Ananse', 'The storyteller', 'A school certificate'], c: 1, s: 'Characters' },
+            { q: 'Aya is Ananse’s:', a: ['Sister', 'Mother', 'Aunt', 'Daughter'], c: 1, s: 'Characters' },
+            { q: 'Ekuwa is Ananse’s:', a: ['Mother', 'Aunt', 'Wife', 'Teacher'], c: 1, s: 'Characters' },
+            { q: 'The messengers mainly function to:', a: ['Sing songs only', 'Advance the plot and heighten suspense', 'Replace the chiefs physically', 'Stop the action'], c: 1, s: 'Characters' },
+            { q: 'One central theme in the play is:', a: ['Greed', 'Space travel', 'Judicial reform', 'Weather change'], c: 0, s: 'Themes' },
+            { q: 'Ananse’s greed shows that unchecked desire for wealth leads to:', a: ['Peace', 'Moral decay and downfall', 'Better schools', 'No conflict'], c: 1, s: 'Themes' },
+            { q: 'The play also highlights:', a: ['Female education and social progress', 'Only war and revenge', 'Only farming', 'Only death'], c: 0, s: 'Themes' },
+            { q: 'Chief-Who-Is-Chief prefers a wife who is:', a: ['Educated', 'Silent', 'Wealthy only', 'Very old'], c: 0, s: 'Themes' },
+            { q: 'The play contrasts Ananse’s approach with the chief’s view of marriage as a:', a: ['Game', 'Business deal', 'Partnership', 'Punishment'], c: 2, s: 'Themes' },
+            { q: 'The play critiques the treatment of women as:', a: ['Kings', 'Economic assets', 'Messengers', 'Teachers'], c: 1, s: 'Themes' },
+            { q: 'The tension between tradition and modernity is called:', a: ['Selective modernity and cultural continuity', 'Historical silence', 'Urban migration', 'Rural isolation'], c: 0, s: 'Themes' },
+            { q: 'Ananse’s desire to renovate his house shows his interest in:', a: ['Modern comfort and status', 'Leaving Ghana', 'Joining the army', 'Moving to the palace'], c: 0, s: 'Themes' },
+            { q: 'The play balances humour with:', a: ['Song and dance', 'Social critique', 'Myth and fantasy', 'Science and logic'], c: 1, s: 'Themes' }
+        ];
+
+        const state = {
+            session: [],
+            score: 0,
+            attempted: 0,
+            selectedCount: 0,
+            answered: new Set()
+        };
+
+        const setupPanel = document.getElementById('setup-panel');
+        const quizPanel = document.getElementById('quiz-panel');
+        const resultsPanel = document.getElementById('results-panel');
+        const questionsContainer = document.getElementById('questions-container');
+        const selectedCountEl = document.getElementById('selected-count');
+        const attemptedCountEl = document.getElementById('attempted-count');
+        const scoreCountEl = document.getElementById('score-count');
+        const remainingCountEl = document.getElementById('remaining-count');
+        const progressFill = document.getElementById('progress-fill');
+        const qCountInput = document.getElementById('qCount');
+
+        document.getElementById('start-btn').addEventListener('click', startQuiz);
+        document.getElementById('fill-70-btn').addEventListener('click', () => { qCountInput.value = 20; });
+        document.getElementById('submit-btn').addEventListener('click', showResults);
+        document.getElementById('to-top-btn').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        document.getElementById('to-bottom-btn').addEventListener('click', () => { window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' }); });
+        document.getElementById('restart-btn').addEventListener('click', () => location.reload());
+
+        function shuffle(list) {
+            const copy = [...list];
+            for (let i = copy.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [copy[i], copy[j]] = [copy[j], copy[i]];
+            }
+            return copy;
+        }
+
+        function clampCount(value) {
+            const parsed = Number.parseInt(value, 10);
+            if (!Number.isFinite(parsed) || parsed < 1) return 1;
+            return Math.min(parsed, questionBank.length);
+        }
+
+        function startQuiz() {
+            const count = clampCount(qCountInput.value);
+            state.selectedCount = count;
+            state.score = 0;
+            state.attempted = 0;
+            state.answered = new Set();
+            state.session = shuffle(questionBank).slice(0, count);
+
+            setupPanel.classList.add('hidden');
+            resultsPanel.classList.add('hidden');
+            quizPanel.classList.remove('hidden');
+            renderQuestions();
+            updateStats();
+            quizPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function renderQuestions() {
+            questionsContainer.innerHTML = '';
+            state.session.forEach((item, index) => {
+                const card = document.createElement('article');
+                card.className = 'question-card';
+                card.dataset.index = index;
+                card.innerHTML = `
+                    <div class="question-top">
+                        <div><span class="question-tag">${item.s}</span></div>
+                        <div style="color: var(--muted); font-size: 0.92rem;">Question ${index + 1} of ${state.selectedCount}</div>
+                    </div>
+                    <p><strong>${index + 1}.</strong> ${item.q}</p>
+                    <div class="options">
+                        ${item.a.map((option, optionIndex) => `<button type="button" class="option" data-question="${index}" data-option="${optionIndex}">${option}</button>`).join('')}
+                    </div>
+                    <div class="feedback" id="feedback-${index}"></div>
+                `;
+                questionsContainer.appendChild(card);
+            });
+
+            questionsContainer.querySelectorAll('.option').forEach(button => {
+                button.addEventListener('click', handleAnswer);
+            });
+        }
+
+        function handleAnswer(event) {
+            const button = event.currentTarget;
+            const questionIndex = Number(button.dataset.question);
+            const optionIndex = Number(button.dataset.option);
+            const question = state.session[questionIndex];
+            const card = button.closest('.question-card');
+
+            if (state.answered.has(questionIndex)) return;
+            state.answered.add(questionIndex);
+            state.attempted += 1;
+
+            const buttons = card.querySelectorAll('.option');
+            buttons.forEach(btn => btn.disabled = true);
+
+            const feedback = document.getElementById(`feedback-${questionIndex}`);
+            if (optionIndex === question.c) {
+                button.classList.add('correct');
+                state.score += 1;
+                feedback.textContent = 'Correct.';
+                feedback.className = 'feedback good';
+            } else {
+                button.classList.add('incorrect');
+                buttons[question.c].classList.add('correct');
+                feedback.textContent = 'Incorrect.';
+                feedback.className = 'feedback bad';
+            }
+
+            updateStats();
+        }
+
+        function updateStats() {
+            selectedCountEl.textContent = state.selectedCount;
+            attemptedCountEl.textContent = state.attempted;
+            scoreCountEl.textContent = state.score;
+            remainingCountEl.textContent = Math.max(state.selectedCount - state.attempted, 0);
+            const progress = state.selectedCount ? (state.attempted / state.selectedCount) * 100 : 0;
+            progressFill.style.width = `${progress}%`;
+        }
+
+        function showResults() {
+            const unanswered = state.selectedCount - state.attempted;
+            const percent = state.attempted ? Math.round((state.score / state.attempted) * 100) : 0;
+            const comment = percent >= 80
+                ? 'Strong work. You know the plot, characters, and themes well.'
+                : percent >= 50
+                    ? 'Good progress. Review the plot structure and character roles for a stronger score.'
+                    : 'Keep going. Focus on the plot, the characters, and the core themes first.';
+
+            document.getElementById('final-score').textContent = `${state.score} / ${state.attempted}`;
+            document.getElementById('final-percent').textContent = state.attempted ? `${percent}% on the questions you answered` : 'No questions were answered.';
+            document.getElementById('result-attempted').textContent = state.attempted;
+            document.getElementById('result-correct').textContent = state.score;
+            document.getElementById('result-unanswered').textContent = unanswered;
+            document.getElementById('grade-comment').textContent = comment;
+
+            quizPanel.classList.add('hidden');
+            resultsPanel.classList.remove('hidden');
+            resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>

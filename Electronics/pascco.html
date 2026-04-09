@@ -1,0 +1,2360 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSM 251 - Introductory Electronics PASSCO | KNUST</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+  html { scroll-behavior: smooth; }
+
+  :root {
+    --blue: #145647;
+    --lightblue: rgba(20, 86, 71, 0.1);
+    --accent: #b4692a;
+    --muted: #75685b;
+    --text: #17120d;
+    --bg: #f3ede2;
+    --card: rgba(255, 255, 255, 0.88);
+    --border: rgba(38, 29, 21, 0.13);
+    --secbg: rgba(20, 86, 71, 0.08);
+    --optbg: rgba(255, 255, 255, 0.95);
+    --shadow: 0 14px 40px rgba(36, 26, 18, 0.09);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background:
+      radial-gradient(circle at 8% 10%, rgba(20, 86, 71, 0.2), transparent 34%),
+      radial-gradient(circle at 100% 12%, rgba(180, 105, 42, 0.18), transparent 30%),
+      linear-gradient(180deg, #fff8ef 0%, var(--bg) 100%);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /*  HEADER  */
+  .header {
+    background: linear-gradient(135deg, #0f2638 0%, var(--blue) 100%);
+    color: white;
+    text-align: center;
+    padding: 36px 20px 28px;
+    border-radius: 0 0 26px 26px;
+    box-shadow: var(--shadow);
+  }
+  .header h1 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+    margin-bottom: 8px;
+  }
+  .header h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    margin-bottom: 6px;
+  }
+  .header p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-top: 4px;
+  }
+  .header .badge {
+    display: inline-block;
+    margin-top: 14px;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 20px;
+    padding: 5px 18px;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+  }
+
+  /*  NAV  */
+  .toc {
+    max-width: 860px;
+    margin: 74px auto 0;
+    padding: 0 16px;
+  }
+  .toc-inner {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 30px 24px 18px;
+    box-shadow: var(--shadow);
+  }
+  .toc h3 {
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .toc ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .toc ul li a {
+    display: inline-block;
+    background: var(--secbg);
+    color: var(--blue);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 5px 14px;
+    font-size: 0.87rem;
+    text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: background 0.15s;
+  }
+  .toc ul li a:hover { background: var(--lightblue); }
+
+  /*  MAIN  */
+  .main {
+    max-width: 860px;
+    margin: 18px auto 0;
+    padding: 0 16px;
+  }
+
+  /*  SECTION HEAD  */
+  .section-head {
+    margin: 16px 0 20px;
+    padding: 12px 20px;
+    background: linear-gradient(145deg, #0f2638, var(--blue));
+    color: white;
+    border-radius: 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.97rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+  }
+
+  /*  QUESTION CARD  */
+  .qblock {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  .question {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .qnum {
+    font-weight: bold;
+    color: var(--accent);
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-right: 6px;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 8px;
+  }
+  .option {
+    background: var(--optbg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 7px 14px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.12s, border-color 0.12s;
+  }
+  .option:hover {
+    background: var(--lightblue);
+    border-color: var(--accent);
+  }
+  .option.selected {
+    background: rgba(20, 86, 71, 0.2);
+    border-color: var(--blue);
+    box-shadow: inset 0 0 0 1px rgba(20, 86, 71, 0.32);
+  }
+  .optlabel {
+    font-weight: bold;
+    color: var(--blue);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-width: 18px;
+    flex-shrink: 0;
+  }
+
+  /*  FIGURE  */
+  .figure {
+    text-align: center;
+    margin: 16px 0 10px;
+  }
+  .figure svg {
+    display: inline-block;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: white;
+    padding: 10px;
+  }
+  .fig-label {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 6px;
+  }
+
+  /*  NOTE  */
+  .note {
+    font-style: italic;
+    font-size: 0.92rem;
+    color: #555;
+    background: var(--secbg);
+    border-left: 3px solid var(--accent);
+    padding: 8px 14px;
+    border-radius: 0 6px 6px 0;
+    margin: 14px 0 10px;
+  }
+
+  /*  MATH  */
+  .math {
+    text-align: center;
+    font-size: 1.08rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin: 14px 0;
+    letter-spacing: 0.04em;
+  }
+  .math-note {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .quiz-shell { margin-top: 18px; }
+
+  .question-break {
+    display: block;
+    margin: 6px 0;
+  }
+
+  .stats {
+    position: fixed;
+    top: 10px;
+    left: 16px;
+    right: 16px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 16px;
+    padding: 7px 8px;
+    background: rgba(255, 250, 242, 0.92);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+    scrollbar-width: thin;
+  }
+  .stat {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    white-space: nowrap;
+  }
+  .stat span {
+    color: #4a3b2c;
+    text-transform: uppercase;
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    margin: 0;
+  }
+  .stat strong {
+    font-size: 0.92rem;
+    line-height: 1;
+  }
+  .progress-bar {
+    flex: 0 0 130px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(35, 35, 35, 0.08);
+    overflow: hidden;
+    margin-left: 2px;
+  }
+  .progress-bar div {
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--accent), #d67a31);
+    transition: width 0.2s ease;
+  }
+  .submit-wrap {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 15;
+    margin: 0;
+    padding: 12px;
+    background: rgba(255, 250, 242, 0.9);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .submit-wrap .hint {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .submit-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  button {
+    font: inherit;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  button:hover { transform: translateY(-1px); }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 20px;
+    font-weight: 700;
+    box-shadow: 0 10px 28px rgba(31, 93, 78, 0.24);
+    border-radius: 14px;
+    border: 0;
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 14px 20px;
+    border-radius: 14px;
+  }
+  .btn-compact { padding: 10px 12px; font-size: 0.9rem; }
+  .results {
+    padding: 28px;
+    text-align: center;
+  }
+  #results-panel {
+    max-width: 860px;
+    margin: 0 auto 36px;
+    padding: 0 16px 150px;
+  }
+  .results.hidden { display: none; }
+  .scoreline {
+    font-size: clamp(2rem, 7vw, 4rem);
+    margin: 14px 0 10px;
+    font-family: 'Fraunces', serif;
+  }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+  }
+  .result-card {
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.72);
+    padding: 18px;
+  }
+  .result-card span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: #2f281f;
+    margin-bottom: 4px;
+  }
+  .result-card strong {
+    font-size: 1.5rem;
+    font-family: 'Fraunces', serif;
+  }
+
+  /*  FOOTER  */
+  .footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 0.85rem;
+    color: #888;
+    border-top: 1px solid var(--border);
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  /*  RESPONSIVE  */
+  @media (max-width: 600px) {
+    .header h2 { font-size: 1.3rem; }
+    .qblock { padding: 14px 14px; }
+    .section-head { font-size: 0.88rem; }
+    .toc { margin-top: 66px; }
+    .main { margin-top: 14px; }
+    .stats { top: 6px; left: 10px; right: 10px; gap: 6px; padding: 6px; }
+    .stat { padding: 5px 8px; gap: 5px; }
+    .stat span { font-size: 0.58rem; }
+    .stat strong { font-size: 0.84rem; }
+    .progress-bar { flex-basis: 96px; height: 7px; }
+    .submit-wrap { left: 10px; right: 10px; bottom: 10px; }
+    .results-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    .toc { display: none; }
+    .qblock { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
+    .section-head { background: #1a5276 !important; -webkit-print-color-adjust: exact; }
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+
+
+
+<div class="toc">
+  <div class="toc-inner">
+    <div style="margin-bottom: 14px;">
+      <a class="btn-secondary" href="../Electronics/index.html" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Back to Electronics index</a>
+    </div>
+    <h3>Jump to Section</h3>
+    <ul>
+      <li><a href="#secA">A: Semiconductor Theory (Q1-12)</a></li>
+      <li><a href="#secB">B: P-N Junction &amp; Diodes (Q13-22)</a></li>
+      <li><a href="#secC">C: Diode Circuit Analysis (Q23-33)</a></li>
+      <li><a href="#secD">D: Real Diode Equation (Q34-36)</a></li>
+      <li><a href="#secE">E: BJT Theory (Q37-55)</a></li>
+      <li><a href="#secF">F: BJT Circuit Analysis (Q56-74)</a></li>
+      <li><a href="#secG">G: Rectifiers &amp; Regulators (Q75-80)</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="quiz-shell">
+  <div class="stats">
+    <div class="stat"><span>Total</span><strong id="total-count">0</strong></div>
+    <div class="stat"><span>Answered</span><strong id="answered-count">0</strong></div>
+    <div class="stat"><span>Correct</span><strong id="correct-count">0</strong></div>
+    <div class="stat"><span>Remaining</span><strong id="remaining-count">0</strong></div>
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+  </div>
+</div>
+
+<div class="submit-wrap">
+  <div class="hint" id="submit-hint">Pick answers as you go. Submit anytime to view your completion stats.</div>
+  <div class="submit-actions">
+    <button class="btn-secondary btn-compact" id="to-top-btn" type="button">Back to top</button>
+    <button class="btn-secondary btn-compact" id="to-bottom-btn" type="button">Go to bottom</button>
+    <button class="btn-primary btn-compact" id="submit-btn" type="button">Submit and view results</button>
+  </div>
+</div>
+
+<div class="main">
+
+<!--  -->
+<div id="secA">
+  <div class="section-head">SECTION A - Semiconductor Theory &nbsp; (Q1 - Q12)</div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">1.</span> Which of the following statements is false?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> When atoms are packed closely together to form a crystal, the allowable energy levels broaden into bands of energy.</div>
+      <div class="option"><span class="optlabel">b.</span> Between adjacent energy bands are gaps or forbidden regions where there are no allowable energy levels.</div>
+      <div class="option"><span class="optlabel">c.</span> The presence of electrons in the conduction band is crucial to the conduction process.</div>
+      <div class="option"><span class="optlabel">d.</span> At 0 K, the electrons in the valence band are free to move under an applied electric field.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">2.</span> Suppose that we add some arsenic atoms to Germanium, which of the following statements is false?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> The crystal structure will remain unchanged.</div>
+      <div class="option"><span class="optlabel">b.</span> The electronic structure will change.</div>
+      <div class="option"><span class="optlabel">c.</span> One electron that can affect conductivity has been added per replacement atom.</div>
+      <div class="option"><span class="optlabel">d.</span> The crystal structure will change.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">3.</span> Electrons from the valence band are easily promoted to the acceptor level leaving behind holes that are very effective in carrying charge. Which type of semiconductor is this referring to?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> P-type semiconductor</div>
+      <div class="option"><span class="optlabel">b.</span> N-type semiconductor</div>
+      <div class="option"><span class="optlabel">c.</span> P-N junction</div>
+      <div class="option"><span class="optlabel">d.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">4.</span> During formation of a P-N junction the n side contains a net positive charge, and the p material has a region depleted of holes with a net negative charge. These charges are due to:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> The diffusion current</div>
+      <div class="option"><span class="optlabel">b.</span> The drift current</div>
+      <div class="option"><span class="optlabel">c.</span> Bound charges associated with donor and acceptor atoms</div>
+      <div class="option"><span class="optlabel">d.</span> Doping in the semiconductor</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">5.</span> Which of the following statements about an intrinsic semiconductor is false?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> In a pure or intrinsic semiconductor, there are equal numbers of electrons and holes and these are thermally generated.</div>
+      <div class="option"><span class="optlabel">b.</span> When an electric field is applied they move in opposite directions with holes drifting opposite to the direction of the field.</div>
+      <div class="option"><span class="optlabel">c.</span> The mobility of an electron (average velocity per unit electric field intensity) is usually much greater than that of a hole.</div>
+      <div class="option"><span class="optlabel">d.</span> At 0 K all covalent bonds are intact and no free electrons are available to conduct current.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">6.</span> Which of the following statements is false for a P-type semiconductor?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> It is positively charged.</div>
+      <div class="option"><span class="optlabel">b.</span> It is electrically neutral.</div>
+      <div class="option"><span class="optlabel">c.</span> Majority charge carriers are holes and minority carriers are electrons.</div>
+      <div class="option"><span class="optlabel">d.</span> It is formed by a trivalent impurity.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">7.</span> The diagram in Figure 1 shows the energy band model for a p-type doped semiconductor. Which of the following statements is false?</div>
+<div class="figure"><svg style="max-width:380px;width:100%;height:auto;" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="14">
+  <!-- Ec line -->
+  <line x1="60" y1="40" x2="320" y2="40" stroke="black" stroke-width="2"/>
+  <text x="30" y="44" font-weight="bold">E_c</text>
+
+  <!-- EA dashed line -->
+  <line x1="60" y1="130" x2="240" y2="130" stroke="black" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="30" y="134">E_A</text>
+  <text x="250" y="134">N_A</text>
+
+  <!-- Arrows from EA down to Ev (electrons moving) -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 Z" fill="black"/>
+    </marker>
+  </defs>
+  <line x1="100" y1="130" x2="100" y2="182" stroke="black" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="130" y1="130" x2="130" y2="182" stroke="black" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="160" y1="130" x2="160" y2="182" stroke="black" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="130" x2="190" y2="182" stroke="black" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="220" y1="130" x2="220" y2="182" stroke="black" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Ev line -->
+  <line x1="60" y1="190" x2="320" y2="190" stroke="black" stroke-width="2"/>
+  <text x="30" y="194">E_V</text>
+
+  <!-- Holes (circles below Ev) -->
+  <circle cx="90" cy="215" r="10" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="120" cy="215" r="10" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="150" cy="215" r="10" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="180" cy="215" r="10" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="210" cy="215" r="10" fill="none" stroke="black" stroke-width="1.5"/>
+  <text x="230" y="220">Holes</text>
+
+  <!-- Figure label -->
+  <text x="140" y="248" font-size="13" font-style="italic">Figure 1</text>
+</svg>
+<div class="fig-label">Figure 1  Energy band model for p-type semiconductor</div>
+    </div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> At 0 K an electron participating in a covalent bond is in a lower energy state in the valence band.</div>
+      <div class="option"><span class="optlabel">b.</span> The acceptor atoms have unfilled covalent bonds with energy state E.</div>
+      <div class="option"><span class="optlabel">c.</span> Movement of electrons to acceptor sites completes covalent bond pairs and creates holes.</div>
+      <div class="option"><span class="optlabel">d.</span> Movement of electrons to acceptor sites breaks covalent bond pairs and creates holes.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">8.</span> The energy gap represented by E in Figure 1 has the value:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 0.01 eV</div>
+      <div class="option"><span class="optlabel">b.</span> 0.001 eV</div>
+      <div class="option"><span class="optlabel">c.</span> 0.025 eV</div>
+      <div class="option"><span class="optlabel">d.</span> 0.0025 eV</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">9.</span> A semiconductor material has a _________ temperature coefficient of resistance, which means that as temperature increases its resistance _________.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> Positive, increase</div>
+      <div class="option"><span class="optlabel">b.</span> Positive, decrease</div>
+      <div class="option"><span class="optlabel">c.</span> Negative, increase</div>
+      <div class="option"><span class="optlabel">d.</span> Negative, decrease</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">10.</span> Intrinsic semiconductors are doped to increase their _________.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> Resistance</div>
+      <div class="option"><span class="optlabel">b.</span> Conductance</div>
+      <div class="option"><span class="optlabel">c.</span> Inductance</div>
+      <div class="option"><span class="optlabel">d.</span> Reactance</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">11.</span> The basic function of a semiconductor device in an electrical or electronic circuit is to:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> Control current</div>
+      <div class="option"><span class="optlabel">b.</span> Control voltage</div>
+      <div class="option"><span class="optlabel">c.</span> Increase the price of the equipment</div>
+      <div class="option"><span class="optlabel">d.</span> Both (a) and (b) are true</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">12.</span> Under open circuit conditions, the movement of charge carriers as a result of differences in concentration gives rise to a current called:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> Diffusion current</div>
+      <div class="option"><span class="optlabel">b.</span> Drift current</div>
+      <div class="option"><span class="optlabel">c.</span> Drift velocity</div>
+      <div class="option"><span class="optlabel">d.</span> Saturation current</div>
+    </div>
+</div>
+
+<!--  -->
+<div id="secB">
+  <div class="section-head">SECTION B - P-N Junction &amp; Diode Behaviour &nbsp; (Q13 - Q22)</div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">13.</span> Which of the following statements is false for a P-N junction under open circuit conditions?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> The direction of the drift current is from the N to the P-side.</div>
+      <div class="option"><span class="optlabel">b.</span> The drift current is a strong function of temperature.</div>
+      <div class="option"><span class="optlabel">c.</span> The drift current is independent of the value of the depletion layer voltage.</div>
+      <div class="option"><span class="optlabel">d.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">14.</span> Which of the following is false for a reverse biased P-N junction?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> The electric field within the junction increases.</div>
+      <div class="option"><span class="optlabel">B.</span> The barrier potential increases.</div>
+      <div class="option"><span class="optlabel">C.</span> The only contribution to current flow are thermally generated minority carriers.</div>
+      <div class="option"><span class="optlabel">D.</span> The width of the space charged region decreases.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">15.</span> Zener breakdown occurs when:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> The electric field in the depletion layer increases to the point where it can break covalent bonds and generate electron-hole pairs.</div>
+      <div class="option"><span class="optlabel">b.</span> Minority carriers cross the depletion region, gain sufficient kinetic energy under the electric field, and break bonds to generate electron-hole pairs.</div>
+      <div class="option"><span class="optlabel">c.</span> The voltage drop across a fully conducting diode exceeds 0.7 V.</div>
+      <div class="option"><span class="optlabel">d.</span> None of the above.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">16.</span> Avalanche breakdown occurs when:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> The electric field in the depletion layer increases to the point where it can break covalent bonds and generate electron-hole pairs.</div>
+      <div class="option"><span class="optlabel">b.</span> Minority carriers cross the depletion region, gain sufficient kinetic energy under the electric field, and break bonds to generate electron-hole pairs.</div>
+      <div class="option"><span class="optlabel">c.</span> The voltage drop across a fully conducting diode exceeds 0.7 V.</div>
+      <div class="option"><span class="optlabel">d.</span> None of the above.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">17.</span> The unidirectional-current-flow property makes the diode useful in the design of:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> P-n junction diodes</div>
+      <div class="option"><span class="optlabel">b.</span> Diode valves</div>
+      <div class="option"><span class="optlabel">c.</span> Rectifier circuits</div>
+      <div class="option"><span class="optlabel">d.</span> Semiconductor diodes</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">18.</span> Which of the following statements is NOT a characteristic of an ideal diode?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> If a positive current is applied to the diode, a zero voltage drop appears across the diode.</div>
+      <div class="option"><span class="optlabel">b.</span> If a negative voltage is applied to the diode, no current flows and the diode behaves as an open circuit.</div>
+      <div class="option"><span class="optlabel">c.</span> The breakdown region is entered when the magnitude of the reverse current exceeds a threshold value, called the breakdown voltage.</div>
+      <div class="option"><span class="optlabel">d.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">19.</span> In the forward direction, the ideal diode conducts any current forced by the external circuit while displaying a:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> Zero voltage drop</div>
+      <div class="option"><span class="optlabel">b.</span> Negative voltage drop</div>
+      <div class="option"><span class="optlabel">c.</span> Positive voltage drop</div>
+      <div class="option"><span class="optlabel">d.</span> A 0.7 V voltage drop</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">20.</span> If the p-type end of a silicon diode is at a voltage of 3 V and the n-type end is at 0 V:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> The diode is not biased properly.</div>
+      <div class="option"><span class="optlabel">b.</span> The diode is forward biased and current flows.</div>
+      <div class="option"><span class="optlabel">c.</span> The diode is reverse biased and no current flows.</div>
+      <div class="option"><span class="optlabel">d.</span> The diode is forward biased but current does not flow.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">21.</span> In Figure 2 below, identify the forward-biased diode(s).</div>
+<div class="figure"><svg style="max-width:620px;width:100%;height:auto;" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="12">
+
+<!-- CIRCUIT (a): 20V, 470, D1 forward (points right) -->
+<line x1="30" y1="60" x2="30" y2="160" stroke="black" stroke-width="2"/>
+<line x1="18" y1="90" x2="42" y2="90" stroke="black" stroke-width="3"/>
+<line x1="22" y1="105" x2="38" y2="105" stroke="black" stroke-width="1.5"/>
+<text x="5" y="95" font-size="11">+</text><text x="5" y="112" font-size="11"></text>
+<text x="3" y="140" font-size="11">20 V</text>
+<line x1="30" y1="60" x2="100" y2="60" stroke="black" stroke-width="2"/>
+<polyline points="100,60 108,48 116,72 124,48 132,72 140,48 148,72 156,60" fill="none" stroke="black" stroke-width="2"/>
+<text x="108" y="44" font-size="11">470 </text>
+<line x1="156" y1="60" x2="180" y2="60" stroke="black" stroke-width="2"/>
+<!-- D1 points RIGHT  forward biased -->
+<polygon points="180,48 180,72 204,60" fill="black"/>
+<line x1="204" y1="48" x2="204" y2="72" stroke="black" stroke-width="2.5"/>
+<text x="183" y="44" font-size="11">D1</text>
+<line x1="204" y1="60" x2="220" y2="60" stroke="black" stroke-width="2"/>
+<line x1="220" y1="60" x2="220" y2="160" stroke="black" stroke-width="2"/>
+<line x1="30" y1="160" x2="220" y2="160" stroke="black" stroke-width="2"/>
+<text x="80" y="185" font-size="11" font-style="italic">(a)</text>
+
+<!-- CIRCUIT (b): 5V, 470, D2 reversed (points LEFT)  reverse biased -->
+<line x1="270" y1="60" x2="270" y2="160" stroke="black" stroke-width="2"/>
+<line x1="258" y1="90" x2="282" y2="90" stroke="black" stroke-width="3"/>
+<line x1="262" y1="105" x2="278" y2="105" stroke="black" stroke-width="1.5"/>
+<text x="245" y="95" font-size="11">+</text><text x="245" y="112" font-size="11"></text>
+<text x="248" y="140" font-size="11">5 V</text>
+<line x1="270" y1="60" x2="340" y2="60" stroke="black" stroke-width="2"/>
+<polyline points="340,60 348,48 356,72 364,48 372,72 380,48 388,72 396,60" fill="none" stroke="black" stroke-width="2"/>
+<text x="350" y="44" font-size="11">470 </text>
+<line x1="396" y1="60" x2="420" y2="60" stroke="black" stroke-width="2"/>
+<!-- D2 points LEFT  reverse biased (bar on left, anode on right) -->
+<polygon points="444,48 444,72 420,60" fill="black"/>
+<line x1="444" y1="48" x2="444" y2="72" stroke="black" stroke-width="2.5"/>
+<text x="425" y="44" font-size="11">D2</text>
+<line x1="444" y1="60" x2="460" y2="60" stroke="black" stroke-width="2"/>
+<line x1="460" y1="60" x2="460" y2="160" stroke="black" stroke-width="2"/>
+<line x1="270" y1="160" x2="460" y2="160" stroke="black" stroke-width="2"/>
+<text x="340" y="185" font-size="11" font-style="italic">(b)</text>
+
+<!-- CIRCUIT (c): 50V, 10k, D3 RIGHT (forward biased), 10k load -->
+<line x1="505" y1="60" x2="505" y2="160" stroke="black" stroke-width="2"/>
+<line x1="493" y1="85" x2="517" y2="85" stroke="black" stroke-width="3"/>
+<line x1="497" y1="100" x2="513" y2="100" stroke="black" stroke-width="1.5"/>
+<text x="480" y="92" font-size="11">+</text><text x="480" y="108" font-size="11"></text>
+<text x="480" y="135" font-size="11">50 V</text>
+<line x1="505" y1="60" x2="560" y2="60" stroke="black" stroke-width="2"/>
+<polyline points="560,60 566,48 572,72 578,48 584,72 590,48 596,72 602,60" fill="none" stroke="black" stroke-width="2"/>
+<text x="562" y="44" font-size="11">10 k</text>
+<line x1="602" y1="60" x2="622" y2="60" stroke="black" stroke-width="2"/>
+<!-- D3 points RIGHT  forward biased (anode left, cathode right) -->
+<polygon points="622,48 622,72 646,60" fill="black"/>
+<line x1="646" y1="48" x2="646" y2="72" stroke="black" stroke-width="2.5"/>
+<text x="626" y="44" font-size="11">D3</text>
+<line x1="646" y1="60" x2="665" y2="60" stroke="black" stroke-width="2"/>
+<!-- Right vertical 10k load -->
+<line x1="665" y1="60" x2="665" y2="90" stroke="black" stroke-width="2"/>
+<polyline points="665,90 653,96 677,104 653,112 677,120 653,128 677,136 665,142" fill="none" stroke="black" stroke-width="2"/>
+<text x="668" y="118" font-size="11">10 k</text>
+<line x1="665" y1="142" x2="665" y2="160" stroke="black" stroke-width="2"/>
+<line x1="505" y1="160" x2="665" y2="160" stroke="black" stroke-width="2"/>
+<text x="568" y="185" font-size="11" font-style="italic">(c)</text>
+
+<text x="290" y="208" font-size="12" font-style="italic">Figure 2</text>
+</svg>
+<div class="fig-label">Figure 2  Identify forward-biased diodes</div>
+    </div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> D1</div>
+      <div class="option"><span class="optlabel">b.</span> D2</div>
+      <div class="option"><span class="optlabel">c.</span> D3</div>
+      <div class="option"><span class="optlabel">d.</span> D1 and D3</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">22.</span> When the positive lead of an analog ohmmeter is connected to the cathode of a diode and the negative lead to the anode, the meter reads:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> A very low resistance</div>
+      <div class="option"><span class="optlabel">b.</span> An extremely high resistance or open</div>
+      <div class="option"><span class="optlabel">c.</span> A high resistance initially, decreasing to about 100 </div>
+      <div class="option"><span class="optlabel">d.</span> A gradually increasing resistance</div>
+    </div>
+</div>
+
+<!--  -->
+<div id="secC">
+  <div class="section-head">SECTION C - Diode Circuit Analysis &nbsp; (Q23 - Q33)</div>
+    </div>
+
+<div class="note">Use Figure 3 to answer questions 23 and 24.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:280px;width:100%;height:auto;" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- +20V supply at top -->
+<line x1="150" y1="10" x2="150" y2="30" stroke="black" stroke-width="2"/>
+<text x="135" y="12" font-size="13" font-weight="bold">+20 V</text>
+
+<!-- Top 20k resistor (vertical) -->
+<polyline points="150,30 138,36 162,44 138,52 162,60 138,68 162,76 150,82" fill="none" stroke="black" stroke-width="2"/>
+<text x="163" y="60" font-size="12">20 k</text>
+
+<!-- Node B -->
+<circle cx="150" cy="82" r="3" fill="black"/>
+<text x="130" y="82" font-size="13" font-weight="bold">B</text>
+
+<!-- Diode from B (pointing down-right) -->
+<line x1="150" y1="82" x2="200" y2="82" stroke="black" stroke-width="2"/>
+<polygon points="200,72 200,92 224,82" fill="black"/>
+<line x1="224" y1="72" x2="224" y2="92" stroke="black" stroke-width="2.5"/>
+
+<!-- Right 20k resistor (vertical, from diode cathode down) -->
+<line x1="224" y1="92" x2="224" y2="100" stroke="black" stroke-width="2"/>
+<polyline points="224,100 212,106 236,114 212,122 236,130 212,138 236,146 224,152" fill="none" stroke="black" stroke-width="2"/>
+<text x="237" y="130" font-size="12">20 k</text>
+<line x1="224" y1="152" x2="224" y2="180" stroke="black" stroke-width="2"/>
+
+<!-- Ground from diode-resistor junction -->
+<!-- Ground symbol -->
+<line x1="224" y1="180" x2="224" y2="195" stroke="black" stroke-width="2"/>
+<line x1="210" y1="195" x2="238" y2="195" stroke="black" stroke-width="2"/>
+<line x1="215" y1="201" x2="233" y2="201" stroke="black" stroke-width="1.5"/>
+<line x1="220" y1="207" x2="228" y2="207" stroke="black" stroke-width="1"/>
+
+<!-- Left 20k resistor from B down -->
+<line x1="150" y1="82" x2="150" y2="95" stroke="black" stroke-width="2"/>
+<polyline points="150,95 138,101 162,109 138,117 162,125 138,133 162,141 150,147" fill="none" stroke="black" stroke-width="2"/>
+<text x="163" y="120" font-size="12">20 k</text>
+<line x1="150" y1="147" x2="150" y2="165" stroke="black" stroke-width="2"/>
+
+<!-- Ground from left 20k -->
+<line x1="136" y1="165" x2="164" y2="165" stroke="black" stroke-width="2"/>
+<line x1="141" y1="171" x2="159" y2="171" stroke="black" stroke-width="1.5"/>
+<line x1="146" y1="177" x2="154" y2="177" stroke="black" stroke-width="1"/>
+
+<!-- -10V at bottom of right branch -->
+<line x1="224" y1="207" x2="224" y2="240" stroke="black" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="205" y="260" font-size="13" font-weight="bold">10 V</text>
+
+<!-- Current label I -->
+<text x="228" y="175" font-size="13" font-style="italic">I</text>
+<line x1="228" y1="180" x2="228" y2="200" stroke="black" stroke-width="1.5" marker-end="url(#arr)"/>
+<defs>
+  <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L6,3 Z" fill="black"/>
+  </marker>
+</defs>
+
+<text x="95" y="300" font-size="13" font-style="italic">Figure 3</text>
+</svg>
+<div class="fig-label">Figure 3</div>
+    </div>
+<div class="question"><span class="qnum">23.</span> Using Thevenin's equivalent circuit model, determine the voltage at node B in Figure 3.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 0 V</div>
+      <div class="option"><span class="optlabel">b.</span> 10 V</div>
+      <div class="option"><span class="optlabel">c.</span> 20 V</div>
+      <div class="option"><span class="optlabel">d.</span> 20 V</div>
+    </div>
+<div class="question"><span class="qnum">24.</span> Assume the diode in Figure 3 is ideal; determine the value of the current I.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 0.5 A</div>
+      <div class="option"><span class="optlabel">b.</span> 0.5 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 1.0 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 1.5 A</div>
+    </div>
+</div>
+
+<div class="note">Use Figure 4 to answer questions 25 and 26.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:260px;width:100%;height:auto;" viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<defs>
+  <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L6,3 Z" fill="black"/>
+  </marker>
+</defs>
+
+<!-- +15V at top -->
+<text x="130" y="15" font-weight="bold">+15 V</text>
+<line x1="150" y1="18" x2="150" y2="35" stroke="black" stroke-width="2"/>
+
+<!-- I1 arrow down -->
+<text x="155" y="45" font-size="12" font-style="italic">I</text>
+<line x1="150" y1="35" x2="150" y2="60" stroke="black" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- 5k resistor (vertical) -->
+<polyline points="150,60 138,66 162,74 138,82 162,90 138,98 162,106 150,112" fill="none" stroke="black" stroke-width="2"/>
+<text x="163" y="88" font-size="12">5 k</text>
+
+<!-- Junction node after 5k -->
+<circle cx="150" cy="112" r="3" fill="black"/>
+
+<!-- Left branch: D2 down then I2 to ground -->
+<line x1="150" y1="112" x2="90" y2="112" stroke="black" stroke-width="2"/>
+<line x1="90" y1="112" x2="90" y2="140" stroke="black" stroke-width="2"/>
+<!-- D2 vertical pointing down -->
+<polygon points="78,140 102,140 90,164" fill="black"/>
+<line x1="78" y1="164" x2="102" y2="164" stroke="black" stroke-width="2.5"/>
+<text x="55" y="155" font-size="12">D2</text>
+<line x1="90" y1="164" x2="90" y2="195" stroke="black" stroke-width="2"/>
+<!-- I2 label -->
+<text x="95" y="185" font-size="12" font-style="italic">I</text>
+<!-- Ground -->
+<line x1="76" y1="195" x2="104" y2="195" stroke="black" stroke-width="2"/>
+<line x1="81" y1="201" x2="99" y2="201" stroke="black" stroke-width="1.5"/>
+<line x1="86" y1="207" x2="94" y2="207" stroke="black" stroke-width="1"/>
+
+<!-- Right branch: D1 vertical pointing down, then 10k, then I3 to -10V -->
+<line x1="150" y1="112" x2="220" y2="112" stroke="black" stroke-width="2"/>
+<line x1="220" y1="112" x2="220" y2="140" stroke="black" stroke-width="2"/>
+<!-- D1 pointing down -->
+<polygon points="208,140 232,140 220,164" fill="black"/>
+<line x1="208" y1="164" x2="232" y2="164" stroke="black" stroke-width="2.5"/>
+<text x="232" y="155" font-size="12">D1</text>
+<line x1="220" y1="164" x2="220" y2="180" stroke="black" stroke-width="2"/>
+
+<!-- 10k resistor vertical -->
+<polyline points="220,180 208,186 232,194 208,202 232,210 208,218 232,226 220,232" fill="none" stroke="black" stroke-width="2"/>
+<text x="234" y="208" font-size="12">10 k</text>
+<line x1="220" y1="232" x2="220" y2="260" stroke="black" stroke-width="2"/>
+
+<!-- I3 label -->
+<text x="225" y="252" font-size="12" font-style="italic">I</text>
+<line x1="220" y1="260" x2="220" y2="285" stroke="black" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- -10V -->
+<text x="200" y="300" font-weight="bold">10 V</text>
+
+<text x="110" y="340" font-size="13" font-style="italic">Figure 4</text>
+</svg>
+<div class="fig-label">Figure 4</div>
+    </div>
+<div class="question"><span class="qnum">25.</span> Referring to Figure 4, if diodes D1 and D2 are ideal, find the value of the current I3.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 1 mA</div>
+      <div class="option"><span class="optlabel">b.</span> 1.5 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 2.5 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 2.5 A</div>
+    </div>
+<div class="question"><span class="qnum">26.</span> With reference to Figure 4, if diode D2 is reverse biased, what would be the value of the current I3?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 0.5 mA</div>
+      <div class="option"><span class="optlabel">b.</span> 1.0 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 1.5 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 1.67 mA</div>
+    </div>
+</div>
+
+<div class="note">Use Figure 5 to answer questions 27 to 30.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:280px;width:100%;height:auto;" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<defs>
+  <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L6,3 Z" fill="black"/>
+  </marker>
+</defs>
+
+<!-- +5V top -->
+<text x="133" y="14" font-weight="bold">5 V</text>
+<line x1="150" y1="17" x2="150" y2="35" stroke="black" stroke-width="2"/>
+
+<!-- I1 arrow -->
+<text x="155" y="47" font-size="12" font-style="italic">I</text>
+<line x1="150" y1="35" x2="150" y2="62" stroke="black" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- 5k resistor vertical -->
+<polyline points="150,62 138,68 162,76 138,84 162,92 138,100 162,108 150,114" fill="none" stroke="black" stroke-width="2"/>
+<text x="163" y="90" font-size="12">5 k</text>
+
+<!-- Junction node A -->
+<circle cx="150" cy="114" r="3" fill="black"/>
+<text x="155" y="111" font-size="11">A</text>
+
+<!-- LEFT branch: I2  10k  B  ground -->
+<line x1="150" y1="114" x2="80" y2="114" stroke="black" stroke-width="2"/>
+<text x="83" y="110" font-size="11" font-style="italic">I</text>
+<!-- 10k vertical on left -->
+<line x1="80" y1="114" x2="80" y2="130" stroke="black" stroke-width="2"/>
+<polyline points="80,130 68,136 92,144 68,152 92,160 68,168 92,176 80,182" fill="none" stroke="black" stroke-width="2"/>
+<text x="38" y="157" font-size="12">10 k</text>
+<!-- Node B -->
+<line x1="80" y1="182" x2="80" y2="200" stroke="black" stroke-width="2"/>
+<circle cx="80" cy="200" r="3" fill="black"/>
+<text x="60" y="206" font-weight="bold">B</text>
+<line x1="80" y1="200" x2="80" y2="222" stroke="black" stroke-width="2"/>
+<!-- Ground at B -->
+<line x1="66" y1="222" x2="94" y2="222" stroke="black" stroke-width="2"/>
+<line x1="71" y1="228" x2="89" y2="228" stroke="black" stroke-width="1.5"/>
+<line x1="76" y1="234" x2="84" y2="234" stroke="black" stroke-width="1"/>
+
+<!-- D1: from A down to B node (in parallel with 10k) - points DOWN -->
+<!-- D1 anode at A (x=150,y=114), cathode at B level -->
+<line x1="150" y1="114" x2="220" y2="114" stroke="black" stroke-width="2"/>
+<line x1="220" y1="114" x2="220" y2="135" stroke="black" stroke-width="2"/>
+<polygon points="208,135 232,135 220,159" fill="black"/>
+<line x1="208" y1="159" x2="232" y2="159" stroke="black" stroke-width="2.5"/>
+<text x="234" y="150" font-size="12">D1</text>
+<!-- D1 cathode connects back to B -->
+<line x1="220" y1="159" x2="220" y2="200" stroke="black" stroke-width="2"/>
+<line x1="80" y1="200" x2="220" y2="200" stroke="black" stroke-width="2"/>
+
+<!-- D2: from A downward  10k  I3  -10V -->
+<line x1="150" y1="114" x2="150" y2="135" stroke="black" stroke-width="2"/>
+<polygon points="138,135 162,135 150,159" fill="black"/>
+<line x1="138" y1="159" x2="162" y2="159" stroke="black" stroke-width="2.5"/>
+<text x="163" y="150" font-size="12">D2</text>
+<line x1="150" y1="159" x2="150" y2="178" stroke="black" stroke-width="2"/>
+<!-- 10k vertical below D2 -->
+<polyline points="150,178 138,184 162,192 138,200 162,208 138,216 162,224 150,230" fill="none" stroke="black" stroke-width="2"/>
+<text x="163" y="207" font-size="12">10 k</text>
+<line x1="150" y1="230" x2="150" y2="270" stroke="black" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- I3 label -->
+<text x="155" y="260" font-size="12" font-style="italic">I</text>
+
+<!-- -10V -->
+<text x="128" y="288" font-weight="bold">10 V</text>
+
+<text x="70" y="320" font-size="13" font-style="italic">Figure 5</text>
+</svg>
+<div class="fig-label">Figure 5</div>
+    </div>
+<div class="question"><span class="qnum">27.</span> Assume the diodes in Figure 5 are ideal. What is the value of the voltage at node B?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 0 V</div>
+      <div class="option"><span class="optlabel">b.</span> 10 V</div>
+      <div class="option"><span class="optlabel">c.</span> 5 V</div>
+      <div class="option"><span class="optlabel">d.</span> 0 kV</div>
+    </div>
+<div class="question"><span class="qnum">28.</span> What is the value of the current I3?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 1 mA</div>
+      <div class="option"><span class="optlabel">b.</span> 2 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 3 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 4 mA</div>
+    </div>
+<div class="question"><span class="qnum">29.</span> If diode D1 is now reverse biased, what will be the value of the current I3?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 1 mA</div>
+      <div class="option"><span class="optlabel">b.</span> 2 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 3 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 0.33 mA</div>
+    </div>
+<div class="question"><span class="qnum">30.</span> If diode D2 is now reverse biased, what will be the value of the current I1?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 1 mA</div>
+      <div class="option"><span class="optlabel">b.</span> 2 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 3 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 0.33 mA</div>
+    </div>
+</div>
+
+<div class="note">Use Figure 6 to answer questions 31 to 33.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:320px;width:100%;height:auto;" viewBox="0 0 350 220" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+  <!-- Battery (left side, vertical) -->
+  <!-- Long line (positive) -->
+  <line x1="60" y1="80" x2="60" y2="140" stroke="black" stroke-width="2"/>
+  <!-- Battery symbol lines -->
+  <line x1="45" y1="100" x2="75" y2="100" stroke="black" stroke-width="3"/>
+  <line x1="50" y1="115" x2="70" y2="115" stroke="black" stroke-width="1.5"/>
+  <!-- + and - labels -->
+  <text x="80" y="105" font-size="14" font-weight="bold">+</text>
+  <text x="80" y="120" font-size="14" font-weight="bold"></text>
+  <!-- Battery label -->
+  <text x="15" y="112" font-size="13">20 V</text>
+
+  <!-- Wire top: battery top  resistor start -->
+  <line x1="60" y1="80" x2="130" y2="80" stroke="black" stroke-width="2"/>
+
+  <!-- Resistor (top wire, horizontal) -->
+  <!-- zigzag resistor from x=130 to x=220 at y=80 -->
+  <polyline points="130,80 140,65 155,95 170,65 185,95 200,65 215,95 225,80" 
+            fill="none" stroke="black" stroke-width="2"/>
+  <text x="160" y="58" font-size="13">470 </text>
+
+  <!-- Wire: resistor end  diode start -->
+  <line x1="225" y1="80" x2="270" y2="80" stroke="black" stroke-width="2"/>
+
+  <!-- Diode D1 (horizontal, pointing right) at x=270-310, y=80 -->
+  <!-- Triangle -->
+  <polygon points="270,65 270,95 300,80" fill="black"/>
+  <!-- Bar (cathode) -->
+  <line x1="300" y1="65" x2="300" y2="95" stroke="black" stroke-width="2.5"/>
+  <text x="275" y="58" font-size="13">D</text>
+
+  <!-- Wire: diode  top-right corner -->
+  <line x1="300" y1="80" x2="320" y2="80" stroke="black" stroke-width="2"/>
+  <!-- Right wire down -->
+  <line x1="320" y1="80" x2="320" y2="140" stroke="black" stroke-width="2"/>
+  <!-- Bottom wire: right  battery bottom -->
+  <line x1="60" y1="140" x2="320" y2="140" stroke="black" stroke-width="2"/>
+
+  <!-- Figure label -->
+  <text x="130" y="195" font-size="13" font-style="italic">Figure 6</text>
+</svg>
+<div class="fig-label">Figure 6</div>
+    </div>
+<div class="question"><span class="qnum">31.</span> Referring to Figure 6, estimate the current using the piece-wise linear model with V<sub>DO</sub> = 0.65 V and r<sub>D</sub> = 20 ohm.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 39.4 mA</div>
+      <div class="option"><span class="optlabel">b.</span> 0.394 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 0.041 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 0.41 mA</div>
+    </div>
+<div class="question"><span class="qnum">32.</span> Referring to Figure 6, estimate the diode voltage using the piece-wise linear model with V<sub>DO</sub> = 0.65 V and r<sub>D</sub> = 20 ohm.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 0.7 V</div>
+      <div class="option"><span class="optlabel">b.</span> 0.65 V</div>
+      <div class="option"><span class="optlabel">c.</span> 0.75 V</div>
+      <div class="option"><span class="optlabel">d.</span> 1.44 V</div>
+    </div>
+<div class="question"><span class="qnum">33.</span> Referring to Figure 6, estimate the current using the constant drop voltage model.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 39.4 mA</div>
+      <div class="option"><span class="optlabel">b.</span> 0.394 mA</div>
+      <div class="option"><span class="optlabel">c.</span> 0.041 mA</div>
+      <div class="option"><span class="optlabel">d.</span> 0.041 A</div>
+    </div>
+</div>
+
+<!--  -->
+<div id="secD">
+  <div class="section-head">SECTION D - Real Diode Equation &nbsp; (Q34 - Q36)</div>
+</div>
+
+<div class="qblock">
+<div class="math-note">The i-v characteristics of the real diode in forward bias is governed by:</div>
+<div class="math">i = I<sub>S</sub> ( e<sup>V / nV<sub>T</sub></sup> &minus; 1 )</div>
+<div class="math-note">where I<sub>S</sub> = saturation current, v = diode voltage, n = ideality factor, V<sub>T</sub> = thermal constant.</div>
+<div class="question"><span class="qnum">34.</span> The constant V<sub>T</sub> in the equation above is called the:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> Terminal voltage</div>
+      <div class="option"><span class="optlabel">b.</span> Threshold voltage</div>
+      <div class="option"><span class="optlabel">c.</span> Thermal voltage</div>
+      <div class="option"><span class="optlabel">d.</span> Constant voltage</div>
+    </div>
+<div class="question"><span class="qnum">35.</span> V<sub>T</sub> is given by the expression (k = Boltzmann constant, T = absolute temperature, q = electron charge):</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> V = kT / q</div>
+      <div class="option"><span class="optlabel">b.</span> V = kq / T</div>
+      <div class="option"><span class="optlabel">c.</span> V = Tq / k</div>
+      <div class="option"><span class="optlabel">d.</span> V = kqT</div>
+    </div>
+<div class="question"><span class="qnum">36.</span> Consider two diode voltages V and V with corresponding currents I and I at room temperature. Find the voltage drop corresponding to a decade change in current for n = 1.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> 60 mV</div>
+      <div class="option"><span class="optlabel">b.</span> 63 mV</div>
+      <div class="option"><span class="optlabel">c.</span> 50 mV</div>
+      <div class="option"><span class="optlabel">d.</span> 54.36 mV</div>
+    </div>
+</div>
+
+<!--  -->
+<div id="secE">
+  <div class="section-head">SECTION E - Bipolar Junction Transistors: Theory &nbsp; (Q37 - Q55)</div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">37.</span> A BJT is a:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Current-controlled device</div>
+      <div class="option"><span class="optlabel">B.</span> Voltage-controlled device</div>
+      <div class="option"><span class="optlabel">C.</span> Power-controlled device</div>
+      <div class="option"><span class="optlabel">D.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">38.</span> The arrowhead on the transistor symbol points in the direction of:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Electron flow in the emitter region.</div>
+      <div class="option"><span class="optlabel">B.</span> Minority carrier flow in the emitter region.</div>
+      <div class="option"><span class="optlabel">C.</span> Majority carrier flow in the emitter region.</div>
+      <div class="option"><span class="optlabel">D.</span> Conventional current flow in the emitter region.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">39.</span> A BJT is in the saturation region if:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Base-emitter junction is reverse-biased and base-collector junction is forward-biased.</div>
+      <div class="option"><span class="optlabel">B.</span> Both junctions are reverse-biased.</div>
+      <div class="option"><span class="optlabel">C.</span> Both junctions are forward-biased.</div>
+      <div class="option"><span class="optlabel">D.</span> Base-emitter junction is forward-biased and base-collector junction is reverse-biased.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">40.</span> In a BJT the base region is made very thin so that:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Recombination in base region is minimum.</div>
+      <div class="option"><span class="optlabel">B.</span> Electric field gradient in base is high.</div>
+      <div class="option"><span class="optlabel">C.</span> Base can be easily fabricated.</div>
+      <div class="option"><span class="optlabel">D.</span> Base can be easily biased.</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">41.</span>  or <sub>DC</sub> is the symbol for the:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Common emitter current gain</div>
+      <div class="option"><span class="optlabel">B.</span> Common collector current gain</div>
+      <div class="option"><span class="optlabel">C.</span> Common base current gain</div>
+      <div class="option"><span class="optlabel">D.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">42.</span> The value of  is always:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> &gt; 1</div>
+      <div class="option"><span class="optlabel">B.</span> &lt; 1</div>
+      <div class="option"><span class="optlabel">C.</span> &lt; 0</div>
+      <div class="option"><span class="optlabel">D.</span> = 1</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">43.</span> A transistor has I. Collector, II. Emitter, and III. Base. In a PNP transistor the electron flows into the transistor at:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> I only</div>
+      <div class="option"><span class="optlabel">B.</span> II only</div>
+      <div class="option"><span class="optlabel">C.</span> II and III only</div>
+      <div class="option"><span class="optlabel">D.</span> I and III only</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">44.</span> A transistor has <sub>DC</sub> = 250 and a base current I<sub>B</sub> = 20 A. The collector current I<sub>C</sub> equals:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 500 A</div>
+      <div class="option"><span class="optlabel">B.</span> 5 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 50 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 5 A</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">45.</span> With the positive probe on an NPN base, an ohmmeter reading between the other transistor terminals should be:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Open</div>
+      <div class="option"><span class="optlabel">B.</span> Infinite</div>
+      <div class="option"><span class="optlabel">C.</span> Low resistance</div>
+      <div class="option"><span class="optlabel">D.</span> High resistance</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">46.</span> A transistor may be used as a switching device or as a:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Fixed resistor</div>
+      <div class="option"><span class="optlabel">B.</span> Tuning device</div>
+      <div class="option"><span class="optlabel">C.</span> Rectifier</div>
+      <div class="option"><span class="optlabel">D.</span> Variable resistor</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">47.</span> BJTs are specified to have  in range 50 to 150. Find the range of their  values.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.97 to 0.993</div>
+      <div class="option"><span class="optlabel">B.</span> 0.98 to 0.993</div>
+      <div class="option"><span class="optlabel">C.</span> 0.0196 to 6.6 - 10</div>
+      <div class="option"><span class="optlabel">D.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">48.</span> Calculate  for two transistors for which  = 0.99 and 0.98.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 99 ; 49</div>
+      <div class="option"><span class="optlabel">B.</span> 0.99 ; 0.98</div>
+      <div class="option"><span class="optlabel">C.</span> 99 ; 49</div>
+      <div class="option"><span class="optlabel">D.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">49.</span> For collector currents of 10 mA, find the base current of the transistors in question 48.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 99 mA ; 49 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 0.1 mA ; 0.2 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 0.1 mA ; 0.02 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 10 mA ; 2 mA</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">50.</span> In a transistor, collector current is controlled by:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Collector voltage</div>
+      <div class="option"><span class="optlabel">B.</span> Base current</div>
+      <div class="option"><span class="optlabel">C.</span> Collector resistance</div>
+      <div class="option"><span class="optlabel">D.</span> All of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">51.</span> What does a reading of large resistance in both forward- and reverse-biased conditions indicate when checking a transistor with an ohmmeter?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Faulty device</div>
+      <div class="option"><span class="optlabel">B.</span> Good device</div>
+      <div class="option"><span class="optlabel">C.</span> Bad ohmmeter</div>
+      <div class="option"><span class="optlabel">D.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">52.</span> For normal operation of a PNP BJT, the base must be _________ with respect to the emitter and _________ with respect to the collector.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Positive, negative</div>
+      <div class="option"><span class="optlabel">B.</span> Positive, positive</div>
+      <div class="option"><span class="optlabel">C.</span> Negative, positive</div>
+      <div class="option"><span class="optlabel">D.</span> Negative, negative</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">53.</span> For a silicon transistor, when a base-emitter junction is forward-biased, it has a nominal voltage drop of:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.7 V</div>
+      <div class="option"><span class="optlabel">B.</span> 0.3 V</div>
+      <div class="option"><span class="optlabel">C.</span> 0.2 V</div>
+      <div class="option"><span class="optlabel">D.</span> 0 V</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">54.</span> When a transistor is used as a switch, it is stable in which two distinct regions?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Saturation and active</div>
+      <div class="option"><span class="optlabel">B.</span> Saturation and cutoff</div>
+      <div class="option"><span class="optlabel">C.</span> Active and cutoff</div>
+      <div class="option"><span class="optlabel">D.</span> None of the above</div>
+    </div>
+</div>
+
+<div class="qblock">
+<div class="question"><span class="qnum">55.</span> A certain transistor has I<sub>C</sub> = 15 mA and I<sub>B</sub> = 167 A;  is:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 15</div>
+      <div class="option"><span class="optlabel">B.</span> 167</div>
+      <div class="option"><span class="optlabel">C.</span> 0.011</div>
+      <div class="option"><span class="optlabel">D.</span> 90</div>
+    </div>
+</div>
+
+<!--  -->
+<div id="secF">
+  <div class="section-head">SECTION F - BJT Circuit Analysis &nbsp; (Q56 - Q74)</div>
+    </div>
+
+<div class="note">Use the circuit in Figure (Q5657) to answer questions 56 and 57. Measurements indicate V<sub>B</sub> = +1.0 V and V<sub>E</sub> = +1.7 V.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:280px;width:100%;height:auto;" viewBox="0 0 320 350" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<defs>
+  <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L6,3 Z" fill="black"/>
+  </marker>
+</defs>
+
+<!-- PNP BJT symbol centered at (170,160) -->
+<!-- Circle -->
+<circle cx="170" cy="160" r="30" fill="none" stroke="black" stroke-width="2"/>
+<!-- Base line -->
+<line x1="110" y1="160" x2="152" y2="160" stroke="black" stroke-width="2"/>
+<!-- Vertical bar inside -->
+<line x1="152" y1="140" x2="152" y2="180" stroke="black" stroke-width="2.5"/>
+<!-- Emitter (top-right, arrow pointing INTO transistor for PNP) -->
+<line x1="152" y1="145" x2="192" y2="120" stroke="black" stroke-width="2"/>
+<!-- Arrow on emitter pointing inward (PNP: conventional current into emitter) -->
+<polygon points="158,141 168,136 163,148" fill="black"/>
+<!-- Collector (bottom-right) -->
+<line x1="152" y1="175" x2="192" y2="200" stroke="black" stroke-width="2"/>
+
+<!-- Emitter label and Ve -->
+<text x="195" y="116" font-size="12">E</text>
+<text x="220" y="116" font-size="12">Ve</text>
+
+<!-- Collector label and Vc -->
+<text x="195" y="205" font-size="12">C</text>
+<text x="220" y="205" font-size="12">Vc</text>
+
+<!-- Base label Vb -->
+<text x="88" y="156" font-size="12">B</text>
+<text x="60" y="156" font-size="12">Vb</text>
+
+<!-- +10V at top through 5k to Emitter -->
+<line x1="192" y1="120" x2="220" y2="108" stroke="black" stroke-width="2"/>
+<line x1="220" y1="108" x2="220" y2="80" stroke="black" stroke-width="2"/>
+<!-- 5k vertical -->
+<polyline points="220,80 208,74 232,66 208,58 232,50 208,42 232,34 220,28" fill="none" stroke="black" stroke-width="2"/>
+<text x="234" y="58" font-size="12">5 k</text>
+<line x1="220" y1="28" x2="220" y2="15" stroke="black" stroke-width="2"/>
+<text x="208" y="12" font-weight="bold">+10 V</text>
+
+<!-- Vb input through 100k to Base -->
+<line x1="110" y1="160" x2="70" y2="160" stroke="black" stroke-width="2"/>
+<!-- 100k horizontal -->
+<polyline points="70,160 64,148 56,172 48,148 40,172 32,148 24,172 18,160" fill="none" stroke="black" stroke-width="2"/>
+<text x="28" y="143" font-size="12">100 k</text>
+<line x1="18" y1="160" x2="5" y2="160" stroke="black" stroke-width="2"/>
+<text x="2" y="156" font-size="11">Vb</text>
+
+<!-- Collector through 5k to V=-10V -->
+<line x1="192" y1="200" x2="220" y2="214" stroke="black" stroke-width="2"/>
+<line x1="220" y1="214" x2="220" y2="235" stroke="black" stroke-width="2"/>
+<!-- 5k vertical -->
+<polyline points="220,235 208,241 232,249 208,257 232,265 208,273 232,281 220,287" fill="none" stroke="black" stroke-width="2"/>
+<text x="234" y="263" font-size="12">5 k</text>
+<line x1="220" y1="287" x2="220" y2="308" stroke="black" stroke-width="2"/>
+<text x="200" y="322" font-weight="bold">V = 10 V</text>
+
+<!-- Ground at base resistor bottom -->
+<line x1="110" y1="160" x2="110" y2="300" stroke="black" stroke-width="2"/>
+<line x1="96" y1="300" x2="124" y2="300" stroke="black" stroke-width="2"/>
+<line x1="101" y1="306" x2="119" y2="306" stroke="black" stroke-width="1.5"/>
+<line x1="106" y1="312" x2="114" y2="312" stroke="black" stroke-width="1"/>
+
+<text x="110" y="340" font-size="13" font-style="italic">Figure (Q5657)</text>
+</svg>
+<div class="fig-label">Figure (Q5657)  PNP BJT measurement circuit</div>
+    </div>
+<div class="question"><span class="qnum">56.</span> What is  for this transistor?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 100</div>
+      <div class="option"><span class="optlabel">B.</span> 101</div>
+      <div class="option"><span class="optlabel">C.</span> 99</div>
+      <div class="option"><span class="optlabel">D.</span> 165</div>
+    </div>
+<div class="question"><span class="qnum">57.</span> What voltage V<sub>C</sub> do you expect at the collector?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 1.72 V</div>
+      <div class="option"><span class="optlabel">B.</span> 1.73 V</div>
+      <div class="option"><span class="optlabel">C.</span> 1.74 V</div>
+      <div class="option"><span class="optlabel">D.</span> 1.75 V</div>
+    </div>
+</div>
+
+<div class="note">Figure (Q58): PNP BJT  Emitter to +5 V direct, V<sub>B</sub> = +4.3 V, 430 k to ground, collector through 2 k to ground (V<sub>C</sub> = +1.2 V).</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:260px;width:100%;height:auto;" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- PNP BJT at (155,155): E top-right, C bottom-right, B left -->
+<circle cx="155" cy="155" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="139" y1="139" x2="139" y2="171" stroke="black" stroke-width="2.5"/>
+<!-- Base -->
+<line x1="70" y1="155" x2="139" y2="155" stroke="black" stroke-width="2"/>
+<!-- Emitter top-right with PNP arrow (pointing INTO transistor) -->
+<line x1="139" y1="143" x2="183" y2="118" stroke="black" stroke-width="2"/>
+<polygon points="145,140 153,131 159,143" fill="black"/>
+<text x="186" y="116" font-size="11">E</text>
+<!-- Collector bottom-right -->
+<line x1="139" y1="167" x2="183" y2="192" stroke="black" stroke-width="2"/>
+<text x="186" y="196" font-size="11">C</text>
+<text x="54" y="152" font-size="11">B</text>
+
+<!-- Emitter goes directly to +5V (no resistor) -->
+<line x1="183" y1="118" x2="210" y2="104" stroke="black" stroke-width="2"/>
+<line x1="210" y1="104" x2="210" y2="18" stroke="black" stroke-width="2"/>
+<text x="195" y="15" font-weight="bold">+5 V</text>
+
+<!-- +4.3V  base, 430k from B to ground -->
+<text x="30" y="118" font-size="11">+4.3 V</text>
+<line x1="55" y1="120" x2="55" y2="155" stroke="black" stroke-width="2"/>
+<line x1="55" y1="155" x2="70" y2="155" stroke="black" stroke-width="2"/>
+<!-- 430k vertical from B down to ground -->
+<line x1="55" y1="155" x2="55" y2="195" stroke="black" stroke-width="2"/>
+<polyline points="55,195 43,201 67,209 43,217 67,225 43,233 67,241 55,247" fill="none" stroke="black" stroke-width="2"/>
+<text x="5" y="222" font-size="12">430 k</text>
+<line x1="55" y1="247" x2="55" y2="268" stroke="black" stroke-width="2"/>
+<line x1="41" y1="268" x2="69" y2="268" stroke="black" stroke-width="2"/>
+<line x1="46" y1="274" x2="64" y2="274" stroke="black" stroke-width="1.5"/>
+<line x1="51" y1="280" x2="59" y2="280" stroke="black" stroke-width="1"/>
+
+<!-- Collector through 2k to ground (Vc node = +1.2V) -->
+<line x1="183" y1="192" x2="210" y2="205" stroke="black" stroke-width="2"/>
+<circle cx="210" cy="205" r="3" fill="black"/>
+<text x="215" y="202" font-size="11">+1.2 V</text>
+<line x1="210" y1="205" x2="210" y2="230" stroke="black" stroke-width="2"/>
+<polyline points="210,230 198,236 222,244 198,252 222,260 198,268 222,276 210,282" fill="none" stroke="black" stroke-width="2"/>
+<text x="224" y="258" font-size="12">2 k</text>
+<line x1="210" y1="282" x2="210" y2="300" stroke="black" stroke-width="2"/>
+<line x1="196" y1="300" x2="224" y2="300" stroke="black" stroke-width="2"/>
+<line x1="201" y1="306" x2="219" y2="306" stroke="black" stroke-width="1.5"/>
+<line x1="206" y1="312" x2="214" y2="312" stroke="black" stroke-width="1"/>
+
+<text x="85" y="312" font-size="13" font-style="italic">Figure (Q58)  PNP</text>
+</svg>
+<div class="fig-label">Figure (Q58)  PNP BJT</div>
+    </div>
+<div class="question"><span class="qnum">58.</span> Find the value of  for the transistor in Figure (Q58).</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 98</div>
+      <div class="option"><span class="optlabel">B.</span> 60</div>
+      <div class="option"><span class="optlabel">C.</span> 100</div>
+      <div class="option"><span class="optlabel">D.</span> 101</div>
+    </div>
+</div>
+
+<div class="note">Figure (Q59): PNP BJT  Emitter to +5 V direct, V<sub>B</sub> = +4.3 V, 200 k to ground, collector through 20 k to ground (V<sub>C</sub> = +2.3 V).</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:260px;width:100%;height:auto;" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- PNP BJT at (155,155) -->
+<circle cx="155" cy="155" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="139" y1="139" x2="139" y2="171" stroke="black" stroke-width="2.5"/>
+<line x1="70" y1="155" x2="139" y2="155" stroke="black" stroke-width="2"/>
+<!-- Emitter top-right, PNP arrow inward -->
+<line x1="139" y1="143" x2="183" y2="118" stroke="black" stroke-width="2"/>
+<polygon points="145,140 153,131 159,143" fill="black"/>
+<text x="186" y="116" font-size="11">E</text>
+<!-- Collector bottom-right -->
+<line x1="139" y1="167" x2="183" y2="192" stroke="black" stroke-width="2"/>
+<text x="186" y="196" font-size="11">C</text>
+<text x="54" y="152" font-size="11">B</text>
+
+<!-- Emitter directly to +5V -->
+<line x1="183" y1="118" x2="210" y2="104" stroke="black" stroke-width="2"/>
+<line x1="210" y1="104" x2="210" y2="18" stroke="black" stroke-width="2"/>
+<text x="195" y="15" font-weight="bold">+5 V</text>
+
+<!-- +4.3V  base through 200k to ground -->
+<text x="30" y="118" font-size="11">+4.3 V</text>
+<line x1="55" y1="120" x2="55" y2="155" stroke="black" stroke-width="2"/>
+<line x1="55" y1="155" x2="70" y2="155" stroke="black" stroke-width="2"/>
+<line x1="55" y1="155" x2="55" y2="195" stroke="black" stroke-width="2"/>
+<polyline points="55,195 43,201 67,209 43,217 67,225 43,233 67,241 55,247" fill="none" stroke="black" stroke-width="2"/>
+<text x="5" y="222" font-size="12">200 k</text>
+<line x1="55" y1="247" x2="55" y2="268" stroke="black" stroke-width="2"/>
+<line x1="41" y1="268" x2="69" y2="268" stroke="black" stroke-width="2"/>
+<line x1="46" y1="274" x2="64" y2="274" stroke="black" stroke-width="1.5"/>
+<line x1="51" y1="280" x2="59" y2="280" stroke="black" stroke-width="1"/>
+
+<!-- Collector through 20k to ground (Vc=2.3V) -->
+<line x1="183" y1="192" x2="210" y2="205" stroke="black" stroke-width="2"/>
+<circle cx="210" cy="205" r="3" fill="black"/>
+<text x="215" y="202" font-size="11">+2.3 V</text>
+<line x1="210" y1="205" x2="210" y2="230" stroke="black" stroke-width="2"/>
+<polyline points="210,230 198,236 222,244 198,252 222,260 198,268 222,276 210,282" fill="none" stroke="black" stroke-width="2"/>
+<text x="224" y="258" font-size="12">20 k</text>
+<line x1="210" y1="282" x2="210" y2="300" stroke="black" stroke-width="2"/>
+<line x1="196" y1="300" x2="224" y2="300" stroke="black" stroke-width="2"/>
+<line x1="201" y1="306" x2="219" y2="306" stroke="black" stroke-width="1.5"/>
+<line x1="206" y1="312" x2="214" y2="312" stroke="black" stroke-width="1"/>
+
+<text x="85" y="312" font-size="13" font-style="italic">Figure (Q59)  PNP</text>
+</svg>
+<div class="fig-label">Figure (Q59)  PNP BJT</div>
+    </div>
+<div class="question"><span class="qnum">59.</span> Find the value of  for the transistor in Figure (Q59).</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 98</div>
+      <div class="option"><span class="optlabel">B.</span> 99</div>
+      <div class="option"><span class="optlabel">C.</span> 50</div>
+      <div class="option"><span class="optlabel">D.</span> 11.5</div>
+    </div>
+</div>
+
+<div class="note">Use Figure (Q6063) to answer questions 60 to 63. Take beta = 100.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:240px;width:100%;height:auto;" viewBox="0 0 280 360" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- PNP BJT at (150,175) -->
+<circle cx="150" cy="175" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="134" y1="159" x2="134" y2="191" stroke="black" stroke-width="2.5"/>
+<!-- Base -->
+<line x1="60" y1="175" x2="134" y2="175" stroke="black" stroke-width="2"/>
+<!-- Emitter top-right (arrow into transistor PNP) -->
+<line x1="134" y1="163" x2="172" y2="140" stroke="black" stroke-width="2"/>
+<polygon points="140,160 148,151 154,163" fill="black"/>
+<text x="175" y="138" font-size="11">E</text>
+<!-- Collector bottom-right -->
+<line x1="134" y1="187" x2="172" y2="210" stroke="black" stroke-width="2"/>
+<text x="175" y="214" font-size="11">C</text>
+<text x="48" y="172" font-size="11">B</text>
+
+<!-- Base to ground -->
+<line x1="60" y1="175" x2="60" y2="305" stroke="black" stroke-width="2"/>
+<line x1="46" y1="305" x2="74" y2="305" stroke="black" stroke-width="2"/>
+<line x1="51" y1="311" x2="69" y2="311" stroke="black" stroke-width="1.5"/>
+<line x1="56" y1="317" x2="64" y2="317" stroke="black" stroke-width="1"/>
+
+<!-- +10V through Re=2k to Emitter -->
+<line x1="172" y1="140" x2="200" y2="125" stroke="black" stroke-width="2"/>
+<line x1="200" y1="125" x2="200" y2="95" stroke="black" stroke-width="2"/>
+<polyline points="200,95 188,89 212,81 188,73 212,65 188,57 212,49 200,43" fill="none" stroke="black" stroke-width="2"/>
+<text x="214" y="72" font-size="12">Re = 2 k</text>
+<line x1="200" y1="43" x2="200" y2="20" stroke="black" stroke-width="2"/>
+<text x="185" y="17" font-weight="bold">+10 V</text>
+
+<!-- Collector through Rc=1k to -10V -->
+<line x1="172" y1="210" x2="200" y2="225" stroke="black" stroke-width="2"/>
+<line x1="200" y1="225" x2="200" y2="250" stroke="black" stroke-width="2"/>
+<polyline points="200,250 188,256 212,264 188,272 212,280 188,288 212,296 200,302" fill="none" stroke="black" stroke-width="2"/>
+<text x="214" y="276" font-size="12">Rc = 1 k</text>
+<line x1="200" y1="302" x2="200" y2="325" stroke="black" stroke-width="2"/>
+<text x="178" y="340" font-weight="bold">V = 10 V</text>
+
+<text x="80" y="355" font-size="13" font-style="italic">Figure (Q6063)</text>
+</svg>
+<div class="fig-label">Figure (Q6063)  PNP BJT, V = +10 V / 10 V, Re = 2 k, Rc = 1 k</div>
+    </div>
+<div class="question"><span class="qnum">60.</span> What is the value of the current flowing through the emitter?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 4.65 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 4.67 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 4.66 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 4.66 MA</div>
+    </div>
+<div class="question"><span class="qnum">61.</span> What is the value of the base current?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.05 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 0.0 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 0.03 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 0.02 mA</div>
+    </div>
+<div class="question"><span class="qnum">62.</span> What is the value of the collector current?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 4.6 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 4.71 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 4.70 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 4.4 mA</div>
+    </div>
+<div class="question"><span class="qnum">63.</span> What voltage would you expect at the emitter?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.4 V</div>
+      <div class="option"><span class="optlabel">B.</span> 1.7 V</div>
+      <div class="option"><span class="optlabel">C.</span> 0.7 V</div>
+      <div class="option"><span class="optlabel">D.</span> 0.7 V</div>
+    </div>
+</div>
+
+<div class="note">Use Figure (Q6467) to answer questions 64 to 67. Take beta = 100.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:240px;width:100%;height:auto;" viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- NPN BJT at (160,175) -->
+<circle cx="160" cy="175" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="144" y1="159" x2="144" y2="191" stroke="black" stroke-width="2.5"/>
+<!-- Base -->
+<line x1="60" y1="175" x2="144" y2="175" stroke="black" stroke-width="2"/>
+<!-- Collector top-right -->
+<line x1="144" y1="163" x2="188" y2="140" stroke="black" stroke-width="2"/>
+<text x="192" y="138" font-size="11">C</text>
+<!-- Emitter bottom-right with arrow out (NPN) -->
+<line x1="144" y1="187" x2="188" y2="210" stroke="black" stroke-width="2"/>
+<polygon points="182,208 192,202 188,214" fill="black"/>
+<text x="192" y="214" font-size="11">E</text>
+<text x="48" y="172" font-size="11">B</text>
+
+<!-- +10V through Rc=2k to Collector -->
+<line x1="188" y1="140" x2="210" y2="128" stroke="black" stroke-width="2"/>
+<line x1="210" y1="128" x2="210" y2="95" stroke="black" stroke-width="2"/>
+<polyline points="210,95 198,89 222,81 198,73 222,65 198,57 222,49 210,43" fill="none" stroke="black" stroke-width="2"/>
+<text x="224" y="72" font-size="12">Rc = 2 k</text>
+<line x1="210" y1="43" x2="210" y2="18" stroke="black" stroke-width="2"/>
+<text x="196" y="15" font-weight="bold">+10 V</text>
+
+<!-- +5V through Rb=100k to Base -->
+<text x="2" y="88" font-weight="bold">+5 V</text>
+<line x1="28" y1="90" x2="28" y2="175" stroke="black" stroke-width="2"/>
+<line x1="28" y1="175" x2="60" y2="175" stroke="black" stroke-width="2"/>
+<!-- 100k horizontal -->
+<polyline points="28,130 20,124 36,116 20,108 36,100 20,92 36,84 28,78" fill="none" stroke="black" stroke-width="2"/>
+<text x="38" y="110" font-size="12">Rb=100 k</text>
+
+<!-- Emitter to ground -->
+<line x1="188" y1="210" x2="210" y2="222" stroke="black" stroke-width="2"/>
+<line x1="210" y1="222" x2="210" y2="305" stroke="black" stroke-width="2"/>
+<line x1="196" y1="305" x2="224" y2="305" stroke="black" stroke-width="2"/>
+<line x1="201" y1="311" x2="219" y2="311" stroke="black" stroke-width="1.5"/>
+<line x1="206" y1="317" x2="214" y2="317" stroke="black" stroke-width="1"/>
+
+<text x="80" y="340" font-size="13" font-style="italic">Figure (Q6467)</text>
+</svg>
+<div class="fig-label">Figure (Q6467)  NPN BJT, V<sub>CC</sub> = +10 V, R<sub>c</sub> = 2 k, R<sub>b</sub> = 100 k from +5 V</div>
+    </div>
+<div class="question"><span class="qnum">64.</span> What is the value of the base current?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.043 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 0.034 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 0.044 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 0.033 mA</div>
+    </div>
+<div class="question"><span class="qnum">65.</span> What is the value of the current flowing through the collector?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 4.3 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 4.2 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 4.32 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 4.23 mA</div>
+    </div>
+<div class="question"><span class="qnum">66.</span> What is the value of the emitter current?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 4.443 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 4.343 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 4.434 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 4.344 mA</div>
+    </div>
+<div class="question"><span class="qnum">67.</span> What voltage would you expect at the emitter?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.7 V</div>
+      <div class="option"><span class="optlabel">B.</span> 1.7 V</div>
+      <div class="option"><span class="optlabel">C.</span> 0.17 V</div>
+      <div class="option"><span class="optlabel">D.</span> 0.0 V</div>
+    </div>
+</div>
+
+<div class="note">Figure (Q68): NPN BJT  V = +10 V, R<sub>c</sub> = 4.7 k (collector), R<sub>e</sub> = 3.3 k (emitter), base to ground.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:240px;width:100%;height:auto;" viewBox="0 0 280 360" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- NPN BJT at (145,175) -->
+<circle cx="145" cy="175" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="129" y1="159" x2="129" y2="191" stroke="black" stroke-width="2.5"/>
+<line x1="60" y1="175" x2="129" y2="175" stroke="black" stroke-width="2"/>
+<!-- Collector top-right -->
+<line x1="129" y1="163" x2="173" y2="140" stroke="black" stroke-width="2"/>
+<text x="176" y="138" font-size="11">C</text>
+<!-- Emitter bottom-right, arrow out -->
+<line x1="129" y1="187" x2="173" y2="210" stroke="black" stroke-width="2"/>
+<polygon points="167,208 177,202 173,214" fill="black"/>
+<text x="176" y="214" font-size="11">E</text>
+<text x="48" y="172" font-size="11">B</text>
+
+<!-- Base to ground -->
+<line x1="60" y1="175" x2="60" y2="305" stroke="black" stroke-width="2"/>
+<line x1="46" y1="305" x2="74" y2="305" stroke="black" stroke-width="2"/>
+<line x1="51" y1="311" x2="69" y2="311" stroke="black" stroke-width="1.5"/>
+<line x1="56" y1="317" x2="64" y2="317" stroke="black" stroke-width="1"/>
+
+<!-- +10V through Rc=4.7k to Collector -->
+<line x1="173" y1="140" x2="195" y2="128" stroke="black" stroke-width="2"/>
+<line x1="195" y1="128" x2="195" y2="90" stroke="black" stroke-width="2"/>
+<polyline points="195,90 183,84 207,76 183,68 207,60 183,52 207,44 195,38" fill="none" stroke="black" stroke-width="2"/>
+<text x="210" y="68" font-size="12">Rc = 4.7 k</text>
+<line x1="195" y1="38" x2="195" y2="18" stroke="black" stroke-width="2"/>
+<text x="180" y="15" font-weight="bold">+10 V</text>
+
+<!-- Emitter through Re=3.3k to ground -->
+<line x1="173" y1="210" x2="195" y2="222" stroke="black" stroke-width="2"/>
+<line x1="195" y1="222" x2="195" y2="240" stroke="black" stroke-width="2"/>
+<polyline points="195,240 183,246 207,254 183,262 207,270 183,278 207,286 195,292" fill="none" stroke="black" stroke-width="2"/>
+<text x="210" y="270" font-size="12">Re = 3.3 k</text>
+<line x1="195" y1="292" x2="195" y2="318" stroke="black" stroke-width="2"/>
+<line x1="181" y1="318" x2="209" y2="318" stroke="black" stroke-width="2"/>
+<line x1="186" y1="324" x2="204" y2="324" stroke="black" stroke-width="1.5"/>
+<line x1="191" y1="330" x2="199" y2="330" stroke="black" stroke-width="1"/>
+
+<text x="75" y="352" font-size="13" font-style="italic">Figure (Q68)</text>
+</svg>
+<div class="fig-label">Figure (Q68)</div>
+    </div>
+<div class="question"><span class="qnum">68.</span> What is the mode of operation of the transistor in Figure (Q68)?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">a.</span> Active</div>
+      <div class="option"><span class="optlabel">b.</span> Saturation</div>
+      <div class="option"><span class="optlabel">c.</span> Cut off</div>
+      <div class="option"><span class="optlabel">d.</span> Would need more information</div>
+    </div>
+</div>
+
+<div class="note">Figure (Q69): NPN BJT  V<sub>BB</sub> = 5 V, R<sub>B</sub> = 5 k, R<sub>C</sub> = 470 , V<sub>CC</sub> = 20 V, <sub>DC</sub> = 25.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:290px;width:100%;height:auto;" viewBox="0 0 340 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- NPN BJT at (180,155) -->
+<circle cx="180" cy="155" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="164" y1="139" x2="164" y2="171" stroke="black" stroke-width="2.5"/>
+<line x1="100" y1="155" x2="164" y2="155" stroke="black" stroke-width="2"/>
+<!-- Collector top-right -->
+<line x1="164" y1="143" x2="208" y2="120" stroke="black" stroke-width="2"/>
+<!-- Emitter bottom-right, arrow out -->
+<line x1="164" y1="167" x2="208" y2="190" stroke="black" stroke-width="2"/>
+<polygon points="202,188 212,182 208,194" fill="black"/>
+<text x="48" y="152" font-size="11">B</text>
+
+<!-- DC = 25 label inside circle area -->
+<text x="168" y="160" font-size="11">=25</text>
+
+<!-- VBB=5V left side battery -->
+<line x1="30" y1="120" x2="30" y2="190" stroke="black" stroke-width="2"/>
+<line x1="18" y1="145" x2="42" y2="145" stroke="black" stroke-width="3"/>
+<line x1="22" y1="158" x2="38" y2="158" stroke="black" stroke-width="1.5"/>
+<text x="2" y="148" font-size="11">+</text>
+<text x="2" y="163" font-size="11"></text>
+<text x="2" y="180" font-size="12">VBB</text>
+<text x="2" y="194" font-size="12">5 V</text>
+
+<!-- Top wire from VBB+ through RB=5k to Base -->
+<line x1="30" y1="120" x2="30" y2="100" stroke="black" stroke-width="2"/>
+<line x1="30" y1="100" x2="60" y2="100" stroke="black" stroke-width="2"/>
+<!-- RB=5k horizontal -->
+<polyline points="60,100 66,88 74,112 82,88 90,112 98,88 106,112 112,100" fill="none" stroke="black" stroke-width="2"/>
+<text x="64" y="85" font-size="12">RB = 5 k</text>
+<line x1="112" y1="100" x2="112" y2="155" stroke="black" stroke-width="2"/>
+<line x1="112" y1="155" x2="100" y2="155" stroke="black" stroke-width="2"/>
+
+<!-- VCC=20V right side -->
+<line x1="280" y1="50" x2="280" y2="90" stroke="black" stroke-width="2"/>
+<line x1="268" y1="70" x2="292" y2="70" stroke="black" stroke-width="3"/>
+<line x1="272" y1="82" x2="288" y2="82" stroke="black" stroke-width="1.5"/>
+<text x="284" y="73" font-size="11">+</text>
+<text x="284" y="86" font-size="11"></text>
+<text x="285" y="60" font-size="12">VCC</text>
+<text x="285" y="48" font-size="12">20 V</text>
+<line x1="280" y1="90" x2="280" y2="260" stroke="black" stroke-width="2"/>
+
+<!-- RC=470 from collector to VCC top wire -->
+<line x1="208" y1="120" x2="230" y2="108" stroke="black" stroke-width="2"/>
+<line x1="230" y1="108" x2="230" y2="75" stroke="black" stroke-width="2"/>
+<polyline points="230,75 218,69 242,61 218,53 242,45 218,37 242,29 230,23" fill="none" stroke="black" stroke-width="2"/>
+<text x="244" y="55" font-size="12">RC = 470 </text>
+<line x1="230" y1="23" x2="230" y2="15" stroke="black" stroke-width="2"/>
+<line x1="230" y1="15" x2="280" y2="15" stroke="black" stroke-width="2"/>
+<line x1="280" y1="15" x2="280" y2="50" stroke="black" stroke-width="2"/>
+
+<!-- Emitter and VBB to common ground -->
+<line x1="208" y1="190" x2="230" y2="202" stroke="black" stroke-width="2"/>
+<line x1="230" y1="202" x2="230" y2="260" stroke="black" stroke-width="2"/>
+<line x1="30" y1="190" x2="30" y2="260" stroke="black" stroke-width="2"/>
+<line x1="280" y1="260" x2="30" y2="260" stroke="black" stroke-width="2"/>
+<line x1="140" y1="260" x2="140" y2="275" stroke="black" stroke-width="2"/>
+<line x1="126" y1="275" x2="154" y2="275" stroke="black" stroke-width="2"/>
+<line x1="131" y1="281" x2="149" y2="281" stroke="black" stroke-width="1.5"/>
+<line x1="136" y1="287" x2="144" y2="287" stroke="black" stroke-width="1"/>
+
+<text x="110" y="308" font-size="13" font-style="italic">Figure (Q69)</text>
+</svg>
+<div class="fig-label">Figure (Q69)</div>
+    </div>
+<div class="question"><span class="qnum">69.</span> The value of V<sub>BE</sub> is:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.6 V</div>
+      <div class="option"><span class="optlabel">B.</span> 0.7 V</div>
+      <div class="option"><span class="optlabel">C.</span> 1.2 V</div>
+      <div class="option"><span class="optlabel">D.</span> 0.079 V</div>
+    </div>
+</div>
+
+<div class="note">Figure (Q70): NPN BJT  10 V supply, R<sub>B</sub> = 1.2 M, R<sub>C</sub> = 4.7 k, <sub>DC</sub> = 200.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:260px;width:100%;height:auto;" viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- NPN BJT at (170,165) -->
+<circle cx="170" cy="165" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="154" y1="149" x2="154" y2="181" stroke="black" stroke-width="2.5"/>
+<!-- Base -->
+<line x1="60" y1="165" x2="154" y2="165" stroke="black" stroke-width="2"/>
+<!-- Collector top-right -->
+<line x1="154" y1="153" x2="198" y2="130" stroke="black" stroke-width="2"/>
+<!-- Emitter bottom-right, arrow out (NPN) -->
+<line x1="154" y1="177" x2="198" y2="200" stroke="black" stroke-width="2"/>
+<polygon points="192,198 202,192 198,204" fill="black"/>
+<text x="48" y="162" font-size="11">B</text>
+
+<!-- VIN input at left -->
+<text x="2" y="162" font-size="12">VIN</text>
+<line x1="28" y1="160" x2="60" y2="165" stroke="black" stroke-width="2"/>
+
+<!-- RB=1.2M horizontal -->
+<polyline points="60,165 68,153 76,177 84,153 92,177 100,153 108,177 116,165" fill="none" stroke="black" stroke-width="2"/>
+<text x="60" y="148" font-size="12">RB = 1.2 M</text>
+
+<!-- 10V top through RC=4.7k to Collector -->
+<line x1="198" y1="130" x2="220" y2="118" stroke="black" stroke-width="2"/>
+<line x1="220" y1="118" x2="220" y2="90" stroke="black" stroke-width="2"/>
+<polyline points="220,90 208,84 232,76 208,68 232,60 208,52 232,44 220,38" fill="none" stroke="black" stroke-width="2"/>
+<text x="234" y="68" font-size="12">4.7 k</text>
+<line x1="220" y1="38" x2="220" y2="18" stroke="black" stroke-width="2"/>
+<text x="205" y="15" font-weight="bold">10 V</text>
+
+<!-- DC=200 label -->
+<text x="155" y="170" font-size="11">=200</text>
+
+<!-- Emitter to ground -->
+<line x1="198" y1="200" x2="220" y2="212" stroke="black" stroke-width="2"/>
+<line x1="220" y1="212" x2="220" y2="300" stroke="black" stroke-width="2"/>
+<line x1="206" y1="300" x2="234" y2="300" stroke="black" stroke-width="2"/>
+<line x1="211" y1="306" x2="229" y2="306" stroke="black" stroke-width="1.5"/>
+<line x1="216" y1="312" x2="224" y2="312" stroke="black" stroke-width="1"/>
+
+<!-- Output node -->
+<circle cx="220" cy="118" r="3" fill="black"/>
+<line x1="220" y1="118" x2="270" y2="118" stroke="black" stroke-width="1" stroke-dasharray="5,3"/>
+<text x="272" y="122" font-size="11">Output</text>
+
+<text x="95" y="330" font-size="13" font-style="italic">Figure (Q70)</text>
+</svg>
+<div class="fig-label">Figure (Q70)</div>
+    </div>
+<div class="question"><span class="qnum">70.</span> If V<sub>CE</sub> = 0.2 V, I<sub>C</sub> is:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.05 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 2.085 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 1.065 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 7.4 mA</div>
+    </div>
+</div>
+
+<div class="note">Use Figure (Q7173) to answer questions 71 to 73.  = 100, dual 15 V supply.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:230px;width:100%;height:auto;" viewBox="0 0 260 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- NPN BJT at (140,180) -->
+<circle cx="140" cy="180" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="124" y1="164" x2="124" y2="196" stroke="black" stroke-width="2.5"/>
+<!-- Base to ground -->
+<line x1="60" y1="180" x2="124" y2="180" stroke="black" stroke-width="2"/>
+<line x1="60" y1="180" x2="60" y2="310" stroke="black" stroke-width="2"/>
+<line x1="46" y1="310" x2="74" y2="310" stroke="black" stroke-width="2"/>
+<line x1="51" y1="316" x2="69" y2="316" stroke="black" stroke-width="1.5"/>
+<line x1="56" y1="322" x2="64" y2="322" stroke="black" stroke-width="1"/>
+<text x="46" y="177" font-size="11">B</text>
+
+<!-- Collector top-right -->
+<line x1="124" y1="168" x2="168" y2="145" stroke="black" stroke-width="2"/>
+<text x="171" y="143" font-size="11">C</text>
+<!-- Emitter bottom-right, arrow out -->
+<line x1="124" y1="192" x2="168" y2="215" stroke="black" stroke-width="2"/>
+<polygon points="162,213 172,207 168,219" fill="black"/>
+<text x="171" y="219" font-size="11">E</text>
+
+<!-- +15V through RC to Collector -->
+<line x1="168" y1="145" x2="190" y2="133" stroke="black" stroke-width="2"/>
+<line x1="190" y1="133" x2="190" y2="100" stroke="black" stroke-width="2"/>
+<polyline points="190,100 178,94 202,86 178,78 202,70 178,62 202,54 190,48" fill="none" stroke="black" stroke-width="2"/>
+<text x="204" y="78" font-size="12">RC</text>
+<line x1="190" y1="48" x2="190" y2="20" stroke="black" stroke-width="2"/>
+<text x="175" y="17" font-weight="bold">+15 V</text>
+
+<!-- Emitter through RE to -15V -->
+<line x1="168" y1="215" x2="190" y2="227" stroke="black" stroke-width="2"/>
+<line x1="190" y1="227" x2="190" y2="255" stroke="black" stroke-width="2"/>
+<polyline points="190,255 178,261 202,269 178,277 202,285 178,293 202,301 190,307" fill="none" stroke="black" stroke-width="2"/>
+<text x="204" y="283" font-size="12">RE</text>
+<line x1="190" y1="307" x2="190" y2="340" stroke="black" stroke-width="2"/>
+<text x="170" y="356" font-weight="bold">15 V</text>
+
+<text x="65" y="375" font-size="13" font-style="italic">Figure (Q7173),  = 100</text>
+</svg>
+<div class="fig-label">Figure (Q7173)  NPN BJT,  = 100, 15 V</div>
+    </div>
+<div class="question"><span class="qnum">71.</span> What is the value of R<sub>E</sub> required for a current of 4.3 mA to flow through the emitter?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 3.33 </div>
+      <div class="option"><span class="optlabel">B.</span> 3.33 k</div>
+      <div class="option"><span class="optlabel">C.</span> 3.65 </div>
+      <div class="option"><span class="optlabel">D.</span> 3.65 k</div>
+    </div>
+<div class="question"><span class="qnum">72.</span> For an emitter current of 4.3 mA, what is the value of the base current?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> 0.043 mA</div>
+      <div class="option"><span class="optlabel">B.</span> 0.044 mA</div>
+      <div class="option"><span class="optlabel">C.</span> 0.434 mA</div>
+      <div class="option"><span class="optlabel">D.</span> 0.44 mA</div>
+    </div>
+<div class="question"><span class="qnum">73.</span> If I<sub>C</sub> = 1 mA at V<sub>BE</sub> = 0.7 V, design the circuit for 5 mA through the collector with +5 V at the collector.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> R<sub>c</sub> = 1 k</div>
+      <div class="option"><span class="optlabel">B.</span> R<sub>c</sub> = 5 k</div>
+      <div class="option"><span class="optlabel">C.</span> R<sub>c</sub> = 2 k</div>
+      <div class="option"><span class="optlabel">D.</span> R<sub>c</sub> = 3 k</div>
+    </div>
+</div>
+
+<div class="note">Figure (Q74): NPN BJT common-emitter  V<sub>CC</sub> = 15 V,  = 100. Design for I<sub>B</sub> = 0.0715 mA.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:240px;width:100%;height:auto;" viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="13">
+<!-- NPN BJT at (155,170) -->
+<circle cx="155" cy="170" r="28" fill="none" stroke="black" stroke-width="2"/>
+<line x1="139" y1="154" x2="139" y2="186" stroke="black" stroke-width="2.5"/>
+<line x1="70" y1="170" x2="139" y2="170" stroke="black" stroke-width="2"/>
+<!-- Collector top-right -->
+<line x1="139" y1="158" x2="183" y2="135" stroke="black" stroke-width="2"/>
+<!-- Emitter bottom-right, arrow out -->
+<line x1="139" y1="182" x2="183" y2="205" stroke="black" stroke-width="2"/>
+<polygon points="177,203 187,197 183,209" fill="black"/>
+<text x="50" y="167" font-size="11">B</text>
+
+<!-- +VCC left rail -->
+<line x1="30" y1="20" x2="30" y2="290" stroke="black" stroke-width="2"/>
+<text x="18" y="17" font-weight="bold">+VCC</text>
+<text x="10" y="30" font-size="11">(15 V)</text>
+
+<!-- RB from VCC to Base -->
+<line x1="30" y1="170" x2="70" y2="170" stroke="black" stroke-width="2"/>
+<polyline points="30,80 38,74 30,68" fill="none" stroke="black" stroke-width="0"/>
+<!-- RB vertical on left branch -->
+<line x1="30" y1="50" x2="30" y2="80" stroke="black" stroke-width="2"/>
+<polyline points="30,80 18,86 42,94 18,102 42,110 18,118 42,126 30,132" fill="none" stroke="black" stroke-width="2"/>
+<text x="44" y="110" font-size="12">RB</text>
+<line x1="30" y1="132" x2="30" y2="170" stroke="black" stroke-width="2"/>
+
+<!-- RC from +VCC right branch to Collector -->
+<line x1="183" y1="135" x2="205" y2="123" stroke="black" stroke-width="2"/>
+<line x1="205" y1="123" x2="205" y2="90" stroke="black" stroke-width="2"/>
+<polyline points="205,90 193,84 217,76 193,68 217,60 193,52 217,44 205,38" fill="none" stroke="black" stroke-width="2"/>
+<text x="218" y="68" font-size="12">RC</text>
+<line x1="205" y1="38" x2="205" y2="20" stroke="black" stroke-width="2"/>
+<line x1="30" y1="20" x2="205" y2="20" stroke="black" stroke-width="2"/>
+
+<!-- VCE label at collector-emitter -->
+<line x1="183" y1="205" x2="205" y2="217" stroke="black" stroke-width="2"/>
+<circle cx="205" cy="217" r="3" fill="black"/>
+<text x="210" y="213" font-size="11">+</text>
+<text x="210" y="235" font-size="11">VCE</text>
+<text x="210" y="253" font-size="11"></text>
+
+<!-- Emitter to ground -->
+<line x1="205" y1="217" x2="205" y2="290" stroke="black" stroke-width="2"/>
+<line x1="30" y1="290" x2="205" y2="290" stroke="black" stroke-width="2"/>
+<line x1="100" y1="290" x2="100" y2="305" stroke="black" stroke-width="2"/>
+<line x1="86" y1="305" x2="114" y2="305" stroke="black" stroke-width="2"/>
+<line x1="91" y1="311" x2="109" y2="311" stroke="black" stroke-width="1.5"/>
+<line x1="96" y1="317" x2="104" y2="317" stroke="black" stroke-width="1"/>
+
+<!-- IC label -->
+<line x1="205" y1="123" x2="205" y2="160" stroke="black" stroke-width="1.5"/>
+<text x="210" y="148" font-size="12" font-style="italic">IC</text>
+
+<text x="80" y="332" font-size="13" font-style="italic">Figure (Q74), VCC=15V, =100</text>
+</svg>
+<div class="fig-label">Figure (Q74)  V<sub>CC</sub> = 15 V,  = 100</div>
+    </div>
+<div class="question"><span class="qnum">74.</span> Design the circuit for a base current of 0.0715 mA.</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> R<sub>B</sub> = 200 k</div>
+      <div class="option"><span class="optlabel">B.</span> R<sub>B</sub> = 100 k</div>
+      <div class="option"><span class="optlabel">C.</span> R<sub>B</sub> = 100 </div>
+      <div class="option"><span class="optlabel">D.</span> R<sub>B</sub> = 20 k</div>
+    </div>
+</div>
+
+<!--  -->
+<div id="secG">
+  <div class="section-head">SECTION G - Rectifiers &amp; Regulators &nbsp; (Q75 - Q80)</div>
+    </div>
+
+<div class="note">Use Figure (Q7580) to answer questions 75 to 80.</div>
+<div class="qblock">
+<div class="figure"><svg style="max-width:580px;width:100%;height:auto;" viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" font-family="Arial" font-size="12">
+<defs>
+  <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L6,3 Z" fill="black"/>
+  </marker>
+</defs>
+
+<!-- Transformer (left) -->
+<rect x="10" y="80" width="18" height="140" fill="none" stroke="black" stroke-width="1.5"/>
+<rect x="32" y="80" width="18" height="140" fill="none" stroke="black" stroke-width="1.5"/>
+<!-- Primary coil lines -->
+<text x="2" y="155" font-size="11" transform="rotate(-90,12,155)">AC IN</text>
+<!-- Secondary taps -->
+<line x1="50" y1="95" x2="80" y2="95" stroke="black" stroke-width="2"/>
+<line x1="50" y1="205" x2="80" y2="205" stroke="black" stroke-width="2"/>
+<!-- + / - labels -->
+<text x="52" y="92" font-size="11">+</text>
+<text x="52" y="213" font-size="11"></text>
+
+<!-- Bridge rectifier diamond shape: center at (155,150) -->
+<!-- 4 nodes: top(155,95), right(210,150), bottom(155,205), left(100,150) -->
+<!-- D1: topright (anode top, cathode right) -->
+<line x1="80" y1="95" x2="125" y2="95" stroke="black" stroke-width="2"/>
+<line x1="125" y1="95" x2="155" y2="95" stroke="black" stroke-width="2"/>
+<polygon points="125,85 125,105 148,95" fill="black"/>
+<line x1="148" y1="85" x2="148" y2="105" stroke="black" stroke-width="2"/>
+<line x1="148" y1="95" x2="210" y2="95" stroke="black" stroke-width="2"/>
+<line x1="210" y1="95" x2="210" y2="150" stroke="black" stroke-width="2"/>
+<text x="130" y="88" font-size="11">D1</text>
+
+<!-- D2: bottomright (anode bottom, cathode right) -->
+<line x1="80" y1="205" x2="210" y2="205" stroke="black" stroke-width="2"/>
+<line x1="210" y1="205" x2="210" y2="150" stroke="black" stroke-width="0"/><!-- already at 150 -->
+<!-- D2 on bottom wire: anode at left going right to cathode meeting right node -->
+<polygon points="130,195 130,215 153,205" fill="black"/>
+<line x1="153" y1="195" x2="153" y2="215" stroke="black" stroke-width="2"/>
+<text x="134" y="222" font-size="11">D2</text>
+
+<!-- D3: lefttop (from left node upward) -->
+<line x1="80" y1="95" x2="80" y2="120" stroke="black" stroke-width="2"/>
+<line x1="80" y1="120" x2="80" y2="150" stroke="black" stroke-width="2"/>
+<polygon points="70,140 90,140 80,117" fill="black"/>
+<line x1="70" y1="117" x2="90" y2="117" stroke="black" stroke-width="2"/>
+<text x="55" y="133" font-size="11">D3</text>
+<line x1="80" y1="150" x2="80" y2="205" stroke="black" stroke-width="2"/>
+
+<!-- D4: leftbottom -->
+<line x1="80" y1="150" x2="80" y2="183" stroke="black" stroke-width="0"/>
+<polygon points="70,183 90,183 80,160" fill="black"/>
+<line x1="70" y1="160" x2="90" y2="160" stroke="black" stroke-width="2"/>
+<text x="55" y="178" font-size="11">D4</text>
+
+<!-- Right node (output +) -->
+<circle cx="210" cy="150" r="4" fill="black"/>
+<text x="215" y="148" font-size="11"></text>
+
+<!-- Left node (output ) connected to bottom and top through diodes already done -->
+<circle cx="80" cy="150" r="4" fill="black"/>
+
+<!-- Capacitor C1 from right node down to left node (bottom rail) -->
+<line x1="210" y1="150" x2="250" y2="150" stroke="black" stroke-width="2"/>
+<line x1="250" y1="115" x2="250" y2="185" stroke="black" stroke-width="2"/>
+<line x1="258" y1="115" x2="258" y2="185" stroke="black" stroke-width="2"/>
+<text x="243" y="108" font-size="11">C</text>
+<text x="243" y="198" font-size="11">-</text>
+<text x="243" y="103" font-size="11"></text>
+<line x1="258" y1="150" x2="310" y2="150" stroke="black" stroke-width="2"/>
+
+<!-- Bottom rail from left node -->
+<line x1="80" y1="150" x2="80" y2="250" stroke="black" stroke-width="2"/>
+<line x1="80" y1="250" x2="480" y2="250" stroke="black" stroke-width="2"/>
+<line x1="250" y1="185" x2="250" y2="250" stroke="black" stroke-width="2"/>
+
+<!-- Series resistor R1 -->
+<polyline points="310,150 318,138 326,162 334,138 342,162 350,138 358,162 366,150" fill="none" stroke="black" stroke-width="2"/>
+<text x="318" y="132" font-size="11">R</text>
+
+<!-- Zener diode D5 (12V) vertical between rail and output -->
+<line x1="366" y1="150" x2="400" y2="150" stroke="black" stroke-width="2"/>
+<circle cx="400" cy="150" r="3" fill="black"/>
+<line x1="400" y1="150" x2="400" y2="120" stroke="black" stroke-width="2"/>
+<!-- Zener symbol -->
+<polygon points="390,120 410,120 400,100" fill="black"/>
+<line x1="388" y1="100" x2="412" y2="100" stroke="black" stroke-width="2"/>
+<!-- Zener ticks on cathode bar -->
+<line x1="388" y1="100" x2="384" y2="108" stroke="black" stroke-width="2"/>
+<line x1="412" y1="100" x2="416" y2="92" stroke="black" stroke-width="2"/>
+<text x="415" y="112" font-size="11">D5</text>
+<text x="415" y="125" font-size="11">12 V</text>
+<line x1="400" y1="78" x2="400" y2="60" stroke="black" stroke-width="2"/>
+<line x1="400" y1="60" x2="480" y2="60" stroke="black" stroke-width="2"/>
+
+<!-- Load RL -->
+<line x1="480" y1="60" x2="480" y2="90" stroke="black" stroke-width="2"/>
+<polyline points="480,90 468,96 492,104 468,112 492,120 468,128 492,136 480,142" fill="none" stroke="black" stroke-width="2"/>
+<text x="494" y="118" font-size="11">RL</text>
+<line x1="480" y1="142" x2="480" y2="250" stroke="black" stroke-width="2"/>
+
+<!-- + and  output labels -->
+<text x="402" y="58" font-size="11"></text>
+<text x="402" y="255" font-size="11">-</text>
+
+<!-- Zener to bottom rail -->
+<line x1="400" y1="150" x2="400" y2="250" stroke="black" stroke-width="2"/>
+
+<text x="185" y="285" font-size="12" font-style="italic">Figure (Q7580): Bridge Rectifier with Filter &amp; Zener Regulation</text>
+</svg>
+<div class="fig-label">Figure (Q7580)  Bridge Rectifier with Filter Capacitor &amp; Zener Regulation</div>
+    </div>
+<div class="question"><span class="qnum">75.</span> If the bridge rectifier is biased with the polarity shown, which diodes would be turned on?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> D1 and D4</div>
+      <div class="option"><span class="optlabel">B.</span> D2 and D3</div>
+      <div class="option"><span class="optlabel">C.</span> D1 and D2</div>
+      <div class="option"><span class="optlabel">D.</span> D3 and D4</div>
+    </div>
+<div class="question"><span class="qnum">76.</span> The rectifier above is called a full wave rectifier because:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> It uses a quarter of each half of the input sinusoid.</div>
+      <div class="option"><span class="optlabel">B.</span> It uses half of the input sinusoid.</div>
+      <div class="option"><span class="optlabel">C.</span> It uses both halves of the input sinusoid.</div>
+      <div class="option"><span class="optlabel">D.</span> Because it uses alternate halves of the input sinusoid.</div>
+    </div>
+<div class="question"><span class="qnum">77.</span> The function of the capacitor in the circuit is:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> To store charges</div>
+      <div class="option"><span class="optlabel">B.</span> To act as a filter</div>
+      <div class="option"><span class="optlabel">C.</span> To replace the EMF</div>
+      <div class="option"><span class="optlabel">D.</span> To regulate the voltage</div>
+    </div>
+<div class="question"><span class="qnum">78.</span> The function of the zener diode is to ensure that:</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> A constant current is delivered at the output irrespective of voltage fluctuations in the mains supply.</div>
+      <div class="option"><span class="optlabel">B.</span> A constant voltage is delivered at the output irrespective of current fluctuations in the circuit.</div>
+      <div class="option"><span class="optlabel">C.</span> The ripples in the input sinusoid are reduced.</div>
+      <div class="option"><span class="optlabel">D.</span> The fuse does not blow up.</div>
+    </div>
+<div class="question"><span class="qnum">79.</span> Which of the following waveforms is produced at the output of the bridge rectifier?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Half-wave rectified (positive halves only, negatives clipped to zero)</div>
+      <div class="option"><span class="optlabel">B.</span> Full-wave rectified (both halves flipped positive, continuous humps above 0 V)</div>
+      <div class="option"><span class="optlabel">C.</span> Smoothed DC with ripple</div>
+      <div class="option"><span class="optlabel">D.</span> Pure flat DC line</div>
+    </div>
+<div class="question"><span class="qnum">80.</span> Which of the following waveforms is produced at the output of the capacitor?</div>
+<div class="options">
+      <div class="option"><span class="optlabel">A.</span> Half-wave rectified signal</div>
+      <div class="option"><span class="optlabel">B.</span> Smoothed DC with small ripple voltage</div>
+      <div class="option"><span class="optlabel">C.</span> Full-wave rectified humps</div>
+      <div class="option"><span class="optlabel">D.</span> Pure flat DC line</div>
+    </div>
+</div>
+
+</div><!-- end .main -->
+
+<section id="results-panel" class="results hidden">
+    <h2>Quiz Progress Summary</h2>
+    <div class="scoreline" id="final-score">0 / 0</div>
+    <p id="result-message">Answer options and submit to view your completion summary.</p>
+    <div class="results-grid">
+      <div class="result-card"><span>Answered</span><strong id="result-attempted">0</strong></div>
+      <div class="result-card"><span>Correct</span><strong id="result-correct">0</strong></div>
+      <div class="result-card"><span>Unanswered</span><strong id="result-unanswered">0</strong></div>
+    </div>
+</section>
+
+<script>
+  (function () {
+    const answerKey = {
+      1: 'd', 2: 'd', 3: 'a', 4: 'c', 5: 'b', 6: 'a', 7: 'd', 8: 'c', 9: 'd', 10: 'b',
+      11: 'd', 12: 'a', 13: 'd', 14: 'd', 15: 'a', 16: 'b', 17: 'c', 18: 'c', 19: 'a', 20: 'b',
+      21: 'd', 22: 'b', 23: 'b', 24: 'b', 25: 'a', 26: 'd', 27: 'a', 28: 'a', 29: 'c', 30: 'd',
+      31: 'a', 32: 'd', 33: 'd', 34: 'c', 35: 'a', 36: 'a', 37: 'a', 38: 'd', 39: 'c', 40: 'a',
+      41: 'a', 42: 'b', 43: 'd', 44: 'b', 45: 'c', 46: 'd', 47: 'b', 48: 'a', 49: 'b', 50: 'b',
+      51: 'a', 52: 'c', 53: 'a', 54: 'b', 55: 'd', 56: 'd', 57: 'd', 58: 'b', 59: 'd', 60: 'a',
+      61: 'a', 62: 'a', 63: 'd', 64: 'a', 65: 'a', 66: 'b', 67: 'd', 68: 'c', 69: 'b', 70: 'b',
+      71: 'b', 72: 'a', 73: 'c', 74: 'a', 75: 'd', 76: 'c', 77: 'b', 78: 'b', 79: 'b', 80: 'b'
+    };
+
+    const questions = Array.from(document.querySelectorAll('.main .question'));
+    const optionGroups = Array.from(document.querySelectorAll('.main .options'));
+    const totalCountEl = document.getElementById('total-count');
+    const answeredCountEl = document.getElementById('answered-count');
+    const correctCountEl = document.getElementById('correct-count');
+    const remainingCountEl = document.getElementById('remaining-count');
+    const progressFillEl = document.getElementById('progress-fill');
+    const resultsPanel = document.getElementById('results-panel');
+
+    function addQuestionSpacingBreaks() {
+      const cards = document.querySelectorAll('.qblock');
+      cards.forEach((card) => {
+        const cardQuestions = card.querySelectorAll(':scope > .question');
+        if (cardQuestions.length <= 1) return;
+
+        for (let i = 1; i < cardQuestions.length; i += 1) {
+          const q = cardQuestions[i];
+          const prev = q.previousElementSibling;
+          if (prev && !(prev.tagName === 'BR' && prev.classList.contains('question-break'))) {
+            const spacer = document.createElement('br');
+            spacer.className = 'question-break';
+            q.parentNode.insertBefore(spacer, q);
+          }
+        }
+      });
+    }
+
+    function updateProgress() {
+      const answered = optionGroups.filter((group) => group.querySelector('.option.selected')).length;
+      const total = questions.length;
+      const percent = total ? Math.round((answered / total) * 100) : 0;
+      const correct = getCorrectCount();
+
+      answeredCountEl.textContent = answered;
+      totalCountEl.textContent = total;
+      correctCountEl.textContent = correct;
+      remainingCountEl.textContent = Math.max(total - answered, 0);
+      progressFillEl.style.width = `${percent}%`;
+    }
+
+    function getSelectedLetter(group) {
+      const selected = group.querySelector('.option.selected');
+      if (!selected) return '';
+      const label = selected.querySelector('.optlabel');
+      return label ? label.textContent.trim().replace('.', '').toLowerCase() : '';
+    }
+
+    function getCorrectCount() {
+      return optionGroups.reduce((count, group, index) => {
+        const selected = getSelectedLetter(group);
+        const expected = answerKey[index + 1];
+        return count + (selected && expected && selected === expected ? 1 : 0);
+      }, 0);
+    }
+
+    function showResults() {
+      const answered = optionGroups.filter((group) => group.querySelector('.option.selected')).length;
+      const correct = getCorrectCount();
+      const total = questions.length;
+      const unanswered = Math.max(0, total - answered);
+      const percent = answered ? Math.round((correct / answered) * 100) : 0;
+
+      document.getElementById('final-score').textContent = `${correct} / ${answered}`;
+      document.getElementById('result-attempted').textContent = answered;
+      document.getElementById('result-correct').textContent = correct;
+      document.getElementById('result-unanswered').textContent = unanswered;
+      document.getElementById('result-message').textContent =
+        answered === 0
+          ? 'No answers selected yet.'
+          : correct === answered
+            ? 'Great. Every answered question is correct.'
+            : `You answered ${answered} questions with ${correct} correct (${percent}%).`;
+
+      resultsPanel.classList.remove('hidden');
+      resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function bindOptions() {
+      optionGroups.forEach((group) => {
+        const options = Array.from(group.querySelectorAll('.option'));
+
+        options.forEach((option) => {
+          option.setAttribute('role', 'button');
+          option.setAttribute('tabindex', '0');
+
+          const selectOption = () => {
+            options.forEach((opt) => opt.classList.remove('selected'));
+            option.classList.add('selected');
+            updateProgress();
+          };
+
+          option.addEventListener('click', selectOption);
+          option.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              selectOption();
+            }
+          });
+        });
+      });
+    }
+
+    document.getElementById('submit-btn').addEventListener('click', showResults);
+    document.getElementById('to-top-btn').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.getElementById('to-bottom-btn').addEventListener('click', () => {
+      document.body.scrollIntoView({ block: 'end', behavior: 'smooth' });
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    });
+
+    addQuestionSpacingBreaks();
+    bindOptions();
+    updateProgress();
+  })();
+</script>
+
+</body>
+</html>
+
+
+

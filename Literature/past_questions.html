@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGL 263 Literature Quiz</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta property="og:title" content="ENGL 263 Literature Quiz">
+    <meta property="og:description" content="A randomized ENGL 263 literature quiz built from course materials, past papers, and poem notes.">
+    <meta property="og:url" content="https://lamla-quiz-hub.netlify.app/">
+    <meta property="og:image" content="/quizzes.jpg">
+    <meta property="og:type" content="website">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+        :root {
+            --bg: #f4efe7;
+            --panel: #fffaf2;
+            --ink: #171717;
+            --muted: #4a4036;
+            --accent: #1f5d4e;
+            --accent-2: #b46b2f;
+            --border: rgba(35, 35, 35, 0.12);
+            --success: #216e39;
+            --error: #b42318;
+            --shadow: 0 24px 80px rgba(44, 28, 13, 0.12);
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--ink);
+            font-family: 'IBM Plex Sans', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(31, 93, 78, 0.18), transparent 34%),
+                radial-gradient(circle at top right, rgba(180, 107, 47, 0.16), transparent 30%),
+                linear-gradient(180deg, #fff8ef 0%, #f4efe7 100%);
+        }
+        .wrap { max-width: 1080px; margin: 0 auto; padding: 24px 16px 48px; }
+        .hero {
+            background: linear-gradient(145deg, rgba(35, 35, 35, 0.96), rgba(31, 93, 78, 0.96));
+            color: #f8f3ea;
+            border-radius: 28px;
+            padding: 32px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: auto -120px -120px auto;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            filter: blur(2px);
+        }
+        .kicker {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            color: rgba(248, 243, 234, 0.78);
+            margin: 0 0 10px;
+        }
+        h1, h2 { font-family: 'Fraunces', serif; line-height: 1.05; margin: 0; }
+        h1 { font-size: clamp(2rem, 5vw, 3.8rem); }
+        .hero p { margin: 16px 0 0; max-width: 760px; color: rgba(255, 249, 240, 0.98); line-height: 1.65; }
+        .panel {
+            margin-top: 18px;
+            background: rgba(255, 250, 242, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(12px);
+        }
+        .setup { padding: 24px; }
+        .setup-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 18px; align-items: end; }
+        .card {
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 18px;
+        }
+        .flow-list {
+            margin: 10px 0 0;
+            padding-left: 20px;
+            color: #2f281f;
+            line-height: 1.7;
+        }
+        .flow-list li {
+            margin-bottom: 6px;
+        }
+        label { display: block; font-weight: 600; margin-bottom: 8px; }
+        input[type="number"] {
+            width: 100%; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--border);
+            background: #fff; font: inherit; font-size: 1rem;
+        }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+        .actions a {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button { font: inherit; border: 0; border-radius: 14px; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; }
+        button:hover { transform: translateY(-1px); }
+        .btn-primary { background: var(--accent); color: #fff; padding: 14px 20px; font-weight: 700; box-shadow: 0 10px 28px rgba(31, 93, 78, 0.24); }
+        .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--border); padding: 14px 20px; }
+        .hidden { display: none !important; }
+        .quiz-shell { margin-top: 18px; }
+        .stats {
+            position: sticky;
+            top: 10px;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            padding: 7px 8px;
+            background: rgba(255, 250, 242, 0.92);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(8px);
+            scrollbar-width: thin;
+        }
+        .stat {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 10px;
+            white-space: nowrap;
+        }
+        .stat span {
+            display: inline;
+            color: var(--muted);
+            font-size: 0.64rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0;
+        }
+        .stat strong { font-size: 0.92rem; line-height: 1; }
+        .progress-bar {
+            flex: 0 0 130px;
+            height: 8px;
+            border-radius: 999px;
+            background: rgba(35, 35, 35, 0.08);
+            overflow: hidden;
+            margin-left: 2px;
+        }
+        .progress-bar div { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent-2)); transition: width 0.2s ease; }
+        .question-card {
+            margin-bottom: 18px; padding: 22px; border-radius: 22px; background: rgba(255, 255, 255, 0.82);
+            border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(44, 28, 13, 0.06);
+        }
+        .question-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+        .question-tag {
+            display: inline-flex; align-items: center; gap: 8px; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em;
+            text-transform: uppercase; color: var(--accent); background: rgba(31, 93, 78, 0.08); border-radius: 999px; padding: 8px 12px;
+        }
+        .question-card p { margin: 0; font-size: 1.05rem; line-height: 1.65; }
+        .options { display: grid; gap: 10px; margin-top: 16px; }
+        .option {
+            width: 100%; text-align: left; padding: 14px 16px; background: #fff; border: 1px solid rgba(35, 35, 35, 0.14);
+            border-radius: 16px; color: var(--ink);
+        }
+        .option:disabled { cursor: default; transform: none; }
+        .option.correct { background: rgba(33, 110, 57, 0.12); border-color: rgba(33, 110, 57, 0.38); color: var(--success); font-weight: 700; }
+        .option.incorrect { background: rgba(180, 35, 24, 0.12); border-color: rgba(180, 35, 24, 0.38); color: var(--error); font-weight: 700; }
+        .feedback { margin-top: 12px; min-height: 1.2em; font-weight: 600; }
+        .feedback.good { color: var(--success); }
+        .feedback.bad { color: var(--error); }
+        .submit-wrap {
+            position: sticky; bottom: 16px; z-index: 15; margin-top: 20px; padding: 12px; background: rgba(255, 250, 242, 0.9);
+            border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--shadow); display: flex; gap: 12px; align-items: center; justify-content: space-between;
+        }
+        .submit-wrap .hint { color: var(--muted); font-size: 0.95rem; }
+        .submit-actions { display: flex; align-items: center; gap: 8px; }
+        .btn-compact { padding: 10px 12px; font-size: 0.9rem; }
+        .results { padding: 28px; text-align: center; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+        .result-card { border-radius: 20px; padding: 18px; background: rgba(255, 255, 255, 0.72); border: 1px solid var(--border); }
+        .result-card span { display: block; color: #2f281f; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+        .result-card strong { font-size: 1.5rem; }
+        .scoreline { font-size: clamp(2rem, 7vw, 4rem); margin: 14px 0 10px; font-family: 'Fraunces', serif; }
+        @media (max-width: 820px) {
+            .wrap { padding: 14px 10px 32px; }
+            .hero { padding: 20px; border-radius: 20px; }
+            .panel { border-radius: 18px; }
+            .setup-grid, .results-grid { grid-template-columns: 1fr; }
+            .submit-wrap { flex-direction: column; align-items: stretch; }
+            .question-top { flex-direction: column; }
+            .stats {
+                top: 6px;
+                gap: 6px;
+                padding: 6px;
+            }
+            .stat {
+                padding: 5px 8px;
+                gap: 5px;
+            }
+            .stat span { font-size: 0.58rem; }
+            .stat strong { font-size: 0.84rem; }
+            .progress-bar { flex-basis: 96px; height: 7px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <section class="hero">
+            <p class="kicker">ENGL 263</p>
+            <h1>Literature Quiz</h1>
+            <h2>(Past QUestions)</h2>
+            <p>Choose how many questions you want, then get a random set from a 150-question bank built from the course materials, past papers, and poem materials. Every question gives instant feedback, and grading is based only on what you answered.</p>
+        </section>
+
+        <section id="setup-panel" class="panel setup">
+            <div class="setup-grid">
+                <div class="card">
+                    <label for="qCount">How many questions do you want to answer?</label>
+                    <input id="qCount" type="number" min="1" max="150" value="70">
+                    <div class="actions">
+                        <button class="btn-primary" id="start-btn">Start quiz</button>
+                        <button class="btn-secondary" id="fill-70-btn">Use 70</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <strong>Simple flow</strong>
+                    <ol class="flow-list">
+                        <li>Enter a number up to 150.</li>
+                        <li>Answer the randomized questions on one scrollable page.</li>
+                        <li>Submit anytime to grade only the questions you actually answered.</li>
+                    </ol>
+                    <div class="actions" style="margin-top:16px;">
+                        <a class="btn-secondary" href="index.html">Back to Literature index</a>
+                        <a class="btn-secondary" href="ENGL263_Literature_Summary.pdf" download>Download study summary</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-panel" class="panel quiz-shell hidden">
+            <div class="stats">
+                <div class="stat"><span>Selected</span><strong id="selected-count">0</strong></div>
+                <div class="stat"><span>Answered</span><strong id="attempted-count">0</strong></div>
+                <div class="stat"><span>Correct</span><strong id="score-count">0</strong></div>
+                <div class="stat"><span>Remaining</span><strong id="remaining-count">0</strong></div>
+                <div class="progress-bar"><div id="progress-fill"></div></div>
+            </div>
+            <div id="questions-container"></div>
+            <div class="submit-wrap">
+                <div class="hint" id="submit-hint">Answer as many as you want, then grade the ones you completed.</div>
+                <div class="submit-actions">
+                    <button class="btn-secondary btn-compact" id="to-top-btn" type="button">Back to top</button>
+                    <button class="btn-secondary btn-compact" id="to-bottom-btn" type="button">Go to bottom</button>
+                    <button class="btn-primary btn-compact" id="submit-btn" type="button">Submit and grade</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="results-panel" class="panel results hidden">
+            <h2>Quiz complete</h2>
+            <div class="scoreline" id="final-score">0 / 0</div>
+            <p id="final-percent" style="font-size:1.1rem; color: var(--muted); margin:0;"></p>
+            <div class="results-grid">
+                <div class="result-card"><span>Answered</span><strong id="result-attempted">0</strong></div>
+                <div class="result-card"><span>Correct</span><strong id="result-correct">0</strong></div>
+                <div class="result-card"><span>Unanswered</span><strong id="result-unanswered">0</strong></div>
+            </div>
+            <p id="grade-comment" style="max-width: 700px; margin: 0 auto 22px; color: var(--muted); line-height: 1.7;"></p>
+            <div class="actions" style="justify-content:center;">
+                <button class="btn-primary" id="restart-btn">Try another set</button>
+                <a class="btn-secondary btn" href="https://lamla-ai.vercel.app" target="_blank" rel="noopener noreferrer">Visit Lamla AI</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const questionBank = [
+            { q: 'According to Ezra Pound, literature is best defined as:', a: ['The news that stays news', 'A mirror of life and society', 'The spontaneous overflow of powerful feelings', 'A record of facts only'], c: 0, s: 'Past Papers' },
+            { q: 'J. A. Cuddon describes literature as works that are:', a: ['Purely fictional', 'Well above the ordinary run of written works', 'Always oral', 'Limited to drama'], c: 1, s: 'Past Papers' },
+            { q: 'The Latin root litera means:', a: ['Sound', 'Writing', 'Song', 'Story'], c: 1, s: 'Past Papers' },
+            { q: 'Which statement is NOT a basic principle of literature?', a: ['It uses language', 'It can be oral or written', 'It must always be fictional', 'It has intrinsic value'], c: 2, s: 'Past Papers' },
+            { q: 'The two major divisions of literature are:', a: ['Poetry and drama', 'Oral and written', 'Fiction and myth', 'Tragedy and comedy'], c: 1, s: 'Past Papers' },
+            { q: 'A fourteen-line poem is a:', a: ['Quatrain', 'Sonnet', 'Sestet', 'Couplet'], c: 1, s: 'Past Papers' },
+            { q: 'A speech delivered alone on stage is a:', a: ['Soliloquy', 'Dialogue', 'Aside', 'Chorus'], c: 0, s: 'Past Papers' },
+            { q: 'End-stopped lines are lines that:', a: ['Run on without punctuation', 'Pause naturally at the end', 'Have no rhythm', 'Always rhyme in pairs'], c: 1, s: 'Past Papers' },
+            { q: 'A traditional ballad is usually:', a: ['Anonymous and orally handed down', 'Written as free verse', 'A long dramatic monologue', 'A modern newspaper text'], c: 0, s: 'Past Papers' },
+            { q: 'The literary term for a part representing the whole is:', a: ['Metonymy', 'Synecdoche', 'Hyperbole', 'Paradox'], c: 1, s: 'Past Papers' },
+            { q: 'Wordsworth defined poetry as the spontaneous overflow of:', a: ['Daily events', 'Powerful feelings', 'Careful planning', 'Scientific thought'], c: 1, s: 'Past Papers' },
+            { q: 'A stanza of four lines is called a:', a: ['Quatrain', 'Tercet', 'Octave', 'Sestet'], c: 0, s: 'Past Papers' },
+            { q: 'Repetition at the beginning of lines is:', a: ['Anaphora', 'Allusion', 'Apostrophe', 'Onomatopoeia'], c: 0, s: 'Past Papers' },
+            { q: 'The oldest division of literature is:', a: ['Written literature', 'Oral literature', 'Drama', 'Prose fiction'], c: 1, s: 'Past Papers' },
+            { q: 'An epic usually centers on a:', a: ['Comic trickster', 'Heroic figure', 'Village chorus', 'Minor character'], c: 1, s: 'Past Papers' },
+            { q: 'In tragedy, hamartia means:', a: ['A blessing', 'A tragic flaw', 'A heroic reward', 'A stage direction'], c: 1, s: 'Past Papers' },
+            { q: 'Which scholar defines literature as artistic, imaginative expression of a people?', a: ['Kofi Agyekum', 'Ezra Pound', 'Robert Frost', 'J. A. Cuddon'], c: 0, s: 'Past Papers' },
+            { q: 'Oral literature is best described as literature composed for:', a: ['Private reading only', 'Performance', 'Printing only', 'Exams only'], c: 1, s: 'Past Papers' },
+            { q: 'Which form is linked with Beckett and Ionesco?', a: ['Theatre of the Absurd', 'Romantic drama', 'Pastoral comedy', 'Heroic epic'], c: 0, s: 'Past Papers' },
+            { q: 'In tragedy, punishment should generally:', a: ['Outweigh the flaw', 'Be less than the flaw', 'Ignore the flaw', 'Be unrelated to the flaw'], c: 1, s: 'Past Papers' },
+            { q: 'An ode is a poem of:', a: ['Praise', 'Insult', 'Narration only', 'Rules and instructions'], c: 0, s: 'Past Papers' },
+            { q: 'Blank verse is normally written in:', a: ['Iambic pentameter', 'Free prose', 'Trochaic dimeter', 'Limerick form'], c: 0, s: 'Past Papers' },
+            { q: 'A deus ex machina often gives a drama a:', a: ['Sudden resolution', 'Longer conflict', 'Tragic narrator', 'Silent chorus'], c: 0, s: 'Past Papers' },
+            { q: 'Drama imitates:', a: ['Only dialogue', 'Life and action', 'Only written texts', 'Only song'], c: 1, s: 'Past Papers' },
+            { q: 'The two roads in The Road Not Taken symbolize:', a: ['Cities and villages', 'Life choices', 'Rich and poor', 'Morning and night'], c: 1, s: 'Past Papers' },
+            { q: 'War by Bob Marley is rooted in a speech by:', a: ['Haile Selassie', 'Marcus Garvey', 'Nelson Mandela', 'Kwame Nkrumah'], c: 0, s: 'Past Papers' },
+            { q: 'A stanza of seven lines in iambic pentameter is a:', a: ['Rhyme royal', 'Sestet', 'Sonnet', 'Octave'], c: 0, s: 'Past Papers' },
+            { q: 'A pastoral poem usually focuses on:', a: ['Shepherds and countryside life', 'Urban traffic', 'Scientific discovery', 'Political speeches'], c: 0, s: 'Past Papers' },
+            { q: 'The emotional release at the end of tragedy is called:', a: ['Catharsis', 'Hubris', 'Anagnorisis', 'Peripety'], c: 0, s: 'Past Papers' },
+            { q: 'Be Patient with Life uses mainly a metaphor of:', a: ['The sea', 'Agriculture and seasons', 'Fire and ashes', 'Machines and cities'], c: 1, s: 'Past Papers' },
+            { q: 'In Father Gilligan, the priest is mainly shown as:', a: ['Wealthy and proud', 'Tired and overworked', 'Angry and violent', 'Young and careless'], c: 1, s: 'Past Papers' },
+            { q: 'Requiescat is a poem by:', a: ['Matthew Arnold', 'Robert Frost', 'W. B. Yeats', 'Bob Marley'], c: 0, s: 'Past Papers' },
+            { q: 'The Road Not Taken is by:', a: ['Edna St. Vincent Millay', 'Robert Frost', 'Gershon Amenuvor', 'W. B. Yeats'], c: 1, s: 'Past Papers' },
+            { q: 'Not in a Silver Casket Cool with Pearls was written by:', a: ['Robert Frost', 'Matthew Arnold', 'Edna St. Vincent Millay', 'Robert Nesta Marley'], c: 2, s: 'Past Papers' },
+            { q: 'Father Gilligan is best described as a:', a: ['Ballad', 'Epic', 'Sonnet', 'Ode'], c: 0, s: 'Past Papers' },
+            { q: 'The rhyme scheme of Father Gilligan is mainly:', a: ['ABAB', 'ABCB', 'AABB', 'AAAA'], c: 1, s: 'Past Papers' },
+            { q: 'The person who speaks in Requiescat asks that no spray of:', a: ['Rose', 'Yew', 'Lily', 'Thorn'], c: 1, s: 'Past Papers' },
+            { q: 'Which item appears in Millay’s poem as an alternative to a casket of jewels?', a: ['Cowslips and apples', 'Pearls and rubies', 'Coins and rings', 'Silks and lanterns'], c: 0, s: 'Past Papers' },
+            { q: 'The phrase “news that stays news” stresses the:', a: ['Timelessness of literature', 'Speed of newspapers', 'Boring nature of poetry', 'Need for rhyme'], c: 0, s: 'Past Papers' },
+            { q: 'The term “literature” is criticized as too narrow when it only means:', a: ['Speech', 'Writing', 'Drama', 'Myth'], c: 1, s: 'Past Papers' },
+            { q: 'A soliloquy is mainly used to reveal:', a: ['A crowd’s opinion', 'Inner thoughts', 'A map of the stage', 'A song lyric'], c: 1, s: 'Past Papers' },
+            { q: 'The oldest form of literary transmission is:', a: ['Printing', 'Oral tradition', 'Digital media', 'Photography'], c: 1, s: 'Past Papers' },
+            { q: 'A hero’s downfall in tragedy is often tied to:', a: ['His hamartia', 'His costume', 'His chorus', 'His audience'], c: 0, s: 'Past Papers' },
+            { q: 'The major purpose of literature is to entertain and to:', a: ['Instruct', 'Decorate', 'Advertise', 'Imitate headlines'], c: 0, s: 'Past Papers' },
+            { q: 'Literature is valuable because it can shape:', a: ['Only textbooks', 'Human behavior and thought', 'Weather patterns', 'Mathematics'], c: 1, s: 'Past Papers' },
+            { q: 'A dramatic aside is a speech meant for:', a: ['The audience and not the other characters', 'Every character on stage', 'Only the chorus', 'Only the narrator'], c: 0, s: 'Past Papers' },
+            { q: 'A quatrain contains:', a: ['Two lines', 'Three lines', 'Four lines', 'Eight lines'], c: 2, s: 'Past Papers' },
+            { q: 'A ballad is often narrative and:', a: ['Lyrical only', 'Story-like', 'Argumentative', 'Scientific'], c: 1, s: 'Past Papers' },
+            { q: '“Her cabin’d, ample spirit” suggests someone who felt:', a: ['Confined but powerful', 'Joyful and free', 'Lazy and bored', 'Rich and famous'], c: 0, s: 'Past Papers' },
+            { q: 'The title Requiescat means:', a: ['Let her rest', 'Go to war', 'Look at the road', 'Hold the line'], c: 0, s: 'Past Papers' },
+            { q: 'A poem of praise is most likely an:', a: ['Elegy', 'Ode', 'Ballad', 'Tragedy'], c: 1, s: 'Past Papers' },
+            { q: 'Alliteration is the repetition of:', a: ['Consonant sounds', 'Meaning', 'Paragraphs', 'Sentences'], c: 0, s: 'Past Papers' },
+            { q: 'Anaphora is the repetition of:', a: ['End sounds', 'Beginning words or phrases', 'Silent pauses', 'Metaphors'], c: 1, s: 'Past Papers' },
+            { q: 'A pastoral setting typically evokes:', a: ['Peaceful countryside', 'Industrial noise', 'Urban speed', 'Political speeches'], c: 0, s: 'Past Papers' },
+            { q: 'The Road Not Taken has four stanzas of:', a: ['Three lines each', 'Four lines each', 'Five lines each', 'Six lines each'], c: 1, s: 'Past Papers' },
+            { q: 'The rhyme scheme of The Road Not Taken is:', a: ['ABCB', 'ABAB', 'ABAAB', 'AABB'], c: 2, s: 'Past Papers' },
+            { q: 'War is mainly a protest against:', a: ['Peace', 'Racism and oppression', 'Education', 'Family life'], c: 1, s: 'Past Papers' },
+            { q: 'The phrase “love in the open hand” in Millay’s poem suggests love that is:', a: ['Secret and locked away', 'Open and freely given', 'Dangerous and hidden', 'Cold and distant'], c: 1, s: 'Past Papers' },
+            { q: 'Father Gilligan is set during an:', a: ['Epidemic', 'Olympics', 'Election', 'Harvest festival'], c: 0, s: 'Past Papers' },
+            { q: 'In Father Gilligan, divine intervention shows:', a: ['Human beings always succeed alone', 'God helps when people are weak', 'Prayer is useless', 'The priest is dishonest'], c: 1, s: 'Past Papers' },
+            { q: 'The title of Bob Marley’s War reflects a message against:', a: ['Unity', 'Racial injustice', 'Hope', 'Freedom'], c: 1, s: 'Past Papers' },
+            { q: 'The “silver casket” in Millay’s poem stands for:', a: ['A conventional guarded love', 'A soldier’s helmet', 'A farm tool', 'A church bell'], c: 0, s: 'Past Papers' },
+            { q: 'The general tone of The Road Not Taken is:', a: ['Reflective', 'Frantic', 'Mocking', 'Hysterical'], c: 0, s: 'Past Papers' },
+            { q: 'The main idea behind Be Patient with Life is:', a: ['Success should be rushed', 'Patience and steady growth matter', 'Comparison is always good', 'Work has no value'], c: 1, s: 'Past Papers' },
+            { q: 'A lyric poem is primarily concerned with:', a: ['Personal feeling', 'Battle strategy', 'Court records', 'Scientific facts'], c: 0, s: 'Past Papers' },
+            { q: 'A speech that an actor delivers to himself is a:', a: ['Monologue', 'Soliloquy', 'Aside', 'Duet'], c: 1, s: 'Past Papers' },
+            { q: 'The term “intrinsic value” means literature is valuable:', a: ['Only when profitable', 'In itself', 'Only in exams', 'Only when short'], c: 1, s: 'Past Papers' },
+            { q: 'The summary describes literature as an imaginative work that pictures:', a: ['Only history', 'Human life in society', 'Only nature', 'Only religion'], c: 1, s: 'Study Summary' },
+            { q: 'One major function of literature in the summary is to:', a: ['Entertain and enlighten', 'Replace mathematics', 'Avoid emotion', 'Stop language change'], c: 0, s: 'Study Summary' },
+            { q: 'The summary says literature helps develop and preserve:', a: ['Language', 'Only music', 'Only politics', 'Only sports'], c: 0, s: 'Study Summary' },
+            { q: 'The summary treats literature as a means of social:', a: ['Expression', 'Isolation', 'Confusion', 'Silence'], c: 0, s: 'Study Summary' },
+            { q: 'According to the summary, literature can be based on:', a: ['Fiction or reality', 'Only fiction', 'Only reality', 'Only dreams'], c: 0, s: 'Study Summary' },
+            { q: 'In Be Patient with Life, the repeated “yours” mainly creates a sense of:', a: ['Command', 'Affirmation and empowerment', 'Sarcasm', 'Confusion'], c: 1, s: 'Study Summary' },
+            { q: 'The core advice in Be Patient with Life is to:', a: ['Rush toward success', 'Trust growth and timing', 'Ignore your own progress', 'Compete with everyone'], c: 1, s: 'Study Summary' },
+            { q: 'The poem Be Patient with Life uses an agricultural image of:', a: ['The sea', 'Seasons and harvest', 'Animals and cages', 'Buildings and roads'], c: 1, s: 'Study Summary' },
+            { q: 'The “sun, soil, and season” idea in Be Patient with Life suggests that:', a: ['Everyone shares the same timing', 'Comparison is unfair because conditions differ', 'Nature is the enemy', 'Success is random'], c: 1, s: 'Study Summary' },
+            { q: 'Father Gilligan is summarized as a poem about:', a: ['A young musician', 'An exhausted priest and God’s help', 'A battle between kings', 'A road journey'], c: 1, s: 'Study Summary' },
+            { q: 'In Father Gilligan, the priest falls asleep because he is:', a: ['Sick', 'Tired', 'Angry', 'Curious'], c: 1, s: 'Study Summary' },
+            { q: 'The summary says Father Gilligan is written in:', a: ['Twelve quatrains with ABCB rhyme', 'Three sonnets', 'Free verse', 'Couplets only'], c: 0, s: 'Study Summary' },
+            { q: 'The main theme of Father Gilligan includes:', a: ['Human weakness and divine grace', 'Comedy and romance', 'Greed and betrayal', 'Travel and trade'], c: 0, s: 'Study Summary' },
+            { q: 'In Requiescat, the persona asks for roses and rejects:', a: ['Yew', 'Lilies', 'Holly', 'Grass'], c: 0, s: 'Study Summary' },
+            { q: 'The summary suggests Requiescat centers on:', a: ['A quiet remembrance of the dead', 'A wedding scene', 'A battle cry', 'A sports victory'], c: 0, s: 'Study Summary' },
+            { q: 'The Road Not Taken presents a speaker facing:', a: ['A moral test', 'A choice between two paths', 'A family quarrel', 'A dream sequence'], c: 1, s: 'Study Summary' },
+            { q: 'The summary highlights the poem’s rhyme scheme as:', a: ['ABAB', 'ABCB', 'ABAAB', 'AABB'], c: 2, s: 'Study Summary' },
+            { q: 'The Road Not Taken is described as reflective and:', a: ['Narrative', 'Comic', 'Chaotic', 'Prophetic'], c: 0, s: 'Study Summary' },
+            { q: 'War is presented in the summary as a protest against:', a: ['Racism, colonialism, and oppression', 'Weather change', 'School rules', 'Marriage'], c: 0, s: 'Study Summary' },
+            { q: 'The song War is tied to a speech by:', a: ['Haile Selassie', 'W. B. Yeats', 'Matthew Arnold', 'Robert Frost'], c: 0, s: 'Study Summary' },
+            { q: 'The summary describes War as part of:', a: ['Protest literature', 'Children’s literature', 'Travel writing', 'Folklore only'], c: 0, s: 'Study Summary' },
+            { q: 'Millay’s poem is summarized as valuing love in an:', a: ['Open hand', 'Locked chest', 'Iron cage', 'Ivory tower'], c: 0, s: 'Study Summary' },
+            { q: 'The imagery of cowslips and apples in Millay’s poem suggests:', a: ['Simple, generous love', 'Wealth and luxury', 'Danger and secrecy', 'War and loss'], c: 0, s: 'Study Summary' },
+            { q: 'The summary says Millay gives her love:', a: ['In public and openly', 'Through a hidden code', 'Only after marriage', 'Only through money'], c: 0, s: 'Study Summary' },
+            { q: 'The summary’s reading of literature stresses its connection to:', a: ['Experience and reality', 'Only fantasy', 'Only grammar', 'Only data'], c: 0, s: 'Study Summary' },
+            { q: 'The summary says literature is born from individual or:', a: ['Collective experiences', 'Mechanical processes', 'Random noise', 'Silent pages'], c: 0, s: 'Study Summary' },
+            { q: 'A key task of literature in the summary is to help people understand:', a: ['How to live', 'How to ignore others', 'How to avoid language', 'How to win elections'], c: 0, s: 'Study Summary' },
+            { q: 'The summary places oral literature and written literature under the broader idea of:', a: ['Two separate sciences', 'Literature', 'Maths', 'History'], c: 1, s: 'Study Summary' },
+            { q: 'The summary’s definition of literature emphasizes that it is:', a: ['Purely mechanical', 'Imaginative and creative', 'Only legal', 'Only historical'], c: 1, s: 'Study Summary' },
+            { q: 'The poem Be Patient with Life is especially aimed at:', a: ['Young people', 'Infants', 'Sailors', 'Kings'], c: 0, s: 'Study Summary' },
+            { q: 'The summary of Father Gilligan shows the poem ending with:', a: ['Praise for God’s intervention', 'A failed prayer', 'A broken journey', 'A marriage'], c: 0, s: 'Study Summary' },
+            { q: 'In Be Patient with Life, the repeated address “young men of the land” mainly sets up a tone of:', a: ['Guidance', 'Mockery', 'Despair', 'Suspense'], c: 0, s: 'Poem Depth' },
+            { q: 'The agricultural image of planting seeds and waiting for harvest mainly suggests:', a: ['Instant reward', 'Delayed but natural growth', 'Failure', 'Violence'], c: 1, s: 'Poem Depth' },
+            { q: 'When Be Patient with Life says another person’s season differs, it is stressing:', a: ['Same conditions for all', 'Different life timings', 'The end of nature', 'The uselessness of effort'], c: 1, s: 'Poem Depth' },
+            { q: 'The poem’s repeated calls to patience are meant to challenge:', a: ['Careful planning', 'Impatience and comparison', 'Honesty', 'Hard work'], c: 1, s: 'Poem Depth' },
+            { q: 'The tone of Be Patient with Life is best described as:', a: ['Counselling and encouraging', 'Mocking and playful', 'Terrified and violent', 'Detached and cold'], c: 0, s: 'Poem Depth' },
+            { q: 'In Father Gilligan, the parishioners are mostly:', a: ['Sick or dying', 'Celebrating harvest', 'Traveling abroad', 'Playing games'], c: 0, s: 'Poem Depth' },
+            { q: 'Father Gilligan falls asleep after prayer because he is:', a: ['Overworked', 'Lazy', 'Unfaithful', 'Drunk'], c: 0, s: 'Poem Depth' },
+            { q: 'The poem Father Gilligan portrays God as:', a: ['Absent from human life', 'A helper of the weak', 'A source of punishment only', 'A distant legend'], c: 1, s: 'Poem Depth' },
+            { q: 'The rhyme scheme of Father Gilligan being ABCB helps create a sense of:', a: ['Ballad music and movement', 'Scientific proof', 'Free-form chaos', 'Comic relief'], c: 0, s: 'Poem Depth' },
+            { q: 'The final praise in Father Gilligan is directed toward:', a: ['The sick man', 'The priest’s horse', 'God', 'The narrator'], c: 2, s: 'Poem Depth' },
+            { q: 'The speaker in The Road Not Taken stands at a point of:', a: ['Decision', 'Revenge', 'Marriage', 'Inheritance'], c: 0, s: 'Poem Depth' },
+            { q: 'The “yellow wood” in The Road Not Taken contributes to the poem’s feeling of:', a: ['Seasonal change and reflection', 'Urban speed', 'Noise', 'Dangerous battle'], c: 0, s: 'Poem Depth' },
+            { q: 'When the speaker says both roads were worn about the same, the poem suggests that choices are often:', a: ['Clear and easy', 'Less different than they appear', 'Always perfect', 'Always wrong'], c: 1, s: 'Poem Depth' },
+            { q: 'The final sigh in The Road Not Taken indicates a mood of:', a: ['Regret or reflective hindsight', 'Celebration only', 'Anger', 'Confusion'], c: 0, s: 'Poem Depth' },
+            { q: 'The poem’s famous final line makes the speaker sound:', a: ['Certain that one choice mattered', 'Indifferent to the choice', 'Unable to speak', 'Angry at the forest'], c: 0, s: 'Poem Depth' },
+            { q: 'War by Bob Marley is built around the idea that there should be war until:', a: ['Racism is ended', 'Rain falls', 'The sea dries', 'Children grow up'], c: 0, s: 'Poem Depth' },
+            { q: 'The speech behind War is by Haile Selassie, who speaks from a context of:', a: ['Pan-African and anti-racist struggle', 'Business competition', 'Marriage counselling', 'School reform'], c: 0, s: 'Poem Depth' },
+            { q: 'War presents peace as impossible without:', a: ['Justice', 'Wealth', 'Noise', 'Silence'], c: 0, s: 'Poem Depth' },
+            { q: 'The repetitive structure of War works to sound like:', a: ['A moral chant or proclamation', 'A private diary', 'A joke', 'A puzzle'], c: 0, s: 'Poem Depth' },
+            { q: 'The song War is mainly a form of:', a: ['Protest poetry', 'Romantic lyric', 'Children’s lullaby', 'Pastoral idyll'], c: 0, s: 'Poem Depth' },
+            { q: 'In Millay’s poem, the love offered is not locked away but given:', a: ['Openly', 'Reluctantly', 'Secretly', 'With anger'], c: 0, s: 'Poem Depth' },
+            { q: 'The phrase “legend plain” in Millay’s poem points to a love that is:', a: ['Conventional and marked by symbols', 'Purely accidental', 'Hostile', 'Invisible'], c: 0, s: 'Poem Depth' },
+            { q: 'The speaker’s gift of cowslips and apples suggests affection that is:', a: ['Natural and unpretentious', 'Expensive and formal', 'Cold and distant', 'Violent and forced'], c: 0, s: 'Poem Depth' },
+            { q: 'The tone of Millay’s poem is best described as:', a: ['Warm and candid', 'Bitter and mocking', 'Fearful', 'Detached'], c: 0, s: 'Poem Depth' },
+            { q: 'The “open hand” in Millay’s poem symbolically stands for:', a: ['Generosity and trust', 'Secrecy', 'Punishment', 'Greed'], c: 0, s: 'Poem Depth' },
+            { q: 'In Requiescat, the request for roses instead of yew suggests a desire for:', a: ['Gentle remembrance', 'Brutality', 'Wealth', 'Noise'], c: 0, s: 'Poem Depth' },
+            { q: 'The title Requiescat is associated with:', a: ['Rest in peace', 'War and conquest', 'A road trip', 'A harvest'], c: 0, s: 'Poem Depth' },
+            { q: 'The mood of Requiescat is best described as:', a: ['Quiet and mournful', 'Boisterous', 'Playful', 'Aggressive'], c: 0, s: 'Poem Depth' },
+            { q: 'In Requiescat, the image of the “cabin’d” spirit suggests a life that was:', a: ['Restricted', 'Lazy', 'Carefree', 'Famous'], c: 0, s: 'Poem Depth' },
+            { q: 'Matthew Arnold’s poem Requiescat is a meditation on:', a: ['Loss and remembrance', 'Travel and choice', 'Political protest', 'Harvest'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem most clearly presents a speaker who refuses conventional symbols of love?', a: ['Millay’s Not in a Silver Casket Cool with Pearls', 'The Road Not Taken', 'War', 'Father Gilligan'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem most clearly uses an emotional, reflective travel image to think about life choices?', a: ['The Road Not Taken', 'War', 'Requiescat', 'Father Gilligan'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem is built around a priest’s exhaustion and sudden divine help?', a: ['Father Gilligan', 'War', 'Millay’s poem', 'Be Patient with Life'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem uses a direct anti-racist and anti-oppression message?', a: ['War', 'Requiescat', 'The Road Not Taken', 'Millay’s poem'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem uses the image of harvest to argue for delayed growth?', a: ['Be Patient with Life', 'War', 'Requiescat', 'Father Gilligan'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem ends with a famous line about a path being less traveled by?', a: ['The Road Not Taken', 'War', 'Be Patient with Life', 'Requiescat'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem praises companionship and support within marriage?', a: ['The Secret to a Man’s Admiration', 'Father Gilligan', 'Requiescat', 'War'], c: 0, s: 'Poem Depth' },
+            { q: 'Which poem uses “yew” as a symbol that should be avoided in mourning?', a: ['Requiescat', 'War', 'Be Patient with Life', 'The Road Not Taken'], c: 0, s: 'Poem Depth' },
+            { q: 'The final couplet-like ending of Millay’s poem feels like:', a: ['A generous offering', 'A warning', 'A threat', 'A complaint'], c: 0, s: 'Poem Depth' },
+            { q: 'The priest’s horse in Father Gilligan mainly helps show:', a: ['His urgency after waking', 'His wealth', 'His anger', 'His fear of horses'], c: 0, s: 'Poem Depth' },
+            { q: 'The phrase “eyes, full of tears” in a related summary poem creates a feeling of:', a: ['Vulnerability', 'Arrogance', 'Sleepiness', 'Humor'], c: 0, s: 'Poem Depth' },
+            { q: 'The overall effect of Bob Marley’s repetition in War is to sound:', a: ['Urgent and insistent', 'Relaxed and playful', 'Uncertain', 'Childish'], c: 0, s: 'Poem Depth' },
+            { q: 'In Be Patient with Life, comparing one person’s timing to another’s mainly discourages:', a: ['Self-comparison', 'Hard work', 'Hope', 'Consistency'], c: 0, s: 'Poem Depth' },
+            { q: 'A major shared idea across the poem set is that human life is shaped by:', a: ['Time, choice, and response to circumstance', 'Only money', 'Only fame', 'Only accidents'], c: 0, s: 'Poem Depth' },
+            { q: 'The poems in this quiz mostly ask the reader to interpret:', a: ['Theme, imagery, and tone', 'Only spelling', 'Only page layout', 'Only punctuation'], c: 0, s: 'Poem Depth' },
+            { q: 'A consistent feature of these literary texts is that they use language to:', a: ['Create meaning beyond plain statement', 'Avoid interpretation', 'Stop reflection', 'Remove emotion'], c: 0, s: 'Poem Depth' },
+            { q: 'The poem set as a whole values awareness of:', a: ['Human experience', 'Only stage directions', 'Only facts', 'Only laws'], c: 0, s: 'Poem Depth' },
+            { q: 'The summary on literature in general says literature can help people:', a: ['Understand how to live', 'Ignore society', 'Avoid language', 'Reject imagination'], c: 0, s: 'Poem Depth' }
+        ];
+
+        const state = {
+            session: [],
+            score: 0,
+            attempted: 0,
+            selectedCount: 0,
+            answered: new Set()
+        };
+
+        const setupPanel = document.getElementById('setup-panel');
+        const quizPanel = document.getElementById('quiz-panel');
+        const resultsPanel = document.getElementById('results-panel');
+        const questionsContainer = document.getElementById('questions-container');
+        const selectedCountEl = document.getElementById('selected-count');
+        const attemptedCountEl = document.getElementById('attempted-count');
+        const scoreCountEl = document.getElementById('score-count');
+        const remainingCountEl = document.getElementById('remaining-count');
+        const progressFill = document.getElementById('progress-fill');
+        const qCountInput = document.getElementById('qCount');
+
+        document.getElementById('start-btn').addEventListener('click', startQuiz);
+        document.getElementById('fill-70-btn').addEventListener('click', () => { qCountInput.value = 70; });
+        document.getElementById('submit-btn').addEventListener('click', showResults);
+        document.getElementById('to-top-btn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        document.getElementById('to-bottom-btn').addEventListener('click', () => {
+            document.body.scrollIntoView({ block: 'end', behavior: 'smooth' });
+            window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+        });
+        document.getElementById('restart-btn').addEventListener('click', () => location.reload());
+
+        function shuffle(list) {
+            const copy = [...list];
+            for (let i = copy.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [copy[i], copy[j]] = [copy[j], copy[i]];
+            }
+            return copy;
+        }
+
+        function clampCount(value) {
+            const parsed = Number.parseInt(value, 10);
+            if (!Number.isFinite(parsed) || parsed < 1) return 1;
+            return Math.min(parsed, questionBank.length);
+        }
+
+        function startQuiz() {
+            const count = clampCount(qCountInput.value);
+            state.selectedCount = count;
+            state.score = 0;
+            state.attempted = 0;
+            state.answered = new Set();
+            state.session = shuffle(questionBank).slice(0, count);
+
+            setupPanel.classList.add('hidden');
+            resultsPanel.classList.add('hidden');
+            quizPanel.classList.remove('hidden');
+            renderQuestions();
+            updateStats();
+            quizPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function renderQuestions() {
+            questionsContainer.innerHTML = '';
+            state.session.forEach((item, index) => {
+                const card = document.createElement('article');
+                card.className = 'question-card';
+                card.dataset.index = index;
+                card.innerHTML = `
+                    <div class="question-top">
+                        <div><span class="question-tag">${item.s}</span></div>
+                        <div style="color: var(--muted); font-size: 0.92rem;">Question ${index + 1} of ${state.selectedCount}</div>
+                    </div>
+                    <p><strong>${index + 1}.</strong> ${item.q}</p>
+                    <div class="options">
+                        ${item.a.map((option, optionIndex) => `<button type="button" class="option" data-question="${index}" data-option="${optionIndex}">${option}</button>`).join('')}
+                    </div>
+                    <div class="feedback" id="feedback-${index}"></div>
+                `;
+                questionsContainer.appendChild(card);
+            });
+
+            questionsContainer.querySelectorAll('.option').forEach(button => {
+                button.addEventListener('click', handleAnswer);
+            });
+        }
+
+        function handleAnswer(event) {
+            const button = event.currentTarget;
+            const questionIndex = Number(button.dataset.question);
+            const optionIndex = Number(button.dataset.option);
+            const question = state.session[questionIndex];
+            const card = button.closest('.question-card');
+
+            if (state.answered.has(questionIndex)) return;
+            state.answered.add(questionIndex);
+            state.attempted += 1;
+
+            const buttons = card.querySelectorAll('.option');
+            buttons.forEach(btn => btn.disabled = true);
+
+            const feedback = document.getElementById(`feedback-${questionIndex}`);
+            if (optionIndex === question.c) {
+                button.classList.add('correct');
+                state.score += 1;
+                feedback.textContent = 'Correct.';
+                feedback.className = 'feedback good';
+            } else {
+                button.classList.add('incorrect');
+                buttons[question.c].classList.add('correct');
+                feedback.textContent = 'Incorrect.';
+                feedback.className = 'feedback bad';
+            }
+
+            updateStats();
+        }
+
+        function updateStats() {
+            selectedCountEl.textContent = state.selectedCount;
+            attemptedCountEl.textContent = state.attempted;
+            scoreCountEl.textContent = state.score;
+            remainingCountEl.textContent = Math.max(state.selectedCount - state.attempted, 0);
+            const progress = state.selectedCount ? (state.attempted / state.selectedCount) * 100 : 0;
+            progressFill.style.width = `${progress}%`;
+        }
+
+        function showResults() {
+            const unanswered = state.selectedCount - state.attempted;
+            const percent = state.attempted ? Math.round((state.score / state.attempted) * 100) : 0;
+            const comment = percent >= 80
+                ? 'Strong work. You are handling both the literary terms and the poem analysis well.'
+                : percent >= 50
+                    ? 'Good progress. Review the poem-specific imagery and the core literary terms for a stronger score.'
+                    : 'Keep going. Focus on the definitions, then revisit the poem summaries and themes.';
+
+            document.getElementById('final-score').textContent = `${state.score} / ${state.attempted}`;
+            document.getElementById('final-percent').textContent = state.attempted ? `${percent}% on the questions you answered` : 'No questions were answered.';
+            document.getElementById('result-attempted').textContent = state.attempted;
+            document.getElementById('result-correct').textContent = state.score;
+            document.getElementById('result-unanswered').textContent = unanswered;
+            document.getElementById('grade-comment').textContent = comment;
+
+            quizPanel.classList.add('hidden');
+            resultsPanel.classList.remove('hidden');
+            resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>
