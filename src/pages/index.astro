@@ -1,0 +1,298 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout title="Lamla Quiz Hub">
+  <Navbar links={[
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Operating Systems", href: "operating-systems.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">Lamla Quiz Hub</p>
+        <h1>One platform. Multiple courses. Better quiz flow.</h1>
+        <p>Lamla Quiz Hub is your course gateway for practice and revision. Start here, choose your subject, and move straight into the quiz sets you want to attempt.</p>
+        <div class="hero-actions">
+          <a class="btn" href="electronics.html">Start with Electronics</a>
+          <a class="btn-light btn" href="literature.html">Open Literature Quizzes</a>
+          <a class="btn-light btn" href="operating-systems.html">Open OS Quizzes</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">Landing page → Course hub → Quiz page</span>
+          <span class="hero-badge">Mobile-first design</span>
+          <span class="hero-badge">Fast navigation</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Use one clear route every time: open Lamla Quiz Hub, enter your course page, and begin your quiz.</p>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat"><span>Quiz Categories</span><strong>8 Courses</strong></div>
+      <div class="stat"><span>Always Available</span><strong>24/7 Access</strong></div>
+      <div class="stat"><span>Devices Supported</span><strong>Mobile + Desktop</strong></div>
+      <div class="stat"><span>Feedback</span><strong>Instant Results</strong></div>
+    </div>
+  </section>
+
+  <section class="panel panel-pad">
+    <div class="panel-head">
+      <h2>How Lamla Quiz Hub Works</h2>
+      <span class="mini-chip">Course-first architecture</span>
+    </div>
+    <p style="margin:0 0 14px; color: var(--muted); line-height: 1.65;">Use one structure everywhere so navigation stays simple: enter through Lamla Quiz Hub, pick a subject hub, then choose a quiz set for that course.</p>
+    <div class="feature-strip">
+      <div class="feature">
+        <span>Stage 1</span>
+        <strong>Enter the master landing</strong>
+        <p>All subjects are visible here with status and intent.</p>
+      </div>
+      <div class="feature">
+        <span>Stage 2</span>
+        <strong>Pick a course hub</strong>
+        <p>Each course has its own page and quiz roadmap.</p>
+      </div>
+      <div class="feature">
+        <span>Stage 3</span>
+        <strong>Launch a quiz</strong>
+        <p>Open a quiz set and start answering immediately.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel panel-pad">
+    <div class="panel-head">
+      <h2>Choose Your Course</h2>
+      <span class="mini-chip">Ready to navigate</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="tag">Electronics</div>
+        <div class="status-row">
+          <span class="status building">Organizing</span>
+          <span class="status">Ready for new quizzes</span>
+        </div>
+        <h2>Electronics Quizzes</h2>
+        <p>Use the Electronics hub to access electronics quiz categories and upcoming practice sets in one place.</p>
+        <div class="actions">
+          <a class="btn" href="electronics.html">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Literature</div>
+        <div class="status-row">
+          <span class="status live">Live</span>
+          <span class="status">Multiple quiz sets</span>
+        </div>
+        <h2>Literature Quizzes</h2>
+        <p>Access the full literature experience with separate pages for general past questions, Latest PassCO, and The Marriage of Anansewa.</p>
+        <div class="actions">
+          <a class="btn" href="literature.html">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Operating Systems</div>
+        <div class="status-row">
+          <span class="status live">Live</span>
+          <span class="status">Single quiz experience</span>
+        </div>
+        <h2>Operating Systems Quizzes</h2>
+        <p>Continue into the Operating Systems quiz page for Linux and open-source question practice.</p>
+        <div class="actions">
+          <a class="btn" href="operating-systems.html">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">OOP with Java</div>
+        <div class="status-row">
+          <span class="status building">Coming soon</span>
+          <span class="status">In development</span>
+        </div>
+        <h2>OOP with Java Quizzes</h2>
+        <p>Object-Oriented Programming with Java — classes, inheritance, polymorphism, interfaces, and exam prep questions.</p>
+        <div class="actions">
+          <a class="btn" href="oop-java.html">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Ethical Computing</div>
+        <div class="status-row">
+          <span class="status building">Coming soon</span>
+          <span class="status">In development</span>
+        </div>
+        <h2>Ethical Implications of Computing</h2>
+        <p>Privacy, professional responsibility, digital rights, intellectual property, and applied computing ethics.</p>
+        <div class="actions">
+          <a class="btn" href="ethical-computing.html">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Linear Algebra</div>
+        <div class="status-row">
+          <span class="status building">Coming soon</span>
+          <span class="status">In development</span>
+        </div>
+        <h2>Linear & Numerical Algebra</h2>
+        <p>Matrices, vector spaces, eigenvalues, numerical methods, and past exam questions for this course.</p>
+        <div class="actions">
+          <a class="btn" href="linear-algebra.html">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">System Analysis</div>
+        <div class="status-row">
+          <span class="status building">Coming soon</span>
+          <span class="status">In development</span>
+        </div>
+        <h2>System Analysis & Design</h2>
+        <p>SDLC, requirements gathering, UML diagrams, DFDs, system modelling, and design strategies from course material and past papers.</p>
+        <div class="actions">
+          <a class="btn" href="system-analysis.html">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Databases</div>
+        <div class="status-row">
+          <span class="status building">Coming soon</span>
+          <span class="status">In development</span>
+        </div>
+        <h2>Database Concepts & Technologies</h2>
+        <p>Relational design, SQL, normalisation, ACID transactions, concurrency control, and recovery techniques.</p>
+        <div class="actions">
+          <a class="btn" href="database-concepts.html">Open course hub</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      Lamla Quiz Hub flow: choose a course on this landing page, then continue to that course index before opening individual quiz pages.
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <p class="kicker" style="margin-bottom: 8px; color: rgba(255,255,255,0.8);">Launch Path</p>
+      <h2>Ready to practice with Lamla Quiz Hub?</h2>
+      <p>Begin with your preferred course and move straight into quiz-based revision.</p>
+    </div>
+    <div>
+      <div class="ai-promo">
+        <h3>Level Up Your Exam Game with <span>Lamla AI</span></h3>
+        <p>Built for students who want to study with purpose, Lamla AI turns your own slides and notes into personalized quizzes, flashcards, and instant AI explanations that actually make sense.</p>
+        <p class="closing">Built by students, for students. Study smarter. Perform better.</p>
+      </div>
+      <div class="hero-actions" style="margin-top: 14px;">
+        <a class="btn" href="https://lamla-ai.vercel.app" target="_blank" rel="noopener noreferrer">Visit Lamla AI</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    margin-top: 14px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, rgba(13, 26, 39, 0.96), rgba(20, 86, 71, 0.96));
+    box-shadow: var(--shadow);
+    color: #f8f3ea;
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: auto -90px -130px auto;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.09);
+  }
+  .hero-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; align-items: stretch; }
+  .hero-copy, .hero-side { position: relative; z-index: 1; }
+  .hero-side {
+    display: flex; flex-direction: column; justify-content: center; gap: 12px;
+    padding: 20px; border-radius: 22px;
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .kicker { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem; color: rgba(248, 243, 234, 0.86); margin: 0 0 10px; }
+  .hero p { margin: 16px 0 0; max-width: 740px; color: rgba(255, 249, 240, 0.98); line-height: 1.7; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+  .hero-badge, .mini-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 12px; border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1); color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.82rem; white-space: nowrap;
+  }
+  .mini-chip { color: var(--ink); background: rgba(31, 93, 78, 0.08); border-color: var(--border); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .btn-light { background: rgba(255, 255, 255, 0.1); color: #fff; border: 1px solid rgba(255, 255, 255, 0.24); }
+
+  .stats-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+  .stat { padding: 18px; border-radius: 18px; border: 1px solid var(--border); background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.75)); }
+  .stat span { display: block; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; color: #000; margin-bottom: 6px; }
+  .stat strong { font-size: clamp(1.3rem, 3vw, 1.7rem); font-family: 'Fraunces', serif; color: #000; }
+
+  .panel { margin-top: 16px; background: rgba(255, 250, 242, 0.93); border: 1px solid var(--border); border-radius: 24px; box-shadow: var(--shadow); backdrop-filter: blur(12px); }
+  .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .panel-head p { margin: 0; color: var(--muted); max-width: 620px; line-height: 1.6; }
+  .panel-pad { padding: 24px; }
+  .feature-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .feature { padding: 16px; border-radius: 18px; background: rgba(255,255,255,0.84); border: 1px solid var(--border); }
+  .feature span { display: block; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .feature strong { display: block; font-size: 1.03rem; line-height: 1.35; }
+  .feature p { margin: 9px 0 0; color: var(--muted); line-height: 1.56; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.74));
+    border: 1px solid var(--border); border-radius: 22px; padding: 20px;
+    display: flex; flex-direction: column; gap: 14px; min-height: 290px;
+    position: relative; overflow: hidden;
+  }
+  .card::before { content: ''; position: absolute; inset: 0 auto auto 0; width: 100%; height: 6px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+  .tag { display: inline-flex; align-items: center; width: fit-content; border-radius: 999px; padding: 8px 12px; background: rgba(31,93,78,0.08); color: var(--accent); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+  .status-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .status { border-radius: 999px; padding: 6px 10px; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; border: 1px solid var(--border); background: rgba(255,255,255,0.78); color: var(--muted); }
+  .status.live { color: #1f5d4e; background: rgba(31,93,78,0.1); border-color: rgba(31,93,78,0.3); }
+  .status.building { color: #7f4714; background: rgba(180,107,47,0.12); border-color: rgba(180,107,47,0.32); }
+  .card h2 { font-size: 1.6rem; }
+  .card p { margin: 0; color: var(--muted); line-height: 1.65; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+  .note { margin-top: 18px; padding: 16px; border-radius: 18px; background: rgba(31,93,78,0.08); color: var(--muted); border: 1px solid rgba(31,93,78,0.14); line-height: 1.6; }
+
+  .cta {
+    margin-top: 16px; border-radius: 24px; padding: 24px;
+    background: linear-gradient(130deg, rgba(16,46,68,0.96), rgba(20,86,71,0.96));
+    color: #fff; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; align-items: center;
+    box-shadow: var(--shadow);
+  }
+  .cta p { margin: 10px 0 0; color: rgba(255,255,255,0.9); line-height: 1.6; }
+  .ai-promo { margin-top: 14px; padding: 16px; border-radius: 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); }
+  .ai-promo h3 { margin: 0; font-family: 'Fraunces', serif; font-size: clamp(1.2rem,3.2vw,1.7rem); line-height: 1.2; color: #fff; }
+  .ai-promo h3 span { display: block; color: #fff3dc; }
+  .ai-promo p { margin: 10px 0 0; color: rgba(255,255,255,0.92); line-height: 1.6; }
+  .ai-promo .closing { margin-top: 10px; font-weight: 700; color: #fff; }
+
+  @media (max-width: 900px) {
+    .hero-layout, .grid, .feature-strip, .stats-row, .cta { grid-template-columns: 1fr; }
+    .hero { padding: 20px; border-radius: 22px; }
+    .panel { border-radius: 18px; }
+    .hero-side { padding: 14px; }
+    .hero-actions { margin-top: 18px; }
+    .card { min-height: auto; }
+    .panel-pad { padding: 16px; }
+  }
+</style>

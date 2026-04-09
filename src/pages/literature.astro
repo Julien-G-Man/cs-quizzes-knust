@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="Literature | Lamla Quiz Hub"
+  description="Literature section of Lamla Quiz Hub with ENGL 263 quiz sets including past questions, PassCO, and Anansewa."
+  ogUrl="https://lamla-quiz-hub.netlify.app/literature.html"
+>
+  <Navbar links={[
+    { label: "Home", href: "index.html" },
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Operating Systems", href: "operating-systems.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">Literature | Lamla Quiz Hub</p>
+        <h1>Literature Quizzes</h1>
+        <p>This page is dedicated to Literature only. Choose the ENGL 263 quiz set you want to practice and start immediately.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn" href="literature/past_questions.html">Open general past questions</a>
+          <a class="btn btn-light" href="literature/anansewa_quiz.html">Open Anansewa quiz</a>
+          <a class="btn btn-light" href="literature/latest_passco.html">Open Latest PassCO</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">Randomized questions</span>
+          <span class="hero-badge">Instant feedback</span>
+          <span class="hero-badge">Answer any count</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Everything is built to feel light, direct, and exam-ready: pick a set, choose how many questions, then start answering on one page.</p>
+      </div>
+    </div>
+    <div class="feature-strip">
+      <div class="feature"><span>Mode 1</span><strong>General past questions with the same random quiz flow.</strong></div>
+      <div class="feature"><span>Mode 2</span><strong>The Marriage of Anansewa, separated into its own page.</strong></div>
+      <div class="feature"><span>Mode 3</span><strong>Latest PassCO follows the document sequence (no shuffle).</strong></div>
+    </div>
+  </section>
+
+  <section class="panel menu">
+    <div class="grid">
+      <article class="card">
+        <div class="tag">General Past Questions</div>
+        <h2>Past Questions</h2>
+        <p>Use the general ENGL 263 question bank you already have. This stays on its own page so the other sets do not get mixed together.</p>
+        <div class="actions">
+          <a class="btn" href="literature/past_questions.html">Open general past questions</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Latest PassCO</div>
+        <h2>Latest PassCO</h2>
+        <p>This quiz is from the PassCo images that recently dropped in the class group.</p>
+        <div class="actions">
+          <a class="btn" href="literature/latest_passco.html">Open Latest PassCO</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Book Quiz</div>
+        <h2>The Marriage of Anansewa</h2>
+        <p>Launch the separate quiz for Efua Sutherland's play with randomized questions and the same answer-by-answer grading flow.</p>
+        <div class="actions">
+          <a class="btn" href="literature/anansewa_quiz.html">Open book quiz</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      Literature flow: Lamla Quiz Hub → Literature Quizzes → selected Literature quiz page.
+    </div>
+  </section>
+</Layout>

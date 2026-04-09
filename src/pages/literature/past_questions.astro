@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/past_questions.json';
+---
+<Layout
+  title="Literature Past Questions | Lamla Quiz Hub"
+  description="A randomized quiz on ENGL 263 Literature past questions covering poems, themes, and literary concepts."
+  ogUrl="https://lamla-quiz-hub.netlify.app/literature/past_questions.html"
+>
+  <QuizShell
+    questions={questions}
+    kicker="ENGL 263"
+    title="Literature Past Questions"
+    description="Choose how many questions you want, then get a random set from the Literature past questions bank. Every question gives instant feedback, and grading is based only on what you answered."
+    backHref="../literature.html"
+    backLabel="Back to Literature index"
+    defaultCount={20}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from ENGL 263 past papers and poem study material."
+  />
+</Layout>

@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="Database Concepts & Technologies | Lamla Quiz Hub"
+  description="Database Concepts & Technologies course page inside Lamla Quiz Hub. Quiz sets coming soon."
+  ogUrl="https://lamla-quiz-hub.netlify.app/database-concepts.html"
+>
+  <Navbar links={[
+    { label: "Home", href: "index.html" },
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">Database Concepts & Technologies | Lamla Quiz Hub</p>
+        <h1>Database Concepts & Technologies</h1>
+        <p>This page covers relational databases, SQL, normalisation, transactions, and modern database technologies. Quiz sets covering all major topics are on the way.</p>
+        <div class="hero-actions">
+          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn btn-light" href="#quiz-menu">See what's coming</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">SQL & Relational DBs</span>
+          <span class="hero-badge">Normalisation</span>
+          <span class="hero-badge">Coming soon</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Quiz sets on relational design, SQL queries, normalisation, and database management concepts are being built from course material and past papers.</p>
+      </div>
+    </div>
+    <div class="feature-strip">
+      <div class="feature"><span>Topic 1</span><strong>Relational model, ERDs, and database design principles.</strong></div>
+      <div class="feature"><span>Topic 2</span><strong>SQL — DDL, DML, joins, subqueries, and transactions.</strong></div>
+      <div class="feature"><span>Topic 3</span><strong>Normalisation, indexing, concurrency, and recovery.</strong></div>
+    </div>
+  </section>
+
+  <section id="quiz-menu" class="panel menu">
+    <div class="grid">
+      <article class="card">
+        <div class="tag">Core Concepts</div>
+        <h2>Relational Design & SQL</h2>
+        <p>Covers the relational model, entity-relationship diagrams, keys, SQL queries, and data manipulation fundamentals.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Advanced Topics</div>
+        <h2>Normalisation & Transactions</h2>
+        <p>Practice questions on functional dependencies, 1NF–BCNF, ACID properties, concurrency control, and recovery techniques.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Exam Prep</div>
+        <h2>Past Questions</h2>
+        <p>Database Concepts & Technologies past exam questions covering all major topics from previous semesters.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      Database Concepts & Technologies quizzes are in development. The question bank is being built from course material and past papers.
+    </div>
+  </section>
+</Layout>

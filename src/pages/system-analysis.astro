@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="System Analysis & Design | Lamla Quiz Hub"
+  description="System Analysis & Design course page inside Lamla Quiz Hub. Quiz sets coming soon."
+  ogUrl="https://lamla-quiz-hub.netlify.app/system-analysis.html"
+>
+  <Navbar links={[
+    { label: "Home", href: "index.html" },
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">System Analysis & Design | Lamla Quiz Hub</p>
+        <h1>System Analysis & Design</h1>
+        <p>This page covers the full systems development lifecycle — from requirements gathering and modelling to system design and implementation strategies. Quiz sets are on the way.</p>
+        <div class="hero-actions">
+          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn btn-light" href="#quiz-menu">See what's coming</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">SDLC & Methodologies</span>
+          <span class="hero-badge">UML & Modelling</span>
+          <span class="hero-badge">Coming soon</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Quiz sets covering systems analysis, design patterns, and modelling techniques are being built from course material and past papers.</p>
+      </div>
+    </div>
+    <div class="feature-strip">
+      <div class="feature"><span>Topic 1</span><strong>Requirements gathering, feasibility, and the SDLC phases.</strong></div>
+      <div class="feature"><span>Topic 2</span><strong>UML diagrams, data flow diagrams, and system modelling.</strong></div>
+      <div class="feature"><span>Topic 3</span><strong>System design, testing strategies, and implementation.</strong></div>
+    </div>
+  </section>
+
+  <section id="quiz-menu" class="panel menu">
+    <div class="grid">
+      <article class="card">
+        <div class="tag">Core Concepts</div>
+        <h2>SDLC & Requirements</h2>
+        <p>Covers the systems development lifecycle, feasibility studies, requirements elicitation, and analysis techniques.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Modelling</div>
+        <h2>UML & System Modelling</h2>
+        <p>Practice questions on use case diagrams, class diagrams, DFDs, ERDs, and structured design approaches.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Exam Prep</div>
+        <h2>Past Questions</h2>
+        <p>System Analysis & Design past exam questions covering all major topics from previous semesters.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      System Analysis & Design quizzes are in development. The question bank is being built from course material and past papers.
+    </div>
+  </section>
+</Layout>

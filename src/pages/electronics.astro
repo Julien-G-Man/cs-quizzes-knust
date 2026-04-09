@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="Electronics | Lamla Quiz Hub"
+  description="Electronics course page inside Lamla Quiz Hub for exam-focused quiz practice."
+  ogUrl="https://lamla-quiz-hub.netlify.app/electronics.html"
+>
+  <Navbar links={[
+    { label: "Home", href: "index.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Operating Systems", href: "operating-systems.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">Electronics | Lamla Quiz Hub</p>
+        <h1>Electronics Quizzes</h1>
+        <p>This is the Electronics page for focused practice. Choose from the quizzes that are available now and revise at your own pace.</p>
+        <div class="hero-actions">
+          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn btn-light" href="#quiz-menu">Explore quiz sections</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">Fixed-order quiz</span>
+          <span class="hero-badge">PASSCO practice</span>
+          <span class="hero-badge">Hub access</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Each card opens a live quiz page with the same Lamla-style flow, so you can jump straight into revision.</p>
+      </div>
+    </div>
+    <div class="feature-strip">
+      <div class="feature"><span>Available now</span><strong>Basic Semiconductor Theory quiz.</strong></div>
+      <div class="feature"><span>Available now</span><strong>PASSCO past questions practice.</strong></div>
+      <div class="feature"><span>Navigation</span><strong>Use the hub to open either quiz directly.</strong></div>
+    </div>
+  </section>
+
+  <section id="quiz-menu" class="panel menu">
+    <div class="grid">
+      <article class="card">
+        <div class="tag">General Set</div>
+        <h2>Basic Semiconductor Theory</h2>
+        <p>Start with a random 100-question quiz covering atoms, bands, intrinsic and extrinsic semiconductors, PN junctions, and diode behavior.</p>
+        <div class="actions">
+          <a class="btn" href="electronics/intro_electronics.html">Open Introduction quiz</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Exam Set</div>
+        <h2>PASSCO Practice</h2>
+        <p>Practice with exam-style past questions in the existing Electronics PASSCO quiz.</p>
+        <div class="actions">
+          <a class="btn" href="electronics/pascco.html">Open PASSCO quiz</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      Student flow: Lamla Quiz Hub → Electronics Quizzes → select Introduction or PASSCO practice.
+    </div>
+  </section>
+</Layout>

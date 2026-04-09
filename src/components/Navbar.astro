@@ -1,0 +1,94 @@
+---
+interface Props {
+  /** Links to show in the topbar. Each has a label and href. */
+  links: { label: string; href: string; external?: boolean }[];
+}
+const { links } = Astro.props;
+---
+<header class="topbar">
+  <a class="brand" href="/">
+    <span class="brand-mark">LQ</span>
+    <span>Lamla Quiz Hub</span>
+  </a>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="top-actions">☰</button>
+  <nav class="top-actions" id="top-actions">
+    {links.map(link => (
+      <a
+        class="btn-secondary btn"
+        href={link.href}
+        {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      >{link.label}</a>
+    ))}
+  </nav>
+</header>
+
+<style>
+  .topbar {
+    position: sticky; top: 0; z-index: 20; margin-top: 8px;
+    background: rgba(255, 248, 238, 0.88);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    box-shadow: 0 8px 30px rgba(40, 30, 20, 0.07);
+    padding: 10px 14px;
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 700; color: var(--ink); text-decoration: none;
+  }
+  .brand-mark {
+    width: 34px; height: 34px; border-radius: 10px;
+    background: linear-gradient(145deg, var(--accent), var(--accent-3));
+    color: #fff; display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-weight: 700; font-size: 0.95rem;
+  }
+  .top-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .menu-toggle {
+    display: none; width: 42px; height: 42px; border-radius: 12px;
+    border: 1px solid var(--border); background: rgba(255, 255, 255, 0.66);
+    color: var(--ink); align-items: center; justify-content: center;
+    cursor: pointer; font-size: 1.2rem; line-height: 1; padding: 0; font-family: inherit;
+  }
+  .menu-toggle:hover { transform: translateY(-1px); }
+  @media (max-width: 900px) {
+    .topbar { border-radius: 20px; align-items: center; flex-wrap: wrap; }
+    .menu-toggle { display: inline-flex; margin-left: auto; }
+    .top-actions {
+      display: none; width: 100%; margin-top: 10px;
+      flex-direction: column; gap: 8px;
+    }
+    .topbar.menu-open .top-actions { display: flex; }
+    .top-actions .btn { width: 100%; justify-content: center; }
+  }
+</style>
+
+<script>
+  const topbar = document.querySelector('.topbar') as HTMLElement;
+  const menuToggle = document.getElementById('menu-toggle') as HTMLButtonElement;
+  const menuLinks = document.querySelectorAll('#top-actions a');
+
+  function closeMenu() {
+    topbar.classList.remove('menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+    menuToggle.setAttribute('aria-label', 'Open menu');
+  }
+  function openMenu() {
+    topbar.classList.add('menu-open');
+    menuToggle.setAttribute('aria-expanded', 'true');
+    menuToggle.textContent = '✕';
+    menuToggle.setAttribute('aria-label', 'Close menu');
+  }
+  menuToggle.addEventListener('click', () => {
+    topbar.classList.contains('menu-open') ? closeMenu() : openMenu();
+  });
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.matchMedia('(max-width: 900px)').matches) closeMenu();
+    });
+  });
+  window.addEventListener('resize', () => {
+    if (!window.matchMedia('(max-width: 900px)').matches) closeMenu();
+  });
+</script>

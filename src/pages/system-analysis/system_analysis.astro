@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/system_analysis.json';
+---
+<Layout
+  title="System Analysis & Design Quiz | Lamla Quiz Hub"
+  description="A randomized quiz on System Analysis & Design covering SDLC, UML, requirements, and system modelling."
+  ogUrl="https://lamla-quiz-hub.netlify.app/system-analysis/system_analysis.html"
+>
+  <QuizShell
+    questions={questions}
+    kicker="System Analysis & Design"
+    title="System Analysis & Design"
+    description="Choose how many questions you want, then get a random set from the System Analysis & Design question bank. Covers SDLC, requirements gathering, UML, DFDs, and system design."
+    backHref="../system-analysis.html"
+    backLabel="Back to System Analysis index"
+    defaultCount={20}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from System Analysis & Design course material and past papers."
+  />
+</Layout>

@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/anansewa.json';
+---
+<Layout
+  title="The Marriage of Anansewa Quiz | Lamla Quiz Hub"
+  description="A randomized quiz on Efua Sutherland's The Marriage of Anansewa."
+  ogUrl="https://lamla-quiz-hub.netlify.app/literature/anansewa_quiz.html"
+>
+  <QuizShell
+    questions={questions}
+    kicker="ENGL 263"
+    title="The Marriage of Anansewa"
+    description="Choose how many questions you want, then get a random set from the Anansewa question bank. Every question gives instant feedback, and grading is based only on what you answered."
+    backHref="../literature.html"
+    backLabel="Back to Literature index"
+    defaultCount={20}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from the Anansewa summary and book material."
+  />
+</Layout>

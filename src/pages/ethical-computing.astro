@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="Ethical Implications of Computing | Lamla Quiz Hub"
+  description="Ethical Implications of Computing course page inside Lamla Quiz Hub. Quiz sets coming soon."
+  ogUrl="https://lamla-quiz-hub.netlify.app/ethical-computing.html"
+>
+  <Navbar links={[
+    { label: "Home", href: "index.html" },
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">Ethical Computing | Lamla Quiz Hub</p>
+        <h1>Ethical Implications of Computing</h1>
+        <p>This page covers the ethical, social, and legal dimensions of computing. Quiz sets on privacy, intellectual property, professional responsibility, and digital rights are on the way.</p>
+        <div class="hero-actions">
+          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn btn-light" href="#quiz-menu">See what's coming</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">Privacy & Security</span>
+          <span class="hero-badge">Digital Rights</span>
+          <span class="hero-badge">Coming soon</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Quiz sets covering the ethical and societal dimensions of computing are being developed. Questions will draw from course material and case studies.</p>
+      </div>
+    </div>
+    <div class="feature-strip">
+      <div class="feature"><span>Topic 1</span><strong>Privacy, surveillance, and data protection principles.</strong></div>
+      <div class="feature"><span>Topic 2</span><strong>Intellectual property, copyright, and open source.</strong></div>
+      <div class="feature"><span>Topic 3</span><strong>Professional codes of conduct and computing ethics frameworks.</strong></div>
+    </div>
+  </section>
+
+  <section id="quiz-menu" class="panel menu">
+    <div class="grid">
+      <article class="card">
+        <div class="tag">Privacy & Law</div>
+        <h2>Privacy & Data Protection</h2>
+        <p>Covers privacy rights, data collection ethics, surveillance, GDPR principles, and the legal frameworks governing personal data.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Professional Ethics</div>
+        <h2>Professional Responsibility</h2>
+        <p>Practice questions on codes of conduct, professional liability, whistleblowing, and ethical decision-making in computing contexts.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Exam Prep</div>
+        <h2>Past Questions</h2>
+        <p>Ethical Implications of Computing past exam questions covering theories, case studies, and applied ethics scenarios.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      Ethical Implications of Computing quizzes are in development. Content is being drawn from course notes, frameworks, and past papers.
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="OOP with Java | Lamla Quiz Hub"
+  description="Object-Oriented Programming with Java course page inside Lamla Quiz Hub. Quiz sets coming soon."
+  ogUrl="https://lamla-quiz-hub.netlify.app/oop-java.html"
+>
+  <Navbar links={[
+    { label: "Home", href: "index.html" },
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">OOP with Java | Lamla Quiz Hub</p>
+        <h1>OOP with Java Quizzes</h1>
+        <p>This page is dedicated to Object-Oriented Programming with Java. Quiz sets covering classes, inheritance, polymorphism, interfaces, and core Java concepts are on the way.</p>
+        <div class="hero-actions">
+          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn btn-light" href="#quiz-menu">See what's coming</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">Classes & Objects</span>
+          <span class="hero-badge">Inheritance</span>
+          <span class="hero-badge">Coming soon</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Quiz sets for this course are being built. Check back soon for randomized practice questions on all major OOP topics.</p>
+      </div>
+    </div>
+    <div class="feature-strip">
+      <div class="feature"><span>Topic 1</span><strong>Classes, objects, constructors, and encapsulation.</strong></div>
+      <div class="feature"><span>Topic 2</span><strong>Inheritance, polymorphism, and interfaces.</strong></div>
+      <div class="feature"><span>Topic 3</span><strong>Exception handling, collections, and core APIs.</strong></div>
+    </div>
+  </section>
+
+  <section id="quiz-menu" class="panel menu">
+    <div class="grid">
+      <article class="card">
+        <div class="tag">Core Concepts</div>
+        <h2>OOP Fundamentals</h2>
+        <p>Covers classes, objects, constructors, encapsulation, and the four pillars of object-oriented programming in Java.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Advanced Topics</div>
+        <h2>Inheritance & Polymorphism</h2>
+        <p>Practice questions on inheritance hierarchies, method overriding, abstract classes, interfaces, and polymorphic behavior.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Exam Prep</div>
+        <h2>Past Questions</h2>
+        <p>OOP with Java past exam questions covering all major topics from previous semesters.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      OOP with Java quizzes are in development. The question bank is being built from course material and past papers.
+    </div>
+  </section>
+</Layout>

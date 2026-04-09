@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PasscoShell from '../../components/PasscoShell.astro';
+import data from '../../data/latest_passco.json';
+
+const questions = data.questions;
+---
+<Layout
+  title="Latest PassCO Quiz | Lamla Quiz Hub"
+  description="Fixed-order ENGL 263 Latest PassCO quiz based directly on LiteraturePoetry_PastQuestions.docx."
+  ogUrl="https://lamla-quiz-hub.netlify.app/literature/latest_passco.html"
+>
+  <PasscoShell
+    questions={questions}
+    kicker="ENGL 263"
+    title="Latest PassCO"
+    description="This quiz is based on the latest PassCO document. Questions follow the original exam sequence. Select how many to attempt and work through them at your own pace."
+    backHref="../literature.html"
+    backLabel="Back to Literature index"
+    defaultCount={20}
+  />
+</Layout>

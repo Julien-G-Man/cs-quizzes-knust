@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/linear_algebra.json';
+---
+<Layout
+  title="Linear & Numerical Algebra Quiz | Lamla Quiz Hub"
+  description="A randomized quiz on Linear and Numerical Algebra covering matrices, vector spaces, eigenvalues, and numerical methods."
+  ogUrl="https://lamla-quiz-hub.netlify.app/linear-algebra/linear_algebra.html"
+>
+  <QuizShell
+    questions={questions}
+    kicker="Linear & Numerical Algebra"
+    title="Linear & Numerical Algebra"
+    description="Choose how many questions you want, then get a random set from the Linear Algebra question bank. Covers matrices, determinants, vector spaces, eigenvalues, and numerical methods."
+    backHref="../linear-algebra.html"
+    backLabel="Back to Linear Algebra index"
+    defaultCount={20}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from course notes and past exam papers."
+  />
+</Layout>

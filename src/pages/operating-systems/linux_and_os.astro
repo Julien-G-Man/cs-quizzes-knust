@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/linux_and_os.json';
+---
+<Layout
+  title="Linux & Open Source Quiz | Lamla Quiz Hub"
+  description="A randomized quiz on Linux commands, OS concepts, networking, file systems, processes, permissions, and services."
+  ogUrl="https://lamla-quiz-hub.netlify.app/operating-systems/linux_and_os.html"
+>
+  <QuizShell
+    questions={questions}
+    kicker="CSM 225"
+    title="Linux & Open Source"
+    description="Choose how many questions you want, then get a random set from the Linux and OS question bank. Covers commands, file systems, processes, networking, permissions, and services."
+    backHref="../operating-systems.html"
+    backLabel="Back to OS index"
+    defaultCount={20}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from CSM 225 Linux and Open Source material."
+  />
+</Layout>

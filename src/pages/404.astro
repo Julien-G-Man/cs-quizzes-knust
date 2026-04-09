@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="404 — Page not found | Lamla Quiz Hub"
+  description="The page you are looking for does not exist. Navigate back to Lamla Quiz Hub."
+  ogUrl="https://lamla-quiz-hub.netlify.app/404"
+>
+  <Navbar links={[
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Operating Systems", href: "operating-systems.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <div class="panel-404">
+    <div class="num-404">404</div>
+    <h1>Page not found</h1>
+    <p>The page you are looking for doesn't exist or was moved. Head back to the hub or jump straight to a course.</p>
+    <div class="btn-row">
+      <a class="btn" href="index.html">Back to home</a>
+      <button class="btn btn-secondary" onclick="history.back()">Go back</button>
+    </div>
+    <div class="cat-nav">
+      <span class="cat-label">Browse a category</span>
+      <div class="pills">
+        <a class="pill" href="electronics.html">Electronics</a>
+        <a class="pill" href="literature.html">Literature</a>
+        <a class="pill" href="operating-systems.html">Operating Systems</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .panel-404 {
+    margin-top: 32px;
+    background: rgba(255, 250, 242, 0.92);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+    padding: 48px 36px;
+    text-align: center;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .num-404 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(5rem, 18vw, 9rem);
+    line-height: 1;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .panel-404 h1 {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+  .panel-404 p {
+    color: var(--muted);
+    line-height: 1.65;
+    max-width: 480px;
+    margin: 0 auto 28px;
+  }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .btn-row button.btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--border);
+    font: inherit;
+    cursor: pointer;
+  }
+  .cat-nav {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+  }
+  .cat-label {
+    display: block;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(31, 93, 78, 0.08);
+    color: var(--accent);
+    border: 1px solid rgba(31, 93, 78, 0.18);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.15s ease;
+  }
+  .pill:hover { background: rgba(31, 93, 78, 0.15); }
+  @media (max-width: 600px) {
+    .panel-404 { padding: 32px 20px; }
+  }
+</style>

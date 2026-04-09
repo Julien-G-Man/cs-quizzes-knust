@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout
+  title="Linear & Numerical Algebra | Lamla Quiz Hub"
+  description="Linear and Numerical Algebra course page inside Lamla Quiz Hub. Quiz sets coming soon."
+  ogUrl="https://lamla-quiz-hub.netlify.app/linear-algebra.html"
+>
+  <Navbar links={[
+    { label: "Home", href: "index.html" },
+    { label: "Electronics", href: "electronics.html" },
+    { label: "Literature", href: "literature.html" },
+    { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
+  ]} />
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="kicker">Linear & Numerical Algebra | Lamla Quiz Hub</p>
+        <h1>Linear & Numerical Algebra</h1>
+        <p>This page is for Linear and Numerical Algebra practice. Quiz sets on matrices, vector spaces, eigenvalues, numerical methods, and linear systems are on the way.</p>
+        <div class="hero-actions">
+          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn btn-light" href="#quiz-menu">See what's coming</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-badges">
+          <span class="hero-badge">Matrices & Vectors</span>
+          <span class="hero-badge">Numerical Methods</span>
+          <span class="hero-badge">Coming soon</span>
+        </div>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Quiz sets for this course are being built from lecture material and past papers. Topics will span theory and numerical computation.</p>
+      </div>
+    </div>
+    <div class="feature-strip">
+      <div class="feature"><span>Topic 1</span><strong>Matrices, determinants, and systems of linear equations.</strong></div>
+      <div class="feature"><span>Topic 2</span><strong>Vector spaces, eigenvalues, and eigenvectors.</strong></div>
+      <div class="feature"><span>Topic 3</span><strong>Numerical methods: interpolation, iteration, and approximation.</strong></div>
+    </div>
+  </section>
+
+  <section id="quiz-menu" class="panel menu">
+    <div class="grid">
+      <article class="card">
+        <div class="tag">Linear Algebra</div>
+        <h2>Matrices & Linear Systems</h2>
+        <p>Covers matrix operations, determinants, Gaussian elimination, row reduction, and solving systems of linear equations.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Numerical Methods</div>
+        <h2>Numerical Algebra</h2>
+        <p>Practice questions on numerical methods including Newton-Raphson, bisection, interpolation, and numerical integration techniques.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="tag">Exam Prep</div>
+        <h2>Past Questions</h2>
+        <p>Linear and Numerical Algebra past exam questions covering theory, proofs, and applied computation problems.</p>
+        <div class="actions">
+          <span class="btn btn-disabled">Coming soon</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="note">
+      Linear & Numerical Algebra quizzes are in development. The question bank is being built from course notes and past exam papers.
+    </div>
+  </section>
+</Layout>

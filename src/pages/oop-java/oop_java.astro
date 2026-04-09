@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/oop_java.json';
+---
+<Layout
+  title="OOP with Java Quiz | Lamla Quiz Hub"
+  description="A randomized quiz on Object-Oriented Programming with Java covering classes, inheritance, polymorphism, and interfaces."
+  ogUrl="https://lamla-quiz-hub.netlify.app/oop-java/oop_java.html"
+>
+  <QuizShell
+    questions={questions}
+    kicker="OOP with Java"
+    title="OOP with Java"
+    description="Choose how many questions you want, then get a random set from the OOP question bank. Covers classes, objects, inheritance, polymorphism, interfaces, and core Java concepts."
+    backHref="../oop-java.html"
+    backLabel="Back to OOP with Java index"
+    defaultCount={20}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from OOP with Java course material and past papers."
+  />
+</Layout>
