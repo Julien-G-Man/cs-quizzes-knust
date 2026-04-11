@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/linux_fundamentals.json';
+---
+<Layout
+  title="Linux Fundamentals Quiz | Lamla Quiz Hub"
+  description="108 comprehensive Linux questions covering OS concepts, file systems, commands, networking, user management, permissions, services, and processes."
+  ogUrl="https://lamla-quiz-hub.netlify.app/operating-systems/linux_fundamentals"
+>
+  <QuizShell
+    questions={questions}
+    kicker="CSM 225"
+    title="Linux Fundamentals"
+    description="Get a random set from 108 comprehensive Linux questions. Covers OS concepts, file systems, commands, networking, user management, permissions, services, processes, and more."
+    backHref="/operating-systems"
+    backLabel="Back to OS index"
+    defaultCount={15}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Compiled from CSM 225 materials"
+  />
+</Layout>

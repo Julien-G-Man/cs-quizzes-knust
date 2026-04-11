@@ -4,6 +4,7 @@ interface Question {
   opts: string[];
   ans: number;
   cat: string;
+  exp?: string;
 }
 
 interface Props {
@@ -260,7 +261,7 @@ const presetCount = Math.min(defaultCount, totalCount);
   #questions-container :global(.option:disabled) { cursor: default; transform: none; }
   #questions-container :global(.option.correct) { background: rgba(33, 110, 57, 0.12); border-color: rgba(33, 110, 57, 0.38); color: var(--success); font-weight: 700; }
   #questions-container :global(.option.incorrect) { background: rgba(180, 35, 24, 0.12); border-color: rgba(180, 35, 24, 0.38); color: var(--error); font-weight: 700; }
-  #questions-container :global(.feedback) { margin-top: 12px; min-height: 1.2em; font-weight: 600; }
+  #questions-container :global(.feedback) { margin-top: 12px; min-height: 1.2em; font-weight: 600; line-height: 1.5; }
   #questions-container :global(.feedback.good) { color: var(--success); }
   #questions-container :global(.feedback.bad) { color: var(--error); }
 
@@ -401,12 +402,12 @@ const presetCount = Math.min(defaultCount, totalCount);
     if (optionIndex === question.ans) {
       button.classList.add('correct');
       state.score += 1;
-      feedback.textContent = 'Correct.';
+      feedback.textContent = question.exp ? `Correct. ${question.exp}` : 'Correct.';
       feedback.className = 'feedback good';
     } else {
       button.classList.add('incorrect');
       buttons[question.ans].classList.add('correct');
-      feedback.textContent = 'Incorrect.';
+      feedback.textContent = question.exp ? `Incorrect. ${question.exp}` : 'Incorrect.';
       feedback.className = 'feedback bad';
     }
 

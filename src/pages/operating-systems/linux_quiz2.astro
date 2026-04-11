@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/linux_quiz2.json';
+---
+<Layout
+  title="Linux Quiz 2 | Lamla Quiz Hub"
+  description="53 questions combining Linux fundamentals and Quiz 2, covering commands, networking, services, file systems, and headless server management."
+  ogUrl="https://lamla-quiz-hub.netlify.app/operating-systems/linux_quiz2"
+>
+  <QuizShell
+    questions={questions}
+    kicker="CSM 225"
+    title="Linux Quiz 2"
+    description="Get a random set from 53 Linux questions combining fundamentals and Quiz 2. Covers commands, file permissions, user management, networking, file systems, processes, services, and Ubuntu Server concepts."
+    backHref="/operating-systems"
+    backLabel="Back to OS index"
+    defaultCount={15}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Combined from CSM 225 quizzes"
+  />
+</Layout>
