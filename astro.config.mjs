@@ -4,6 +4,6 @@ export default defineConfig({
   output: 'static',
   site: 'https://lamla-quiz-hub.netlify.app',
   build: {
-    format: 'file',
+    format: 'directory',
   },
 });

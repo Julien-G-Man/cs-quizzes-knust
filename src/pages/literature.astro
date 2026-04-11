@@ -5,12 +5,12 @@ import Navbar from '../components/Navbar.astro';
 <Layout
   title="Literature | Lamla Quiz Hub"
   description="Literature section of Lamla Quiz Hub with ENGL 263 quiz sets including past questions, PassCO, and Anansewa."
-  ogUrl="https://lamla-quiz-hub.netlify.app/literature.html"
+  ogUrl="https://lamla-quiz-hub.netlify.app/literature"
 >
   <Navbar links={[
-    { label: "Home", href: "index.html" },
-    { label: "Electronics", href: "electronics.html" },
-    { label: "Operating Systems", href: "operating-systems.html" },
+    { label: "Home", href: "/" },
+    { label: "Electronics", href: "/electronics" },
+    { label: "Operating Systems", href: "/operating-systems" },
     { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
   ]} />
 
@@ -21,10 +21,10 @@ import Navbar from '../components/Navbar.astro';
         <h1>Literature Quizzes</h1>
         <p>This page is dedicated to Literature only. Choose the ENGL 263 quiz set you want to practice and start immediately.</p>
         <div class="hero-actions">
-          <a class="btn btn-light" href="index.html">Back to Lamla Quiz Hub</a>
-          <a class="btn" href="literature/past_questions.html">Open general past questions</a>
-          <a class="btn btn-light" href="literature/anansewa_quiz.html">Open Anansewa quiz</a>
-          <a class="btn btn-light" href="literature/latest_passco.html">Open Latest PassCO</a>
+          <a class="btn btn-light" href="/">Back to Lamla Quiz Hub</a>
+          <a class="btn" href="/literature/past_questions">Open general past questions</a>
+          <a class="btn btn-light" href="/literature/anansewa_quiz">Open Anansewa quiz</a>
+          <a class="btn btn-light" href="/literature/latest_passco">Open Latest PassCO</a>
         </div>
       </div>
       <div class="hero-side">
@@ -50,7 +50,7 @@ import Navbar from '../components/Navbar.astro';
         <h2>Past Questions</h2>
         <p>Use the general ENGL 263 question bank you already have. This stays on its own page so the other sets do not get mixed together.</p>
         <div class="actions">
-          <a class="btn" href="literature/past_questions.html">Open general past questions</a>
+          <a class="btn" href="/literature/past_questions">Open general past questions</a>
         </div>
       </article>
 
@@ -59,7 +59,7 @@ import Navbar from '../components/Navbar.astro';
         <h2>Latest PassCO</h2>
         <p>This quiz is from the PassCo images that recently dropped in the class group.</p>
         <div class="actions">
-          <a class="btn" href="literature/latest_passco.html">Open Latest PassCO</a>
+          <a class="btn" href="/literature/latest_passco">Open Latest PassCO</a>
         </div>
       </article>
 
@@ -68,7 +68,7 @@ import Navbar from '../components/Navbar.astro';
         <h2>The Marriage of Anansewa</h2>
         <p>Launch the separate quiz for Efua Sutherland's play with randomized questions and the same answer-by-answer grading flow.</p>
         <div class="actions">
-          <a class="btn" href="literature/anansewa_quiz.html">Open book quiz</a>
+          <a class="btn" href="/literature/anansewa_quiz">Open book quiz</a>
         </div>
       </article>
     </div>

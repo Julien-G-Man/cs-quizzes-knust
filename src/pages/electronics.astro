@@ -5,12 +5,12 @@ import Navbar from '../components/Navbar.astro';
 <Layout
   title="Electronics | Lamla Quiz Hub"
   description="Electronics course page inside Lamla Quiz Hub for exam-focused quiz practice."
-  ogUrl="https://lamla-quiz-hub.netlify.app/electronics.html"
+  ogUrl="https://lamla-quiz-hub.netlify.app/electronics"
 >
   <Navbar links={[
-    { label: "Home", href: "index.html" },
-    { label: "Literature", href: "literature.html" },
-    { label: "Operating Systems", href: "operating-systems.html" },
+    { label: "Home", href: "/" },
+    { label: "Literature", href: "/literature" },
+    { label: "Operating Systems", href: "/operating-systems" },
     { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
   ]} />
 
@@ -21,7 +21,7 @@ import Navbar from '../components/Navbar.astro';
         <h1>Electronics Quizzes</h1>
         <p>This is the Electronics page for focused practice. Choose from the quizzes that are available now and revise at your own pace.</p>
         <div class="hero-actions">
-          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn" href="/">Back to Lamla Quiz Hub</a>
           <a class="btn btn-light" href="#quiz-menu">Explore quiz sections</a>
         </div>
       </div>
@@ -48,7 +48,7 @@ import Navbar from '../components/Navbar.astro';
         <h2>Basic Semiconductor Theory</h2>
         <p>Start with a random 100-question quiz covering atoms, bands, intrinsic and extrinsic semiconductors, PN junctions, and diode behavior.</p>
         <div class="actions">
-          <a class="btn" href="electronics/intro_electronics.html">Open Introduction quiz</a>
+          <a class="btn" href="/electronics/intro_electronics">Open Introduction quiz</a>
         </div>
       </article>
 
@@ -57,7 +57,7 @@ import Navbar from '../components/Navbar.astro';
         <h2>PASSCO Practice</h2>
         <p>Practice with exam-style past questions in the existing Electronics PASSCO quiz.</p>
         <div class="actions">
-          <a class="btn" href="electronics/pascco.html">Open PASSCO quiz</a>
+          <a class="btn" href="/electronics/pascco">Open PASSCO quiz</a>
         </div>
       </article>
     </div>

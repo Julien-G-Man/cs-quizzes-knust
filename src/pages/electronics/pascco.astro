@@ -1,44 +1,27 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSM 251 - Introductory Electronics PASSCO | KNUST</title>
+﻿---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="CSM 251 – Electronics PASSCO | Lamla Quiz Hub"
+  description="80 past questions covering semiconductor theory, P-N junctions, diode circuits, BJT theory, and rectifiers."
+  ogUrl="https://lamla-quiz-hub.netlify.app/electronics/pascco"
+>
+
+
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
-
-  html { scroll-behavior: smooth; }
-
-  :root {
-    --blue: #145647;
-    --lightblue: rgba(20, 86, 71, 0.1);
-    --accent: #b4692a;
-    --muted: #75685b;
-    --text: #17120d;
-    --bg: #f3ede2;
-    --card: rgba(255, 255, 255, 0.88);
-    --border: rgba(38, 29, 21, 0.13);
-    --secbg: rgba(20, 86, 71, 0.08);
-    --optbg: rgba(255, 255, 255, 0.95);
-    --shadow: 0 14px 40px rgba(36, 26, 18, 0.09);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'IBM Plex Sans', sans-serif;
-    background:
-      radial-gradient(circle at 8% 10%, rgba(20, 86, 71, 0.2), transparent 34%),
-      radial-gradient(circle at 100% 12%, rgba(180, 105, 42, 0.18), transparent 30%),
-      linear-gradient(180deg, #fff8ef 0%, var(--bg) 100%);
-    color: var(--text);
-    line-height: 1.7;
-    font-size: 16px;
+  /* quiz-local vars — defined on * so they cascade in Astro scoped context */
+  * {
+    --quiz-green: #1f5d4e;
+    --quiz-green-light: rgba(31, 93, 78, 0.1);
+    --quiz-orange: #b4692a;
+    --quiz-card: rgba(255, 255, 255, 0.88);
+    --quiz-secbg: rgba(31, 93, 78, 0.08);
+    --quiz-optbg: rgba(255, 255, 255, 0.95);
   }
 
   /*  HEADER  */
   .header {
-    background: linear-gradient(135deg, #0f2638 0%, var(--blue) 100%);
+    background: linear-gradient(135deg, #0f2638 0%, var(--quiz-green) 100%);
     color: white;
     text-align: center;
     padding: 36px 20px 28px;
@@ -78,11 +61,11 @@
   /*  NAV  */
   .toc {
     max-width: 860px;
-    margin: 74px auto 0;
+    margin: 52px auto 0;
     padding: 0 16px;
   }
   .toc-inner {
-    background: var(--card);
+    background: var(--quiz-card);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 30px 24px 18px;
@@ -92,7 +75,7 @@
     font-size: 0.88rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--accent);
+    color: var(--quiz-orange);
     margin-bottom: 10px;
   }
   .toc ul {
@@ -103,8 +86,8 @@
   }
   .toc ul li a {
     display: inline-block;
-    background: var(--secbg);
-    color: var(--blue);
+    background: var(--quiz-secbg);
+    color: var(--quiz-green);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 5px 14px;
@@ -113,7 +96,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
     transition: background 0.15s;
   }
-  .toc ul li a:hover { background: var(--lightblue); }
+  .toc ul li a:hover { background: var(--quiz-green-light); }
 
   /*  MAIN  */
   .main {
@@ -126,7 +109,7 @@
   .section-head {
     margin: 16px 0 20px;
     padding: 12px 20px;
-    background: linear-gradient(145deg, #0f2638, var(--blue));
+    background: linear-gradient(145deg, #0f2638, var(--quiz-green));
     color: white;
     border-radius: 14px;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -137,7 +120,7 @@
 
   /*  QUESTION CARD  */
   .qblock {
-    background: var(--card);
+    background: var(--quiz-card);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 18px 22px;
@@ -151,7 +134,7 @@
   }
   .qnum {
     font-weight: bold;
-    color: var(--accent);
+    color: var(--quiz-orange);
     font-family: 'IBM Plex Sans', sans-serif;
     margin-right: 6px;
   }
@@ -162,7 +145,7 @@
     margin-left: 8px;
   }
   .option {
-    background: var(--optbg);
+    background: var(--quiz-optbg);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 7px 14px;
@@ -174,17 +157,31 @@
     transition: background 0.12s, border-color 0.12s;
   }
   .option:hover {
-    background: var(--lightblue);
-    border-color: var(--accent);
+    background: var(--quiz-green-light);
+    border-color: var(--quiz-orange);
   }
   .option.selected {
-    background: rgba(20, 86, 71, 0.2);
-    border-color: var(--blue);
+    background: rgba(20, 86, 71, 0.15);
+    border-color: var(--quiz-green);
     box-shadow: inset 0 0 0 1px rgba(20, 86, 71, 0.32);
+  }
+  .option.correct {
+    background: rgba(33, 110, 57, 0.15);
+    border-color: #216e39;
+    box-shadow: inset 0 0 0 1.5px #216e39;
+  }
+  .option.incorrect {
+    background: rgba(180, 35, 24, 0.1);
+    border-color: #b42318;
+    box-shadow: inset 0 0 0 1.5px #b42318;
+  }
+  .option.show-correct {
+    background: rgba(33, 110, 57, 0.1);
+    border: 2px dashed #216e39;
   }
   .optlabel {
     font-weight: bold;
-    color: var(--blue);
+    color: var(--quiz-green);
     font-family: 'IBM Plex Sans', sans-serif;
     min-width: 18px;
     flex-shrink: 0;
@@ -214,8 +211,8 @@
     font-style: italic;
     font-size: 0.92rem;
     color: #555;
-    background: var(--secbg);
-    border-left: 3px solid var(--accent);
+    background: var(--quiz-secbg);
+    border-left: 3px solid var(--quiz-orange);
     padding: 8px 14px;
     border-radius: 0 6px 6px 0;
     margin: 14px 0 10px;
@@ -250,20 +247,18 @@
 
   .stats {
     position: fixed;
-    top: 10px;
-    left: 16px;
-    right: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 20;
     display: flex;
     align-items: center;
     gap: 8px;
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin-bottom: 16px;
-    padding: 7px 8px;
-    background: rgba(255, 250, 242, 0.92);
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    padding: 8px 16px;
+    background: rgba(255, 250, 242, 0.95);
+    border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow);
     backdrop-filter: blur(8px);
     scrollbar-width: thin;
@@ -302,7 +297,7 @@
     height: 100%;
     width: 0;
     border-radius: inherit;
-    background: linear-gradient(90deg, var(--accent), #d67a31);
+    background: linear-gradient(90deg, var(--quiz-orange), #d67a31);
     transition: width 0.2s ease;
   }
   .submit-wrap {
@@ -340,7 +335,7 @@
   }
   button:hover { transform: translateY(-1px); }
   .btn-primary {
-    background: var(--accent);
+    background: var(--quiz-orange);
     color: #fff;
     padding: 14px 20px;
     font-weight: 700;
@@ -350,7 +345,7 @@
   }
   .btn-secondary {
     background: transparent;
-    color: var(--text);
+    color: var(--ink);
     border: 1px solid var(--border);
     padding: 14px 20px;
     border-radius: 14px;
@@ -411,9 +406,9 @@
     .header h2 { font-size: 1.3rem; }
     .qblock { padding: 14px 14px; }
     .section-head { font-size: 0.88rem; }
-    .toc { margin-top: 66px; }
+    .toc { margin-top: 48px; }
     .main { margin-top: 14px; }
-    .stats { top: 6px; left: 10px; right: 10px; gap: 6px; padding: 6px; }
+    .stats { top: 0; left: 0; right: 0; border-radius: 0; gap: 6px; padding: 6px; }
     .stat { padding: 5px 8px; gap: 5px; }
     .stat span { font-size: 0.58rem; }
     .stat strong { font-size: 0.84rem; }
@@ -437,7 +432,7 @@
 <div class="toc">
   <div class="toc-inner">
     <div style="margin-bottom: 14px;">
-      <a class="btn-secondary" href="../Electronics/index.html" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Back to Electronics index</a>
+      <a class="btn-secondary" href="/electronics" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Back to Electronics</a>
     </div>
     <h3>Jump to Section</h3>
     <ul>
@@ -465,7 +460,7 @@
 <div class="submit-wrap">
   <div class="hint" id="submit-hint">Pick answers as you go. Submit anytime to view your completion stats.</div>
   <div class="submit-actions">
-    <a class="btn-secondary btn-compact" href="index.html" onclick="return confirm('Leave the quiz? Your progress will be lost.')" style="color:var(--error);border-color:var(--error);">Quit</a>
+    <a class="btn-secondary btn-compact" href="/" onclick="return confirm('Leave the quiz? Your progress will be lost.')" style="color:var(--error);border-color:var(--error);">Quit</a>
     <button class="btn-secondary btn-compact" id="to-top-btn" type="button">Back to top</button>
     <button class="btn-secondary btn-compact" id="to-bottom-btn" type="button">Go to bottom</button>
     <button class="btn-primary btn-compact" id="submit-btn" type="button">Submit and view results</button>
@@ -2224,7 +2219,7 @@
     </div>
 </section>
 
-<script>
+<script is:inline>
   (function () {
     const answerKey = {
       1: 'd', 2: 'd', 3: 'a', 4: 'c', 5: 'b', 6: 'a', 7: 'd', 8: 'c', 9: 'd', 10: 'b',
@@ -2315,16 +2310,33 @@
     }
 
     function bindOptions() {
-      optionGroups.forEach((group) => {
+      optionGroups.forEach((group, groupIndex) => {
         const options = Array.from(group.querySelectorAll('.option'));
+        const correctLetter = answerKey[groupIndex + 1];
 
         options.forEach((option) => {
           option.setAttribute('role', 'button');
           option.setAttribute('tabindex', '0');
 
           const selectOption = () => {
-            options.forEach((opt) => opt.classList.remove('selected'));
+            options.forEach((opt) => opt.classList.remove('selected', 'correct', 'incorrect', 'show-correct'));
+
             option.classList.add('selected');
+
+            const label = option.querySelector('.optlabel');
+            const selectedLetter = label ? label.textContent.trim().replace('.', '').toLowerCase() : '';
+
+            if (selectedLetter === correctLetter) {
+              option.classList.add('correct');
+            } else {
+              option.classList.add('incorrect');
+              options.forEach((opt) => {
+                const optLabel = opt.querySelector('.optlabel');
+                const optLetter = optLabel ? optLabel.textContent.trim().replace('.', '').toLowerCase() : '';
+                if (optLetter === correctLetter) opt.classList.add('show-correct');
+              });
+            }
+
             updateProgress();
           };
 
@@ -2354,8 +2366,7 @@
   })();
 </script>
 
-</body>
-</html>
+</Layout>
 
 
 

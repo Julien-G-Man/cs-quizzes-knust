@@ -8,9 +8,9 @@ import Navbar from '../components/Navbar.astro';
   ogUrl="https://lamla-quiz-hub.netlify.app/404"
 >
   <Navbar links={[
-    { label: "Electronics", href: "electronics.html" },
-    { label: "Literature", href: "literature.html" },
-    { label: "Operating Systems", href: "operating-systems.html" },
+    { label: "Electronics", href: "/electronics" },
+    { label: "Literature", href: "/literature" },
+    { label: "Operating Systems", href: "/operating-systems" },
     { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
   ]} />
 
@@ -19,15 +19,15 @@ import Navbar from '../components/Navbar.astro';
     <h1>Page not found</h1>
     <p>The page you are looking for doesn't exist or was moved. Head back to the hub or jump straight to a course.</p>
     <div class="btn-row">
-      <a class="btn" href="index.html">Back to home</a>
+      <a class="btn" href="/">Back to home</a>
       <button class="btn btn-secondary" onclick="history.back()">Go back</button>
     </div>
     <div class="cat-nav">
       <span class="cat-label">Browse a category</span>
       <div class="pills">
-        <a class="pill" href="electronics.html">Electronics</a>
-        <a class="pill" href="literature.html">Literature</a>
-        <a class="pill" href="operating-systems.html">Operating Systems</a>
+        <a class="pill" href="/electronics">Electronics</a>
+        <a class="pill" href="/literature">Literature</a>
+        <a class="pill" href="/operating-systems">Operating Systems</a>
       </div>
     </div>
   </div>

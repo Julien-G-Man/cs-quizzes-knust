@@ -5,12 +5,12 @@ import Navbar from '../components/Navbar.astro';
 <Layout
   title="Operating Systems | Lamla Quiz Hub"
   description="Operating Systems course page inside Lamla Quiz Hub for Linux and OS concept practice."
-  ogUrl="https://lamla-quiz-hub.netlify.app/operating-systems.html"
+  ogUrl="https://lamla-quiz-hub.netlify.app/operating-systems"
 >
   <Navbar links={[
-    { label: "Home", href: "index.html" },
-    { label: "Electronics", href: "electronics.html" },
-    { label: "Literature", href: "literature.html" },
+    { label: "Home", href: "/" },
+    { label: "Electronics", href: "/electronics" },
+    { label: "Literature", href: "/literature" },
     { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
   ]} />
 
@@ -21,7 +21,7 @@ import Navbar from '../components/Navbar.astro';
         <h1>Operating Systems Quizzes</h1>
         <p>This is the Operating Systems page for focused practice. Choose from the quizzes that are available now and revise at your own pace.</p>
         <div class="hero-actions">
-          <a class="btn" href="index.html">Back to Lamla Quiz Hub</a>
+          <a class="btn" href="/">Back to Lamla Quiz Hub</a>
           <a class="btn btn-light" href="#quiz-menu">Explore quiz sections</a>
         </div>
       </div>
@@ -48,7 +48,7 @@ import Navbar from '../components/Navbar.astro';
         <h2>Linux & Open Source</h2>
         <p>Practice with comprehensive questions covering Linux commands, OS concepts, networking, file systems, processes, permissions, and services.</p>
         <div class="actions">
-          <a class="btn" href="operating-systems/linux_and_os.html">Open Linux quiz</a>
+          <a class="btn" href="/operating-systems/linux_and_os">Open Linux quiz</a>
         </div>
       </article>
     </div>
