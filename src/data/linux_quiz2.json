@@ -255,13 +255,13 @@
     "q": "How do you check your current IP address?",
     "opts": [
       "ip addr",
-      "ifconfig",
+      "ipconfig",
       "myip",
       "both a and b"
     ],
     "ans": 3,
     "cat": "Networking",
-    "exp": "Both 'ip addr' (modern) and 'ifconfig' (legacy) display network interfaces and IP addresses."
+    "exp": "Both 'ip addr' (modern) and 'ipconfig' (legacy) display network interfaces and IP addresses."
   },
   {
     "q": "Which command is used to copy files in Linux?",
