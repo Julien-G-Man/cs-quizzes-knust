@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import questions from '../../data/linux_quiz1.json';
 
 const totalCount = questions.length;
-const presetCount = Math.min(12, totalCount);
+const presetCount = Math.min(20, totalCount);
 ---
 <Layout
   title="Linux Quiz 1 | Lamla Quiz Hub"
@@ -16,7 +16,7 @@ const presetCount = Math.min(12, totalCount);
     <div class="hero-copy">
       <p class="kicker">CSM 225</p>
       <h1>Linux Quiz 1</h1>
-      <p>12 questions on OS Quiz 1 taken during the first semester, covering processes and threading — mix of multiple choice and fill-in-the-blank. Covers scheduling, zombie processes, IPC, multithreading, and context switching.</p>
+      <p>27 questions on OS Quiz 1 taken during the first semester, covering processes and threading — mix of multiple choice and fill-in-the-blank. Covers scheduling, zombie processes, IPC, multithreading, and context switching.</p>
       <div class="hero-actions">
         <a class="btn btn-light" href="/operating-systems">Back to OS index</a>
         <a class="btn btn-light" href="#setup-panel">Choose questions</a>
@@ -449,9 +449,12 @@ const presetCount = Math.min(12, totalCount);
     inputEl.disabled = true;
     btnEl.disabled = true;
 
+    function norm(s) { return s.replace(/[-]/g, ' ').replace(/\s+/g, ' ').trim(); }
+
+    const normalizedUser = norm(userAnswer);
     const correct = question.answer.toLowerCase();
     const alts = (question.alts || []).map(a => a.toLowerCase());
-    const isCorrect = userAnswer === correct || alts.includes(userAnswer);
+    const isCorrect = normalizedUser === norm(correct) || alts.some(a => normalizedUser === norm(a));
 
     if (isCorrect) {
       inputEl.classList.add('correct');
