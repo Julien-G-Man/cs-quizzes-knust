@@ -386,12 +386,12 @@
   {
     "q": "Which Linux file is responsible for APT tools main configuration?",
     "opts": [
-      "/etc/apt/apt.conf",
-      "/dev/.....",
-      "/lib/.....",
-      "/var/....."
+      "/lib/apt/apt.conf",
+      "/var/apt/apt.conf",
+      "/dev/apt/apt.conf",
+      "/etc/apt/apt.conf"
     ],
-    "ans": 0,
+    "ans": 3,
     "cat": "Packages",
     "exp": "/etc/apt/apt.conf stores main APT configuration options for package management in Debian-based systems."
   },
@@ -742,5 +742,29 @@
     "ans": 1,
     "cat": "Commands",
     "exp": "whoami prints the username of the current effective user. Useful when working with sudo or switching users, to confirm which account is active."
+  },
+  {
+    "q": "When running a web browser in \"headless mode\" (e.g., for automated testing), what does it mean?",
+    "opts": [
+      "The browser cannot load images.",
+      "The browser runs without a visible UI.",
+      "The browser is broken.",
+      "The browser only works in text mode."
+    ],
+    "ans": 1,
+    "cat": "Concepts",
+    "exp": "Headless mode means the browser runs without a graphical user interface. It's commonly used for automated testing and web scraping."
+  },
+  {
+    "q": "Which command manages services?",
+    "opts": [
+      "systemctl",
+      "manage",
+      "service",
+      "control"
+    ],
+    "ans": 0,
+    "cat": "Commands",
+    "exp": "systemctl is the main command for managing services in systemd-based Linux systems. It can start, stop, restart, enable, and disable services."
   }
 ]

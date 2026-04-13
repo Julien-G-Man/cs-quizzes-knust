@@ -1,0 +1,302 @@
+[
+  {
+    "q": "Why are zombie processes retained temporarily?",
+    "type": "mc",
+    "opts": [
+      "To store exit status for the parent process",
+      "To free CPU resources",
+      "To receive signals",
+      "To continue execution later",
+      "To allow debugging"
+    ],
+    "ans": 0,
+    "cat": "Processes",
+    "exp": "A zombie process keeps its entry in the process table so the parent can read its exit status via wait(). Once the parent reads it, the zombie is removed."
+  },
+  {
+    "q": "What happens in a uniprocessing system when a process waits for I/O?",
+    "type": "mc",
+    "opts": [
+      "The CPU executes all waiting processes",
+      "The CPU switches to kernel-only execution",
+      "The CPU may remain idle, wasting processing time",
+      "The CPU terminates the process",
+      "The CPU accelerates execution"
+    ],
+    "ans": 2,
+    "cat": "Processes",
+    "exp": "In a uniprocessing system with no multiprogramming, the CPU sits idle while the process waits for I/O — wasting processing time."
+  },
+  {
+    "q": "A process that has completed execution but still exists in the process table is called a ___ process.",
+    "type": "fitb",
+    "answer": "zombie",
+    "alts": [],
+    "cat": "Processes",
+    "exp": "A zombie process has finished execution but its entry remains in the process table until the parent process reads its exit status."
+  },
+  {
+    "q": "A process that is waiting for an event or a resource is said to be in the ___ state.",
+    "type": "fitb",
+    "answer": "waiting",
+    "alts": ["blocked"],
+    "cat": "Processes",
+    "exp": "A process enters the waiting (blocked) state when it cannot proceed until an event occurs, such as I/O completion or a signal."
+  },
+  {
+    "q": "Executing multiple threads within a single process improves performance through ___.",
+    "type": "fitb",
+    "answer": "parallelism",
+    "alts": ["concurrency", "multithreading"],
+    "cat": "Threading",
+    "exp": "Multithreading allows concurrent execution of tasks within a process, improving throughput through parallelism."
+  },
+  {
+    "q": "A process that has finished execution but remains in the process table is called a ___ process.",
+    "type": "fitb",
+    "answer": "zombie",
+    "alts": [],
+    "cat": "Processes",
+    "exp": "Zombie processes linger in the process table after termination until the parent collects the exit status with wait()."
+  },
+  {
+    "q": "How does the dispatcher differ from the scheduler?",
+    "type": "mc",
+    "opts": [
+      "The dispatcher selects processes",
+      "The dispatcher assigns priorities",
+      "The dispatcher performs the actual context switch",
+      "The dispatcher manages memory",
+      "The dispatcher handles IPC"
+    ],
+    "ans": 2,
+    "cat": "Scheduling",
+    "exp": "The scheduler decides which process runs next; the dispatcher actually performs the context switch and hands control of the CPU to the selected process."
+  },
+  {
+    "q": "IPC stands for ___.",
+    "type": "fitb",
+    "answer": "Inter-Process Communication",
+    "alts": ["interprocess communication", "inter process communication"],
+    "cat": "Processes",
+    "exp": "IPC (Inter-Process Communication) refers to mechanisms that allow processes to communicate and synchronize, such as pipes, message queues, and shared memory."
+  },
+  {
+    "q": "Multithreading improves performance through ___.",
+    "type": "fitb",
+    "answer": "parallelism",
+    "alts": ["concurrency"],
+    "cat": "Threading",
+    "exp": "Multithreading allows multiple threads to run concurrently, improving performance through parallelism especially on multi-core processors."
+  },
+  {
+    "q": "A ___ is the smallest unit of processing that can be scheduled by the operating system.",
+    "type": "fitb",
+    "answer": "thread",
+    "alts": [],
+    "cat": "Threading",
+    "exp": "A thread is the smallest schedulable unit. Multiple threads can exist within a single process, sharing its memory space."
+  },
+  {
+    "q": "Which scenario best represents multiprocessing?",
+    "type": "mc",
+    "opts": [
+      "Multiple CPUs executing different processes simultaneously",
+      "Context switching on a single CPU",
+      "Threads sharing memory within one process",
+      "Time-sharing among threads",
+      "A process waiting for I/O"
+    ],
+    "ans": 0,
+    "cat": "Scheduling",
+    "exp": "Multiprocessing uses multiple CPUs to execute different processes simultaneously, providing true parallelism — unlike multitasking which time-shares a single CPU."
+  },
+  {
+    "q": "The act of reassigning the CPU from one task to another is called a ___.",
+    "type": "fitb",
+    "answer": "context switch",
+    "alts": ["context switching"],
+    "cat": "Scheduling",
+    "exp": "A context switch saves the state of the current process and loads the state of the next process, allowing the CPU to switch between tasks."
+  },
+  {
+    "q": "Which condition defines an uninterruptible waiting process?",
+    "type": "mc",
+    "opts": [
+      "Paused by debugger",
+      "Waiting for user input",
+      "Waiting directly on a hardware condition",
+      "Waiting for CPU allocation",
+      "Completed execution"
+    ],
+    "ans": 2,
+    "cat": "Processes",
+    "exp": "An uninterruptible wait (D state in Linux) occurs when a process is waiting directly on a hardware condition and cannot be interrupted by signals."
+  },
+  {
+    "q": "The component that performs the actual CPU allocation and context switching is the ___.",
+    "type": "fitb",
+    "answer": "dispatcher",
+    "alts": [],
+    "cat": "Scheduling",
+    "exp": "The dispatcher handles the mechanics of the context switch — saving/restoring registers, switching memory maps, and handing CPU control to the next process."
+  },
+  {
+    "q": "Which scenario best describes a context switch?",
+    "type": "mc",
+    "opts": [
+      "Saving one process state and loading another onto the CPU",
+      "Sending data through a pipe",
+      "Creating a new thread",
+      "Executing system calls",
+      "A process requesting I/O"
+    ],
+    "ans": 0,
+    "cat": "Scheduling",
+    "exp": "A context switch saves the CPU state (registers, program counter) of the current process and restores the state of the next process to be scheduled."
+  },
+  {
+    "q": "Why is the CPU considered the most precious resource in a Linux system?",
+    "type": "mc",
+    "opts": [
+      "The CPU only runs kernel processes",
+      "The CPU controls all memory directly",
+      "The number of processes usually exceeds the number of CPUs",
+      "The CPU cannot be virtualized",
+      "The CPU cannot be shared"
+    ],
+    "ans": 2,
+    "cat": "Scheduling",
+    "exp": "There are always more processes wanting to run than there are CPUs available, making CPU time scarce and requiring careful scheduling."
+  },
+  {
+    "q": "The Linux component responsible for choosing the next process to run is the ___.",
+    "type": "fitb",
+    "answer": "scheduler",
+    "alts": [],
+    "cat": "Scheduling",
+    "exp": "The Linux scheduler (e.g., CFS — Completely Fair Scheduler) decides which process gets the CPU next based on priority and fairness policies."
+  },
+  {
+    "q": "Which statement best distinguishes a process from a program in Linux?",
+    "type": "mc",
+    "opts": [
+      "A process is an active execution of a program with allocated system resources",
+      "Multiple programs can belong to one process",
+      "A program consumes CPU resources, while a process does not",
+      "A process is a passive entity stored on disk",
+      "A program is an executing instance of a process"
+    ],
+    "ans": 0,
+    "cat": "Processes",
+    "exp": "A program is a passive set of instructions on disk. A process is an active instance of a program with its own memory, CPU registers, and resources."
+  },
+  {
+    "q": "Which process component ensures correct resumption after a context switch?",
+    "type": "mc",
+    "opts": [
+      "Pipe buffers",
+      "IPC identifiers",
+      "Virtual memory map",
+      "Program counter and CPU registers",
+      "Open file table"
+    ],
+    "ans": 3,
+    "cat": "Scheduling",
+    "exp": "The program counter and CPU registers are saved during a context switch and restored when the process resumes, ensuring execution continues from the right point."
+  },
+  {
+    "q": "Why does Linux treat processes as fundamental units of operation?",
+    "type": "mc",
+    "opts": [
+      "Files cannot exist without processes",
+      "Users interact directly with processes",
+      "Processes prevent memory fragmentation",
+      "Processes eliminate hardware dependency",
+      "All system work requires kernel-managed resources allocated to processes"
+    ],
+    "ans": 4,
+    "cat": "Processes",
+    "exp": "Every piece of work in Linux requires kernel-managed resources (CPU time, memory, file handles) — all of which are allocated per process, making processes the fundamental unit."
+  },
+  {
+    "q": "A process waiting for an event or resource is in the ___ state.",
+    "type": "fitb",
+    "answer": "waiting",
+    "alts": ["blocked"],
+    "cat": "Processes",
+    "exp": "A process in the waiting/blocked state is not using the CPU — it is paused until a resource becomes available or an event (like I/O) completes."
+  },
+  {
+    "q": "What is the primary role of the Linux scheduler?",
+    "type": "mc",
+    "opts": [
+      "Performing context switches",
+      "Terminating processes",
+      "Deciding which process should run next",
+      "Managing virtual memory",
+      "Handling I/O devices"
+    ],
+    "ans": 2,
+    "cat": "Scheduling",
+    "exp": "The scheduler's job is to decide which process runs next. The actual mechanics of switching (context switch) are handled by the dispatcher."
+  },
+  {
+    "q": "A process waiting for an event that can be interrupted by signals is in an ___ waiting state.",
+    "type": "fitb",
+    "answer": "interruptible",
+    "alts": [],
+    "cat": "Processes",
+    "exp": "An interruptible wait (S state in Linux) means the process can be woken by a signal. An uninterruptible wait (D state) cannot be interrupted."
+  },
+  {
+    "q": "Time-sharing provides the illusion that processes are executing ___.",
+    "type": "fitb",
+    "answer": "simultaneously",
+    "alts": ["concurrently", "at the same time"],
+    "cat": "Scheduling",
+    "exp": "Time-sharing rapidly switches the CPU between processes, giving each a short time slice so they all appear to run at the same time to the user."
+  },
+  {
+    "q": "What is the primary purpose of time-sharing in Linux?",
+    "type": "mc",
+    "opts": [
+      "To eliminate context switching",
+      "To give the illusion that multiple processes execute simultaneously",
+      "To prevent process blocking",
+      "To reduce memory usage",
+      "To allow direct hardware access"
+    ],
+    "ans": 1,
+    "cat": "Scheduling",
+    "exp": "Time-sharing rapidly switches the CPU between processes so that to users and applications, all processes appear to run concurrently."
+  },
+  {
+    "q": "What is the main benefit of separate virtual address spaces for processes?",
+    "type": "mc",
+    "opts": [
+      "Faster I/O operations",
+      "Elimination of context switches",
+      "Reduced scheduling overhead",
+      "Fault isolation and system stability",
+      "Automatic IPC"
+    ],
+    "ans": 3,
+    "cat": "Processes",
+    "exp": "Separate virtual address spaces mean one process cannot corrupt another's memory. A crash or bug in one process doesn't bring down the whole system."
+  },
+  {
+    "q": "Which process state indicates that processes are competing for CPU time?",
+    "type": "mc",
+    "opts": [
+      "Ready",
+      "Waiting",
+      "Blocked",
+      "Stopped",
+      "Zombie"
+    ],
+    "ans": 0,
+    "cat": "Processes",
+    "exp": "The Ready state means a process is loaded in memory and waiting for CPU time. Multiple ready processes compete to be scheduled next."
+  }
+]

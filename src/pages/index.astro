@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar.astro';
 ---
 <Layout title="Lamla Quiz Hub">
   <Navbar links={[
+    { label: "Operating Systems", href: "/operating-systems" },
     { label: "Electronics", href: "/electronics" },
     { label: "Literature", href: "/literature" },
-    { label: "Operating Systems", href: "/operating-systems" },
     { label: "Visit Lamla AI", href: "https://lamla-ai.vercel.app", external: true },
   ]} />
 
@@ -17,9 +17,9 @@ import Navbar from '../components/Navbar.astro';
         <h1>One platform. Multiple courses. Better quiz flow.</h1>
         <p>Lamla Quiz Hub is your course gateway for practice and revision. Start here, choose your subject, and move straight into the quiz sets you want to attempt.</p>
         <div class="hero-actions">
-          <a class="btn" href="/electronics">Start with Electronics</a>
+          <a class="btn" href="/operating-systems">Start with OS Quizzes</a>
+          <a class="btn-light btn" href="/electronics">Open Electronics Quizzes</a>
           <a class="btn-light btn" href="/literature">Open Literature Quizzes</a>
-          <a class="btn-light btn" href="/operating-systems">Open OS Quizzes</a>
         </div>
       </div>
       <div class="hero-side">
@@ -71,6 +71,19 @@ import Navbar from '../components/Navbar.astro';
     </div>
     <div class="grid">
       <article class="card">
+        <div class="tag">Operating Systems</div>
+        <div class="status-row">
+          <span class="status live">Live</span>
+          <span class="status">Single quiz experience</span>
+        </div>
+        <h2>Operating Systems Quizzes</h2>
+        <p>Continue into the Operating Systems quiz page for Linux and open-source question practice.</p>
+        <div class="actions">
+          <a class="btn" href="/operating-systems">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
         <div class="tag">Electronics</div>
         <div class="status-row">
           <span class="status building">Organizing</span>
@@ -93,19 +106,6 @@ import Navbar from '../components/Navbar.astro';
         <p>Access the full literature experience with separate pages for general past questions, Latest PassCO, and The Marriage of Anansewa.</p>
         <div class="actions">
           <a class="btn" href="/literature">Open course hub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="tag">Operating Systems</div>
-        <div class="status-row">
-          <span class="status live">Live</span>
-          <span class="status">Single quiz experience</span>
-        </div>
-        <h2>Operating Systems Quizzes</h2>
-        <p>Continue into the Operating Systems quiz page for Linux and open-source question practice.</p>
-        <div class="actions">
-          <a class="btn" href="/operating-systems">Open course hub</a>
         </div>
       </article>
 
