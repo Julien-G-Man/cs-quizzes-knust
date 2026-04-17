@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/ethical_computing.json';
+---
+<Layout
+  title="Ethics Passco | Lamla Quiz Hub"
+  description="Ethics Passco quiz on the ethical, social, and legal dimensions of computing."
+  ogUrl="https://lamla-quiz-hub.netlify.app/ethical-computing/passco"
+  ogImage="https://lamla-quiz-hub.netlify.app/img/ethics-hero.png"
+>
+  <QuizShell
+    questions={questions}
+    kicker="Ethics Passco"
+    title="Ethics Passco"
+    description="Made from a combination of various past question papers prodived on the class group chat. Choose how many questions you want, then get a random set from the Ethics Passco question bank. Covers privacy, data protection, professional responsibility, intellectual property, and applied ethics."
+    backHref="/"
+    backLabel="Back to Lamla Quiz Hub"
+    defaultCount={20}
+    featureMode="Single-page quiz with a question selector."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from course notes, frameworks, and past exam papers."
+  />
+</Layout>
