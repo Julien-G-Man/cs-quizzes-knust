@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.astro';
 ---
 <Layout title="Lamla Quiz Hub">
   <Navbar links={[
+    { label: "Ethical Computing", href: "/ethical-computing" },
     { label: "Operating Systems", href: "/operating-systems" },
     { label: "Electronics", href: "/electronics" },
     { label: "Literature", href: "/literature" },
@@ -17,7 +18,8 @@ import Navbar from '../components/Navbar.astro';
         <h1>One platform. Multiple courses. Better quiz flow.</h1>
         <p>Lamla Quiz Hub is your course gateway for practice and revision. Start here, choose your subject, and move straight into the quiz sets you want to attempt.</p>
         <div class="hero-actions">
-          <a class="btn" href="/operating-systems">Start with OS Quizzes</a>
+          <a class="btn" href="/ethical-computing">Start with Ethical Computing</a>
+          <a class="btn-light btn" href="/operating-systems">Open OS Quizzes</a>
           <a class="btn-light btn" href="/electronics">Open Electronics Quizzes</a>
           <a class="btn-light btn" href="/literature">Open Literature Quizzes</a>
         </div>
@@ -71,6 +73,19 @@ import Navbar from '../components/Navbar.astro';
     </div>
     <div class="grid">
       <article class="card">
+        <div class="tag">Ethical Computing</div>
+        <div class="status-row">
+          <span class="status live">Live</span>
+          <span class="status">Passco + Slides sets</span>
+        </div>
+        <h2>Ethical Implications of Computing</h2>
+        <p>Privacy, professional responsibility, digital rights, intellectual property, and applied computing ethics.</p>
+        <div class="actions">
+          <a class="btn" href="/ethical-computing">Open course hub</a>
+        </div>
+      </article>
+
+      <article class="card">
         <div class="tag">Operating Systems</div>
         <div class="status-row">
           <span class="status live">Live</span>
@@ -119,19 +134,6 @@ import Navbar from '../components/Navbar.astro';
         <p>Object-Oriented Programming with Java — classes, inheritance, polymorphism, interfaces, and exam prep questions.</p>
         <div class="actions">
           <a class="btn" href="/oop-java">Open course hub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="tag">Ethical Computing</div>
-        <div class="status-row">
-          <span class="status building">Coming soon</span>
-          <span class="status">In development</span>
-        </div>
-        <h2>Ethical Implications of Computing</h2>
-        <p>Privacy, professional responsibility, digital rights, intellectual property, and applied computing ethics.</p>
-        <div class="actions">
-          <a class="btn" href="/ethical-computing">Open course hub</a>
         </div>
       </article>
 

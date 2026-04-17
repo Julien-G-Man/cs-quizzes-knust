@@ -1,0 +1,1202 @@
+[
+  {
+    "q": "Which of the following best defines \"morals\"?",
+    "opts": [
+      "Standards of behaviour expected by a professional group",
+      "A system of rules enforced by institutions such as courts",
+      "Personal beliefs about what is right and wrong",
+      "Guidelines issued by a government organisation"
+    ],
+    "ans": 2,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Morals are an individual's own beliefs about right and wrong — they are personal, not collectively enforced."
+  },
+  {
+    "q": "According to M. J. Quinn, ethics is best described as:",
+    "opts": [
+      "The legal code governing professional conduct",
+      "The philosophical study of morality and rational examination of moral beliefs",
+      "A set of rules imposed by a government",
+      "Personal feelings about fairness"
+    ],
+    "ans": 1,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Quinn defines ethics as the philosophical study of morality — a rational, examined approach to moral beliefs and behaviour."
+  },
+  {
+    "q": "What distinguishes a policy from a law?",
+    "opts": [
+      "Policies are more strictly enforced than laws",
+      "Laws are optional guidelines whereas policies are mandatory",
+      "Ignorance of a policy is an acceptable defence; ignorance of the law is not",
+      "Policies apply only to government bodies"
+    ],
+    "ans": 2,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "The key difference is that ignorance of a policy is a valid defence, but ignorance of the law is not. This is why policies must meet five enforceability criteria."
+  },
+  {
+    "q": "Which of the following is NOT one of the five criteria that make an organisational policy enforceable?",
+    "opts": [
+      "Dissemination",
+      "Comprehension",
+      "Confidentiality",
+      "Uniform enforcement"
+    ],
+    "ans": 2,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "The five criteria are Dissemination, Review, Comprehension, Compliance, and Uniform Enforcement. Confidentiality is not among them."
+  },
+  {
+    "q": "Jean Jacques Rousseau defined law as:",
+    "opts": [
+      "The moral code of a society based on religious teaching",
+      "Rules members of a society create to balance individual rights against social needs",
+      "A set of personal values shared across cultures",
+      "Guidelines that describe acceptable employee behaviour"
+    ],
+    "ans": 1,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Rousseau described law in the Social Contract as the rules a society creates to balance individual self-determination against collective social needs."
+  },
+  {
+    "q": "\"Due care standards\" in an organisation are met when:",
+    "opts": [
+      "Employees are punished for any breach of conduct",
+      "Every employee knows what is acceptable behaviour and the consequences of illegal acts",
+      "A legal team reviews all company policies annually",
+      "The organisation purchases liability insurance"
+    ],
+    "ans": 1,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Due care requires that every employee understands acceptable and unacceptable behaviour and the consequences of illegal or unethical actions."
+  },
+  {
+    "q": "Which type of law regulates the structure of government agencies and their relationship with citizens?",
+    "opts": [
+      "Civil law",
+      "Private law",
+      "Public law",
+      "Commercial law"
+    ],
+    "ans": 2,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Public law covers criminal, administrative, and constitutional law — it governs the relationship between government and individuals."
+  },
+  {
+    "q": "Criminal law differs from civil law primarily in that criminal law:",
+    "opts": [
+      "Is initiated by the aggrieved individual",
+      "Seeks monetary compensation as its principal sanction",
+      "Is actively enforced by the state and addresses conduct harmful to society",
+      "Applies only to contracts and commercial disputes"
+    ],
+    "ans": 2,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Criminal law is state-enforced and addresses conduct harmful to society; its sanctions include imprisonment, not just fines."
+  },
+  {
+    "q": "\"Due diligence\" requires an organisation to:",
+    "opts": [
+      "Provide legal counsel to all employees",
+      "Make a valid and continual effort to protect others from harm",
+      "Limit liability by restricting employee internet access",
+      "Ensure all contracts are written rather than verbal"
+    ],
+    "ans": 1,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Due diligence goes beyond a one-time effort — it requires that an organisation continuously maintain protective measures against potential harm."
+  },
+  {
+    "q": "A court's right to hear a case involving a wrong committed in its territory is known as:",
+    "opts": [
+      "Due process",
+      "Long-arm jurisdiction",
+      "Civil liability",
+      "Judicial review"
+    ],
+    "ans": 1,
+    "cat": "Week 1 — Morals, Ethics, Policies & Laws",
+    "exp": "Long-arm jurisdiction allows a court to assert authority over individuals or organisations even across national borders, particularly relevant in internet-related offences."
+  },
+  {
+    "q": "According to Ajzen's Theory of Planned Behaviour, human action is guided by which three factors?",
+    "opts": [
+      "Attitude, skills, and environment",
+      "Behavioural belief, normative belief, and control beliefs",
+      "Pleasure, reality, and death drive",
+      "Openness, conscientiousness, and neuroticism"
+    ],
+    "ans": 1,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Ajzen (1988, 1991) identifies Behavioural Belief, Normative Belief, and Control Beliefs as the three considerations that guide human action."
+  },
+  {
+    "q": "The Panopticon Theory, applied to ICT ethics, suggests that people will:",
+    "opts": [
+      "Break rules only when financially motivated",
+      "Obey rules when they know they are being watched",
+      "Always act ethically regardless of surveillance",
+      "Resist monitoring as a violation of privacy"
+    ],
+    "ans": 1,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Bentham's Panopticon principle holds that the awareness of being watched is sufficient to encourage rule compliance — directly applicable to internet monitoring."
+  },
+  {
+    "q": "In Maslow's Hierarchy of Needs, which level sits at the very top?",
+    "opts": [
+      "Safety and security",
+      "Love and belonging",
+      "Self-esteem",
+      "Self-actualisation"
+    ],
+    "ans": 3,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Self-actualisation is the highest level, encompassing morality, creativity, and realising one's inner potential."
+  },
+  {
+    "q": "Which of the Big Five personality traits describes the tendency to frequently experience negative emotions such as anger and worry?",
+    "opts": [
+      "Extraversion",
+      "Agreeableness",
+      "Neuroticism",
+      "Conscientiousness"
+    ],
+    "ans": 2,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Neuroticism refers to the tendency to experience negative emotions and interpersonal sensitivity — relevant for identifying employees at risk of unethical ICT behaviour."
+  },
+  {
+    "q": "In Freud's psychoanalytic theory, the \"pleasure principle\" refers to:",
+    "opts": [
+      "The ability of the mind to assess external reality",
+      "The drive toward death and destruction",
+      "The id's pursuit of immediate gratification of all needs and urges",
+      "The ego's rational decision-making process"
+    ],
+    "ans": 2,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "The pleasure principle is the id's drive to fulfil basic urges immediately — hunger, thirst, anger, sex — without regard for consequences."
+  },
+  {
+    "q": "A computer user who blames a colleague for their own hacking activity is exhibiting which Freudian defence mechanism?",
+    "opts": [
+      "Regression",
+      "Projection",
+      "Sublimation",
+      "Displacement"
+    ],
+    "ans": 1,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Projection involves attributing one's own unacceptable thoughts, feelings, or motives to another person."
+  },
+  {
+    "q": "Which defence mechanism involves redirecting negative feelings from their original source to a safer, substitute target?",
+    "opts": [
+      "Sublimation",
+      "Reaction formation",
+      "Displacement",
+      "Denial"
+    ],
+    "ans": 2,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Displacement involves redirecting unacceptable feelings from the original source to a substitute — e.g., taking anger at a boss out on a spouse."
+  },
+  {
+    "q": "The \"Control Beliefs\" factor in planned behaviour theory refers to:",
+    "opts": [
+      "The belief about likely consequences after performing an action",
+      "The expectation of other people or the community about an action",
+      "Factors that may facilitate or impede performance of a behaviour",
+      "The individual's personal values and moral code"
+    ],
+    "ans": 2,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Control Beliefs relate to perceived facilitators or barriers — for example, an unlocked computer (open door) may trigger an opportunistic act."
+  },
+  {
+    "q": "Which behaviour rule for computer users addresses the prohibition against using another user's system resources?",
+    "opts": [
+      "Theft rule",
+      "Predator rule",
+      "Resources rule",
+      "Copy rule"
+    ],
+    "ans": 2,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "The Resources rule states: \"Do not use other users' computer resources without their permission.\""
+  },
+  {
+    "q": "Sublimation as a defence mechanism involves:",
+    "opts": [
+      "Completely denying an unpleasant reality",
+      "Replacing socially unacceptable impulses with socially acceptable behaviour",
+      "Reverting to immature behaviour from an earlier developmental stage",
+      "Blocking external events from conscious awareness"
+    ],
+    "ans": 1,
+    "cat": "Week 2 — Computing and Psychology Relationship",
+    "exp": "Sublimation channels unacceptable impulses into constructive or socially acceptable activities — e.g., aggressive energy into competitive sport."
+  },
+  {
+    "q": "Which ethical theory holds that there are no universal moral norms, and that right and wrong differ between individuals and cultures?",
+    "opts": [
+      "Kantianism",
+      "Utilitarianism",
+      "Relativism",
+      "Virtue Ethics"
+    ],
+    "ans": 2,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Relativism denies universal moral norms. Subjective relativism applies this to individuals; cultural relativism applies it to societies."
+  },
+  {
+    "q": "Why is subjective relativism rejected as a workable ethical theory for the ICT profession?",
+    "opts": [
+      "It produces too many universal guidelines",
+      "It is self-defeating and cannot be applied consistently across a profession",
+      "It relies too heavily on religious teachings",
+      "It ignores the consequences of actions"
+    ],
+    "ans": 1,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Subjective relativism's \"what's right for you may not be right for me\" logic is self-defeating and impossible to apply uniformly in a profession that requires consistent standards."
+  },
+  {
+    "q": "The Divine Command Theory bases morality on:",
+    "opts": [
+      "The greatest happiness for the greatest number",
+      "Actions that align with the will of God as expressed in holy books",
+      "Universal rational laws derivable by reason",
+      "Virtuous character traits developed through practice"
+    ],
+    "ans": 1,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Divine Command Theory holds that good actions align with God's will, and holy books provide the moral decision-making guides."
+  },
+  {
+    "q": "A key argument AGAINST the Divine Command Theory in a multicultural society is:",
+    "opts": [
+      "It produces too many conflicting rules for professionals",
+      "God's authority is difficult to verify empirically",
+      "There are many holy books with sometimes conflicting teachings",
+      "It is incompatible with criminal law"
+    ],
+    "ans": 2,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Because different holy books disagree on some moral questions, it is unlikely that a multicultural society will adopt a single religion-based morality."
+  },
+  {
+    "q": "Virtue Ethics focuses primarily on:",
+    "opts": [
+      "Calculating the total happiness produced by an action",
+      "Following universal moral laws derived through reason",
+      "How you should behave and think about relationships in daily community life",
+      "Obeying God's commands as a moral guide"
+    ],
+    "ans": 2,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Virtue ethics emphasises character and relationships over rules or consequences — virtuous dispositions like honesty, diligence, and kindness guide decisions."
+  },
+  {
+    "q": "Immanuel Kant believed that moral laws must be:",
+    "opts": [
+      "Derived from cultural traditions and social custom",
+      "Based on the consequences of an action for the majority",
+      "Universal and based on reason, applicable to all rational beings",
+      "Flexible depending on the context of each situation"
+    ],
+    "ans": 2,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Kant's moral laws are universal and reason-based — they apply to all rational beings without exception."
+  },
+  {
+    "q": "A main criticism of Kantianism is that:",
+    "opts": [
+      "It ignores individual happiness",
+      "It allows no exceptions to moral laws, even in extreme situations",
+      "It is not rational enough for professional use",
+      "It relies on consequences rather than duty"
+    ],
+    "ans": 1,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Kantianism's rigidity — no exceptions to moral laws — is a primary criticism, as real-world situations sometimes demand nuance."
+  },
+  {
+    "q": "Utilitarianism is classified as a \"consequentialist\" theory because:",
+    "opts": [
+      "It focuses on the character of the person performing the action",
+      "It derives moral rules from God's commands",
+      "The rightness of an action is judged by its consequences — specifically its effect on total happiness",
+      "It applies one universal law to all moral situations"
+    ],
+    "ans": 2,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Utilitarianism judges an action right or wrong based on whether it increases or decreases overall happiness — the consequence is what matters."
+  },
+  {
+    "q": "What distinguishes Act Utilitarianism from Rule Utilitarianism?",
+    "opts": [
+      "Act Utilitarianism applies the utility principle to moral rules; Rule Utilitarianism applies it to individual actions",
+      "Act Utilitarianism applies the utility principle to individual actions; Rule Utilitarianism applies it to moral rules",
+      "Act Utilitarianism is based on religious teachings; Rule Utilitarianism is secular",
+      "There is no practical difference between the two"
+    ],
+    "ans": 1,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Act Utilitarianism evaluates each individual action, while Rule Utilitarianism adopts rules that, when generally followed, produce the greatest happiness."
+  },
+  {
+    "q": "Social Contract Theory, as described by Thomas Hobbes, argues that without rules:",
+    "opts": [
+      "Society naturally develops ethical behaviour through religion",
+      "People would create more value due to freedom from restrictions",
+      "There would be social anarchy since nobody could protect what they create",
+      "Government would eventually emerge from individual moral consensus"
+    ],
+    "ans": 2,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Hobbes argued that in the \"state of nature,\" without enforceable rules, there would be anarchy — no one could keep what they created, so rational people agree to a social contract."
+  },
+  {
+    "q": "In applying ethical principles to computing, \"Beneficence\" means:",
+    "opts": [
+      "Treating all clients equally regardless of their technical knowledge",
+      "Taking action for the benefit of others, even if they initially refuse good advice",
+      "Refusing to provide services that could cause harm",
+      "Following universal moral laws without exception"
+    ],
+    "ans": 1,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Beneficence (linked to Virtue Ethics and Utilitarianism) means acting for others' benefit — including persuading a client toward protective solutions for their future well-being."
+  },
+  {
+    "q": "The ethical principle of \"Non-Maleficence\" in computing, linked to Kantianism, means:",
+    "opts": [
+      "Provide the cheapest available solution to clients",
+      "Do no harm to an IT client or employer, and alert them to harmful tools",
+      "Ensure all contracts include a liability limitation clause",
+      "Give clients complete autonomy to make all technical decisions"
+    ],
+    "ans": 1,
+    "cat": "Week 3 — Philosophical/Ethical Theories in Computing",
+    "exp": "Non-Maleficence (\"do no harm\") requires IT professionals to avoid providing ineffective or harmful solutions, and to warn clients about risky tools."
+  },
+  {
+    "q": "Which of the following is NOT a required element of a legally enforceable contract?",
+    "opts": [
+      "Agreement comprising offer and acceptance",
+      "Supported by consideration",
+      "Witnessed by a government official",
+      "Made by parties with capacity to contract"
+    ],
+    "ans": 2,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "The six elements are: offer & acceptance, consideration, capacity, genuine assent, legal purpose, and writing when required. Witnessing by a government official is not required."
+  },
+  {
+    "q": "An \"implied contract\" is one where:",
+    "opts": [
+      "Terms are set down clearly in writing or orally",
+      "The court creates an obligation to prevent unjust enrichment",
+      "Terms are determined from surrounding circumstances or established patterns of dealings",
+      "One party is obligated only if the other party performs first"
+    ],
+    "ans": 2,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "An implied contract has terms that arise from circumstances or conduct — such as a restaurant serving food with the understanding that the customer will pay."
+  },
+  {
+    "q": "A \"quasi-contract\" is best described as:",
+    "opts": [
+      "A bilateral contract where both parties must perform",
+      "A contract with illegal subject matter and therefore void",
+      "A court-created remedy to return value to someone who was unjustly enriched",
+      "A verbal agreement that has not been written down"
+    ],
+    "ans": 2,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "A quasi-contract is not a true contract — it is a court remedy applied when no express or implied contract exists but one party has been unjustly enriched."
+  },
+  {
+    "q": "A contract involving illegal subject matter (e.g., gambling where prohibited) is classified as:",
+    "opts": [
+      "Voidable",
+      "Executory",
+      "Unilateral",
+      "Void"
+    ],
+    "ans": 3,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "A void contract has no legal effect whatsoever — illegal subject matter renders it entirely unenforceable."
+  },
+  {
+    "q": "A \"voidable\" contract is one that:",
+    "opts": [
+      "Has already been fully performed by both parties",
+      "Can have its legal effect cancelled by one or more parties (e.g., due to fraud or coercion)",
+      "Has no legal effect at all",
+      "Only obligates one party to perform"
+    ],
+    "ans": 1,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "Voidable contracts are technically valid but can be cancelled due to coercion, undue influence, misrepresentation, fraud, or similar grounds."
+  },
+  {
+    "q": "In contract law, the person making an offer is called the:",
+    "opts": [
+      "Obligor",
+      "Promisor",
+      "Offeror",
+      "Obligee"
+    ],
+    "ans": 2,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "The offeror makes the offer; the offeree is the person to whom the offer is made."
+  },
+  {
+    "q": "Copyright protection for a human-created work lasts:",
+    "opts": [
+      "20 years from the date of creation",
+      "50 years from the date of creation",
+      "70 years after the death of the creator",
+      "Indefinitely, unless the creator sells the rights"
+    ],
+    "ans": 2,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "Copyright lasts 70 years after the creator's death. For computer-generated works, it expires 50 years after creation."
+  },
+  {
+    "q": "Under intellectual property law, the \"right of integrity\" means:",
+    "opts": [
+      "The right to be recognised as the creator of a work",
+      "The right not to have your work tampered with by someone else",
+      "The right to earn royalties from your creation",
+      "The right to patent your idea for 20 years"
+    ],
+    "ans": 1,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "The right of integrity protects the work itself from alteration or distortion by others. The right of paternity protects the creator's attribution."
+  },
+  {
+    "q": "Which statement about software ownership under contract law is correct?",
+    "opts": [
+      "A contractor always loses ownership of software they develop to the client",
+      "Work developed \"in the course of employment\" generally belongs to the employer",
+      "Software developed by an employee always belongs to that employee",
+      "Ownership of software is determined solely by who wrote the most code"
+    ],
+    "ans": 1,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "The key legal phrase is \"in the course of employment\" — work done as an employee generally belongs to the employer; contractors typically retain ownership unless the contract states otherwise."
+  },
+  {
+    "q": "Computer Misuse Law primarily addresses:",
+    "opts": [
+      "Breaches of copyright in digital publications",
+      "Unauthorised access to and unauthorised modification of systems, programs, and data",
+      "The terms of software licensing agreements",
+      "Data retention obligations for organisations"
+    ],
+    "ans": 1,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "Computer Misuse Law covers illegal access and illegal modification — including editing or deleting data without permission."
+  },
+  {
+    "q": "Why might computer log files become inadmissible as evidence in court?",
+    "opts": [
+      "Log files are too technical for courts to interpret",
+      "Log files can only be used in civil cases, not criminal ones",
+      "Viewing log files with an editor after an intrusion may be deemed tampering, invalidating them",
+      "Courts require physical evidence and do not accept digital data"
+    ],
+    "ans": 2,
+    "cat": "Week 4 — Law of Contract",
+    "exp": "If log files are opened and edited (even unintentionally) after an intrusion, the court may consider them potentially altered, making them inadmissible."
+  },
+  {
+    "q": "The term \"netiquette\" refers to:",
+    "opts": [
+      "Legal statutes governing internet service providers",
+      "Internet etiquette — guidelines for ethical and respectful online behaviour",
+      "Technical standards for network configuration",
+      "Anti-spam legislation enforced by governments"
+    ],
+    "ans": 1,
+    "cat": "Week 5 — Internet Communication Ethics / Netiquette",
+    "exp": "Netiquette (network + etiquette) is a set of guidelines — not laws — for respectful and appropriate conduct when communicating online."
+  },
+  {
+    "q": "Which of the following statements about netiquette rules is true?",
+    "opts": [
+      "Violation of netiquette rules always results in criminal prosecution",
+      "Netiquette rules are legally binding in all countries",
+      "Netiquette rules are guidelines — not laws — that help avoid online mistakes and misunderstandings",
+      "Netiquette rules only apply to professional email communication"
+    ],
+    "ans": 2,
+    "cat": "Week 5 — Internet Communication Ethics / Netiquette",
+    "exp": "Netiquette rules are guidelines, not enforceable laws. However, some violations (e.g., threatening emails) can cross into illegal territory in many jurisdictions."
+  },
+  {
+    "q": "Which of the following is an example of good email netiquette?",
+    "opts": [
+      "Writing the entire email in CAPITAL LETTERS for emphasis",
+      "Sending attachments without prior notice to the recipient",
+      "Including an appropriate subject header and keeping the message concise",
+      "Forwarding chain letters to keep contacts informed"
+    ],
+    "ans": 2,
+    "cat": "Week 5 — Internet Communication Ethics / Netiquette",
+    "exp": "Good email netiquette includes using a clear subject line, keeping messages short, and reading before sending. Caps is considered \"shouting\"; chain letters and surprise attachments are discouraged."
+  },
+  {
+    "q": "The Mail Abuse Prevention System (MAPS) fights spam primarily by:",
+    "opts": [
+      "Encrypting all outgoing email to prevent interception",
+      "Maintaining a Real-time Blackhole List (RBL) of known spam networks for mail relays to query and block",
+      "Scanning email content for malicious links before delivery",
+      "Issuing legal proceedings against spammers on behalf of users"
+    ],
+    "ans": 1,
+    "cat": "Week 5 — Internet Communication Ethics / Netiquette",
+    "exp": "MAPS maintains the RBL — a list of networks that forward or create spam. Mail relays query this list via DNS and can reject email from blacklisted hosts."
+  },
+  {
+    "q": "In the context of online communication, \"social media\" platforms sit at the intersection of which two communication models?",
+    "opts": [
+      "Broadcast media and peer-to-peer communications",
+      "Print media and radio broadcasting",
+      "Encrypted messaging and mass publishing",
+      "Telephone networks and television broadcasting"
+    ],
+    "ans": 0,
+    "cat": "Week 5 — Internet Communication Ethics / Netiquette",
+    "exp": "Social media platforms (Facebook, Twitter, Instagram, etc.) combine peer-to-peer (equal nodes) and publish/subscribe (mass media) communication models."
+  },
+  {
+    "q": "Which of the following online activities does netiquette explicitly discourage?",
+    "opts": [
+      "Identifying yourself clearly in communications",
+      "Providing references when paraphrasing others' work",
+      "Visiting pornographic sites and stealing closed-source software",
+      "Using appropriate subject headers in emails"
+    ],
+    "ans": 2,
+    "cat": "Week 5 — Internet Communication Ethics / Netiquette",
+    "exp": "Netiquette asks users to desist from visiting pornographic sites, stealing closed-source software, violating others' privacy, and asking for money online."
+  },
+  {
+    "q": "Which of the following best explains why a computer scientist must understand human psychology?",
+    "opts": [
+      "Psychology replaces the need for legal frameworks in the digital world",
+      "Understanding human behaviour enables the design of secure, ethical systems for diverse users",
+      "Psychological knowledge is required to write better programming code",
+      "Psychology helps computer scientists understand hardware performance"
+    ],
+    "ans": 1,
+    "cat": "Week 5 — Internet Communication Ethics / Netiquette",
+    "exp": "Computer science and psychology have a direct reciprocal link. Understanding how and why people behave online allows IT professionals to design systems that anticipate misuse and serve diverse users ethically."
+  },
+  {
+    "q": "Which of the following is NOT listed as a factor nudging child-computer adoption?",
+    "opts": [
+      "COVID-19 Pandemic & School Closures",
+      "Climate Change impact & School Closures",
+      "Social Media Addiction",
+      "Distance Family life & Online Parenting"
+    ],
+    "ans": 2,
+    "cat": "Week 6 — Ethical Issues on Children Online Surveillance",
+    "exp": "The lecture lists 7 factors: Education, Health, Environment, Security, Family, Entertainment, and Innovation. Social media addiction is not among them."
+  },
+  {
+    "q": "Which tracking tool specifically allows parents to read SMS messages and Social Media posts, and block contacts?",
+    "opts": [
+      "Google Family Link",
+      "Net Nanny",
+      "Qustodio",
+      "Windows Filter"
+    ],
+    "ans": 2,
+    "cat": "Week 6 — Ethical Issues on Children Online Surveillance",
+    "exp": "Qustodio is described as capable of reading SMS, social media posts, and blocking kids' contacts."
+  },
+  {
+    "q": "The Child Internet Protection Act requires libraries receiving federal funds to prevent children from accessing which type of content?",
+    "opts": [
+      "Social media platforms",
+      "Visual depictions of obscenity and child pornography",
+      "Online gaming and gambling sites",
+      "News websites with violent content"
+    ],
+    "ans": 1,
+    "cat": "Week 6 — Ethical Issues on Children Online Surveillance",
+    "exp": "The Act specifically targets visual depictions of obscenity and child pornography in libraries using federal funds for internet access."
+  },
+  {
+    "q": "From the Divine Command Rule perspective, which Bible verse is used to support the idea that surveillance is part of parenting?",
+    "opts": [
+      "Ephesians 6:4",
+      "Numbers 13:1–3",
+      "Proverbs 22:6",
+      "Romans 13:1"
+    ],
+    "ans": 2,
+    "cat": "Week 6 — Ethical Issues on Children Online Surveillance",
+    "exp": "Proverbs 22:6 — \"Train up a child in the way he should go\" — is cited to argue that surveillance is inherent to proper parenting."
+  },
+  {
+    "q": "Which of the following represents the Child-Rights (Bioethics) perspective AGAINST child surveillance?",
+    "opts": [
+      "Surveillance is commanded by God",
+      "Surveillance is a standard part of parenting",
+      "Surveillance breaks parent-child trust",
+      "Surveillance prevents cyberterrorism"
+    ],
+    "ans": 2,
+    "cat": "Week 6 — Ethical Issues on Children Online Surveillance",
+    "exp": "The Child-Rights (Bioethics) perspective presents three objections: it hinders digital inclusion, it violates privacy, and it breaks parent-child trust."
+  },
+  {
+    "q": "What does \"Helicopter Parenting\" refer to in the Medical Perspective on child surveillance?",
+    "opts": [
+      "Using drones to monitor children outdoors",
+      "Over-concern and excessive monitoring of children",
+      "Allowing children to use the internet freely",
+      "Sharing devices between siblings"
+    ],
+    "ans": 1,
+    "cat": "Week 6 — Ethical Issues on Children Online Surveillance",
+    "exp": "Helicopter parenting is defined in the lecture as over-concern — parents who hover too closely over every activity of the child."
+  },
+  {
+    "q": "In the HCI & Systems Protection Perspective (PBAT model), what does \"Adequate Loop time\" do to a parent's intention?",
+    "opts": [
+      "Eliminates the intention permanently",
+      "Modifies the intention to reprocess it",
+      "Converts intention directly into behavior",
+      "Blocks all surveillance behaviors"
+    ],
+    "ans": 1,
+    "cat": "Week 6 — Ethical Issues on Children Online Surveillance",
+    "exp": "The PBAT model shows that adequate loop time feeds back to \"Re-process Intention,\" giving the actor time to reconsider before acting."
+  },
+  {
+    "q": "Which of the five factors of a trusted computer network ensures that the system remains accessible to authorized users on demand?",
+    "opts": [
+      "Confidentiality",
+      "Safety",
+      "Availability",
+      "Reliability"
+    ],
+    "ans": 2,
+    "cat": "Week 8 — Computer Networks and Security Ethics",
+    "exp": "Availability means the system is \"accessible and usable upon demand for authorized entities.\""
+  },
+  {
+    "q": "A hacker intercepts network traffic and reads the contents of messages being transferred. Which type of security threat is this?",
+    "opts": [
+      "Interruption",
+      "Fabrication",
+      "Modification",
+      "Interception"
+    ],
+    "ans": 3,
+    "cat": "Week 8 — Computer Networks and Security Ethics",
+    "exp": "Interception involves an unauthorized party gaining access to data or a service — in this case, reading transferred messages."
+  },
+  {
+    "q": "A Denial of Service (DDoS) attack maps to which category of security threat?",
+    "opts": [
+      "Fabrication",
+      "Interruption",
+      "Modification",
+      "Interception"
+    ],
+    "ans": 1,
+    "cat": "Week 8 — Computer Networks and Security Ethics",
+    "exp": "DDoS attacks make services unavailable or unusable, which is the definition of Interruption."
+  },
+  {
+    "q": "An attacker inserts fake messages into a transmission channel without the sender's knowledge. This is an example of:",
+    "opts": [
+      "Modification",
+      "Interception",
+      "Fabrication",
+      "Interruption"
+    ],
+    "ans": 2,
+    "cat": "Week 8 — Computer Networks and Security Ethics",
+    "exp": "Fabrication involves generating additional data or activity that originally did not exist — such as inserting messages into a channel."
+  },
+  {
+    "q": "What is the correct order in security access control?",
+    "opts": [
+      "Authorization → Authentication → Auditing",
+      "Authentication → Authorization → Auditing",
+      "Auditing → Authorization → Authentication",
+      "Authorization → Auditing → Authentication"
+    ],
+    "ans": 1,
+    "cat": "Week 8 — Computer Networks and Security Ethics",
+    "exp": "You must first verify identity (Authentication), then determine permissions (Authorization), and finally trace access (Auditing). Authorization makes sense only after the subject has been authenticated."
+  },
+  {
+    "q": "Which security mechanism transforms data so that an attacker cannot understand it, protecting both confidentiality and integrity?",
+    "opts": [
+      "Authentication",
+      "Authorization",
+      "Auditing",
+      "Encryption"
+    ],
+    "ans": 3,
+    "cat": "Week 8 — Computer Networks and Security Ethics",
+    "exp": "Encryption transforms data into an unreadable form (confidentiality) and can also detect unauthorized modifications (integrity)."
+  },
+  {
+    "q": "\"Spoofing\" in the context of database objects relates to which type of security threat?",
+    "opts": [
+      "Interruption",
+      "Interception",
+      "Modification",
+      "Fabrication"
+    ],
+    "ans": 3,
+    "cat": "Week 8 — Computer Networks and Security Ethics",
+    "exp": "Fabrication at the Database Object level involves \"Spoofing an object — to imitate or exaggerate.\""
+  },
+  {
+    "q": "Under Ghana's Data Protection Act, 2012 (Act 843), what is the maximum fine for unauthorized data collection and sharing?",
+    "opts": [
+      "GHS 50,000",
+      "GHS 100,000",
+      "GHS 200,000",
+      "GHS 250,000"
+    ],
+    "ans": 3,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "Act 843, Sections 17–20 prescribes fines of up to GHS 250,000 or business license revocation for unlawful data processing."
+  },
+  {
+    "q": "Which Ghanaian law criminalizes a system administrator who installs spyware to monitor employees' private messages?",
+    "opts": [
+      "Copyright Act, 2005 (Act 690)",
+      "Electronic Transactions Act, 2008 (Act 772)",
+      "Cybersecurity Act, 2020 (Act 1038)",
+      "Standards Authority Act, 1973 (NRCD 173)"
+    ],
+    "ans": 1,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "The Electronic Transactions Act, 2008 (Act 772), Section 107 criminalizes unauthorized surveillance, with fines up to GHS 50,000 or 3 years imprisonment."
+  },
+  {
+    "q": "A fintech company stores customer payment details in plain text. Which law is most directly violated?",
+    "opts": [
+      "Copyright Act, 2005 (Act 690)",
+      "Cybersecurity Act, 2020 (Act 1038)",
+      "Data Protection Act, 2012 (Act 843)",
+      "Electronic Transactions Act, 2008 (Act 772)"
+    ],
+    "ans": 1,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "The Cybersecurity Act, 2020 (Act 1038), Section 35 mandates businesses to implement cybersecurity measures. Non-compliance carries fines up to GHS 500,000 or 10 years imprisonment."
+  },
+  {
+    "q": "A \"Symmetric (secret-key)\" encryption system is best described as:",
+    "opts": [
+      "Using different keys for encryption and decryption",
+      "Using a single shared key to encrypt and decrypt",
+      "Producing a fixed-length digest with no decryption",
+      "Encrypting only the hash of a message"
+    ],
+    "ans": 1,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "A symmetric system uses one shared key for both encryption and decryption, requiring that sender and receiver both possess it."
+  },
+  {
+    "q": "In cryptography, \"Hashing\" differs from traditional encryption because:",
+    "opts": [
+      "Hashing uses two different keys",
+      "Hashing is slower than symmetric encryption",
+      "Hashing produces a digest with no decryption — only comparison is possible",
+      "Hashing only works on database objects"
+    ],
+    "ans": 2,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "A hashing system only encrypts data into a fixed-length digest. There is no way to reverse it; you can only compare hashes."
+  },
+  {
+    "q": "Which incentive is suggested specifically for system administrators who uphold ethical standards?",
+    "opts": [
+      "Tax rebates",
+      "Priority licensing",
+      "Reduced regulatory fees",
+      "Professional accreditation and cash bonuses"
+    ],
+    "ans": 3,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "The lecture recommends professional accreditation and cash bonuses as incentives for ethical system administrators."
+  },
+  {
+    "q": "A \"passive intruder\" in the context of ciphertext is best described as someone who:",
+    "opts": [
+      "Alters messages in transit",
+      "Inserts new messages before the destination",
+      "Only listens to messages in transmission",
+      "Spoofs database objects"
+    ],
+    "ans": 2,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "The lecture distinguishes: passive intruders only listen, while active intruders can alter or insert messages."
+  },
+  {
+    "q": "Which of the five factors of a Trusted E-Business Information Systems Architecture specifically relates to minimizing the probability of catastrophic failure?",
+    "opts": [
+      "Confidentiality",
+      "Reliability",
+      "Safety",
+      "Integrity"
+    ],
+    "ans": 2,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "Safety is defined as \"very low probability of catastrophes.\""
+  },
+  {
+    "q": "An e-commerce company uses cracked inventory management software. Under which Ghanaian law is this a violation?",
+    "opts": [
+      "Data Protection Act, 2012 (Act 843)",
+      "Copyright Act, 2005 (Act 690)",
+      "Cybersecurity Act, 2020 (Act 1038)",
+      "Criminal Offences Act, 1960 (Act 29)"
+    ],
+    "ans": 1,
+    "cat": "Week 8b — Information Systems Ethics Management / E-Business & E-Commerce",
+    "exp": "The Copyright Act, 2005 (Act 690) prohibits software piracy. Violators face fines up to GHS 6,000 or up to 2 years imprisonment."
+  },
+  {
+    "q": "What is the defining characteristic that differentiates a computer WORM from a computer VIRUS?",
+    "opts": [
+      "Worms are more damaging to files than viruses",
+      "Worms are self-contained and spread without needing a host program",
+      "Viruses spread through networks; worms spread through files",
+      "Worms can only infect email attachments"
+    ],
+    "ans": 1,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "A worm is a standalone program that spreads itself through a network, while a virus is embedded within a host program and requires it to execute."
+  },
+  {
+    "q": "The Melissa virus (c. 1999) spread by:",
+    "opts": [
+      "Overwriting boot disk records on a specific date",
+      "Sending email with an infected Word attachment to the first 50 contacts",
+      "Spoofing objects in a database",
+      "Deleting media files and collecting passwords"
+    ],
+    "ans": 1,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "When a user opened the infected Word attachment, Melissa auto-emailed itself to the first 50 people in the address book."
+  },
+  {
+    "q": "Which well-known computer virus was deliberately triggered on the birthday of a Renaissance artist?",
+    "opts": [
+      "Brain virus",
+      "Melissa virus",
+      "Love Bug",
+      "Michelangelo virus"
+    ],
+    "ans": 3,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "The Michelangelo virus activates on March 6 — Michelangelo's birthday — and overwrites critical boot disk records."
+  },
+  {
+    "q": "A Trojan horse is best described as:",
+    "opts": [
+      "A self-replicating program that spreads via email only",
+      "Malware that targets boot records on a specific date",
+      "A program with a benign appearance that conceals a sinister purpose",
+      "A worm that exploits network security holes"
+    ],
+    "ans": 2,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "A Trojan horse performs the expected beneficial action while also executing hidden, harmful operations unknown to the user."
+  },
+  {
+    "q": "A Remote Access Trojan (RAT) gives attackers which primary capability?",
+    "opts": [
+      "Infecting the victim's boot sector",
+      "Sending emails to the victim's contacts",
+      "Gaining remote access and control over the victim's computer",
+      "Encrypting the victim's files for ransom"
+    ],
+    "ans": 2,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "RATs like SubSeven enable attackers to capture screen images, record keystrokes, read/write files, and control the mouse of the victim's computer."
+  },
+  {
+    "q": "What is cyberterrorism, as illustrated by the WANK worm example?",
+    "opts": [
+      "Stealing credit card numbers through phishing",
+      "A politically motivated attack against IT resources to inflict damage or generate fear",
+      "Installing spyware on employees' computers",
+      "Spreading viruses via email attachments"
+    ],
+    "ans": 1,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "The WANK worm (Worms Against Nuclear Killers) attacked NASA's systems to protest a nuclear probe launch — a politically motivated IT attack."
+  },
+  {
+    "q": "Which defensive measure is described as the most foolproof way to prevent a network from being attacked by an external virus or worm?",
+    "opts": [
+      "Installing antivirus software",
+      "Regular password changes",
+      "Detaching the network from the internet",
+      "Using only symmetric encryption"
+    ],
+    "ans": 2,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "The lecture states: \"A sure-fire way to prevent a network from being attacked by an external virus or worm is to detach it from the Internet.\""
+  },
+  {
+    "q": "A firewall is best defined as:",
+    "opts": [
+      "An encryption tool that hides network traffic",
+      "A computer positioned between a local network and the internet that monitors packet flow",
+      "A biometric authentication device",
+      "An antivirus program installed on each workstation"
+    ],
+    "ans": 1,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "A firewall is a computer stationed between the local network and the internet that monitors incoming and outgoing packets."
+  },
+  {
+    "q": "The Brain virus (c. 1986) is notable because it was:",
+    "opts": [
+      "The first virus to spread via email attachments",
+      "The first virus that specifically targeted NASA",
+      "The first virus to move from one IBM PC to another",
+      "The first virus to include a payload targeting boot sectors on specific dates"
+    ],
+    "ans": 2,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "The Brain virus, written by owners of Brain Computer Services in Pakistan, was the first virus documented to spread between IBM PCs."
+  },
+  {
+    "q": "Which type of authentication mechanism relies on something a user physically possesses?",
+    "opts": [
+      "Knowledge-based (password)",
+      "Biometric (fingerprint)",
+      "Identification card or smart card",
+      "Retinal scan"
+    ],
+    "ans": 2,
+    "cat": "Week 9 — Ethics on Virus and Antivirus Software Development",
+    "exp": "The lecture lists three authentication categories: knowledge-based (password), possession-based (card/smart card), and biometric (fingerprint/retinal scan). Smart cards fall under possession."
+  },
+  {
+    "q": "Which of the following is the FIRST and most critical step in the ethical decision-making process?",
+    "opts": [
+      "Identifying alternatives",
+      "Evaluating and choosing an alternative",
+      "Implementing the decision",
+      "Developing a problem statement"
+    ],
+    "ans": 3,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "The lecture states: \"Development of a problem statement is the most critical step in the decision-making process. Without a clear statement of the problem, it is useless to proceed.\""
+  },
+  {
+    "q": "Which of the following is the BEST example of a well-formed problem statement?",
+    "opts": [
+      "\"We need to implement a new inventory control system.\"",
+      "\"We have a problem with finished product inventory.\"",
+      "\"Our supply organization is running out of stock, causing 15% out-of-stock situations and over ₵3,000,000 in lost monthly sales.\"",
+      "\"There are issues with our customer orders that need to be addressed.\""
+    ],
+    "ans": 2,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "A good problem statement is specific, measurable, and describes the issue, impact, and frequency — as shown in the textbook example."
+  },
+  {
+    "q": "An ethical dilemma is best described as:",
+    "opts": [
+      "A problem with one clear ethical solution",
+      "A conflict between legal and illegal choices",
+      "A decision problem where neither option is fully acceptable from an ethical perspective",
+      "A situation where corporate policy conflicts with personal preferences"
+    ],
+    "ans": 2,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "An ethical dilemma is \"a problem in the decision-making process between two possible options, neither of which is absolutely acceptable from an ethical perspective.\""
+  },
+  {
+    "q": "Which approach to resolving an ethical dilemma involves carefully analyzing the situation to argue that the dilemma itself does not truly exist?",
+    "opts": [
+      "Value theory approach",
+      "Finding alternative solutions",
+      "Refuting the paradox",
+      "Stakeholder analysis"
+    ],
+    "ans": 2,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "The \"Refute the paradox\" approach involves logically demonstrating that the dilemma's existence can be challenged through careful analysis."
+  },
+  {
+    "q": "The \"value theory approach\" to ethical dilemmas recommends:",
+    "opts": [
+      "Following the law regardless of consequences",
+      "Choosing the alternative that offers the greater good or the lesser evil",
+      "Asking stakeholders to vote on the best option",
+      "Deferring to religious principles for guidance"
+    ],
+    "ans": 1,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "Value theory directs decision-makers to select the option that maximizes good or minimizes harm — the lesser evil."
+  },
+  {
+    "q": "During the \"Identifying Alternatives\" stage of decision-making, which behavior should be avoided during brainstorming?",
+    "opts": [
+      "Including stakeholders in the process",
+      "Offering only the facts without personal opinion",
+      "Being critical of ideas as they are proposed",
+      "Writing down all suggestions as they are made"
+    ],
+    "ans": 2,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "The lecture warns: \"During any brainstorming process, try not to be critical of ideas, as any negative criticism will tend to shut down the discussion.\""
+  },
+  {
+    "q": "When evaluating alternatives, which of the following criteria is NOT mentioned in the lecture?",
+    "opts": [
+      "Effectiveness at addressing the issue",
+      "Cost and time to implement",
+      "The CEO's personal preferences",
+      "The extent of risk associated with each alternative"
+    ],
+    "ans": 2,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "The evaluation criteria listed are: effectiveness, risk, cost, time to implement, legal/ethical compliance, and stakeholder impact. CEO preferences are not mentioned."
+  },
+  {
+    "q": "Which of the following ethical theories is NOT listed in the lecture as a common approach to ethical decision-making?",
+    "opts": [
+      "Kantianism",
+      "Act Utilitarianism",
+      "Social Darwinism",
+      "Divine Command Theory"
+    ],
+    "ans": 2,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "The theories listed are: Subjective Relativism, Cultural Relativism, Divine Command Theory, Virtue Ethics, Kantianism, Act Utilitarianism, Rule Utilitarianism, and Social Contract Theory. Social Darwinism is not included."
+  },
+  {
+    "q": "Step 5 (Evaluate the Results) of the decision-making process recommends what action if the desired outcomes were not achieved?",
+    "opts": [
+      "Accepting the results and moving on",
+      "Firing the person who implemented the decision",
+      "Returning to the problem development step and working through the process again",
+      "Immediately implementing a different alternative without analysis"
+    ],
+    "ans": 2,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "The lecture states: \"If further refinements are needed, return to the problem development step, refine the problem statement as necessary, and work through the process again.\""
+  },
+  {
+    "q": "Why is communication described as the \"key\" during Step 4 (Implementing the Decision)?",
+    "opts": [
+      "It reduces the cost of implementation",
+      "It helps stakeholders accept change by answering why the change is happening and what benefits it brings",
+      "It allows the decision-maker to avoid legal liability",
+      "It speeds up the technical deployment of the solution"
+    ],
+    "ans": 1,
+    "cat": "Week 10 — The Decision-Making Process",
+    "exp": "The lecture states: \"Communication is the key to helping people accept a change,\" specifically by addressing why the change is needed and what the benefits are."
+  },
+  {
+    "q": "The acronym used in the lecture to remember the four main reasons AI ethics matters is:",
+    "opts": [
+      "FAIR",
+      "BAPT",
+      "CAPE",
+      "ABCD"
+    ],
+    "ans": 1,
+    "cat": "Week 10b — Ethics of Artificial Intelligence Application",
+    "exp": "The lecture uses BAPT: Bias & Fairness, Accountability, Privacy & Surveillance, Transparency & Explainability."
+  },
+  {
+    "q": "Amazon's AI hiring tool is cited as a real-world example of which AI ethics problem?",
+    "opts": [
+      "Algorithmic Fairness (COMPAS)",
+      "Data Privacy (Clearview AI)",
+      "Bias in AI — the tool favored male candidates due to biased historical training data",
+      "Model Drift — the tool degraded over time"
+    ],
+    "ans": 2,
+    "cat": "Week 10b — Ethics of Artificial Intelligence Application",
+    "exp": "Amazon's hiring AI rejected female applicants because it was trained on historical data reflecting past male-dominated hiring patterns — a textbook example of AI bias."
+  },
+  {
+    "q": "\"Model Drift\" in AI ethics refers to:",
+    "opts": [
+      "AI systems intentionally changing their decision rules to avoid audits",
+      "An AI's performance degrading over time due to changing data",
+      "The tendency of AI models to favor majority-group data",
+      "Unauthorized access to an AI's training dataset"
+    ],
+    "ans": 1,
+    "cat": "Week 10b — Ethics of Artificial Intelligence Application",
+    "exp": "Model drift occurs when the data environment changes (as with COVID-19 variants), causing a model trained on old data to perform poorly."
+  },
+  {
+    "q": "Which technique is described as \"tricking AI with manipulated inputs,\" illustrated by placing stickers on a road to mislead a Tesla's Autopilot?",
+    "opts": [
+      "Model Drift",
+      "Algorithmic Bias",
+      "Adversarial Attacks",
+      "Data Poisoning"
+    ],
+    "ans": 2,
+    "cat": "Week 10b — Ethics of Artificial Intelligence Application",
+    "exp": "Adversarial Attacks involve manipulating inputs to fool AI systems, as demonstrated by the Tesla Autopilot sticker example."
+  },
+  {
+    "q": "SHAP (Shapley Additive Explanations) and LIME are tools associated with which AI ethics concept?",
+    "opts": [
+      "AI Governance",
+      "Algorithmic Fairness",
+      "Explainable AI (XAI)",
+      "Data Privacy"
+    ],
+    "ans": 2,
+    "cat": "Week 10b — Ethics of Artificial Intelligence Application",
+    "exp": "SHAP and LIME are XAI techniques that help break down AI decisions into understandable factors, e.g., explaining a loan denial."
+  },
+  {
+    "q": "The COMPAS algorithm is cited as a real-world example of failure in which AI ethics area?",
+    "opts": [
+      "Transparency",
+      "Algorithmic Fairness — it flagged Black defendants as higher risk than white defendants",
+      "Accountability — no one was held responsible for its errors",
+      "Privacy — it collected biometric data without consent"
+    ],
+    "ans": 1,
+    "cat": "Week 10b — Ethics of Artificial Intelligence Application",
+    "exp": "COMPAS is the classic example of algorithmic fairness failure: it systematically and disproportionately rated Black defendants as higher recidivism risks."
+  },
+  {
+    "q": "Which of the following BEST describes the \"Black Box Problem\" in AI ethics?",
+    "opts": [
+      "AI systems that are too expensive to audit",
+      "AI systems whose decision-making processes are not easily interpretable or explainable",
+      "AI models that become biased due to a lack of diverse training data",
+      "AI systems that store personal data without encryption"
+    ],
+    "ans": 1,
+    "cat": "Week 10b — Ethics of Artificial Intelligence Application",
+    "exp": "The Black Box Problem refers specifically to the lack of transparency and explainability in complex AI models (especially deep learning), where it is difficult to understand how the model reached a decision."
+  }
+]

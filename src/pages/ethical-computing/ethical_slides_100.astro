@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuizShell from '../../components/QuizShell.astro';
+import questions from '../../data/ethical_slides_100.json';
+---
+<Layout
+  title="Ethical Computing Slides Quiz (100) | Lamla Quiz Hub"
+  description="Topic-by-topic 100-question Ethics, Law, and Computing quiz built from lecture slides."
+  ogUrl="https://lamla-quiz-hub.netlify.app/ethical-computing/ethical_slides_100.html"
+>
+  <QuizShell
+    questions={questions}
+    kicker="Ethical Computing | Slides Set"
+    title="Ethics, Law and Computing (100 Questions)"
+    description="Choose how many questions you want, then get a random set from the slide-based topic bank (Weeks 1-6, 8, 8b, 9, 10, 10b)."
+    backHref="/ethical-computing"
+    backLabel="Back to Ethical Computing index"
+    defaultCount={25}
+    featureMode="Single-page quiz with topic-by-topic source coverage."
+    featureFlow="Choose count, answer, then submit at any time."
+    featureSource="Built from lecture slides (100 questions)."
+  />
+</Layout>

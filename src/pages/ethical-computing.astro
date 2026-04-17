@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.astro';
 ---
 <Layout
   title="Ethical Implications of Computing | Lamla Quiz Hub"
-  description="Ethical Implications of Computing course page inside Lamla Quiz Hub. Quiz sets coming soon."
+  description="Ethical Implications of Computing course page inside Lamla Quiz Hub. Includes past questions and a topic-by-topic 100-question slides set."
   ogUrl="https://lamla-quiz-hub.netlify.app/ethical-computing.html"
 >
   <Navbar links={[
@@ -19,19 +19,19 @@ import Navbar from '../components/Navbar.astro';
       <div class="hero-copy">
         <p class="kicker">Ethical Computing | Lamla Quiz Hub</p>
         <h1>Ethical Implications of Computing</h1>
-        <p>This page covers the ethical, social, and legal dimensions of computing. Quiz sets on privacy, intellectual property, professional responsibility, and digital rights are on the way.</p>
+        <p>This page covers the ethical, social, and legal dimensions of computing. Start with either the past-questions set or the 100-question topic-by-topic slides set.</p>
         <div class="hero-actions">
           <a class="btn" href="/">Back to Lamla Quiz Hub</a>
-          <a class="btn btn-light" href="#quiz-menu">See what's coming</a>
+          <a class="btn btn-light" href="#quiz-menu">Open quiz menu</a>
         </div>
       </div>
       <div class="hero-side">
         <div class="hero-badges">
           <span class="hero-badge">Privacy & Security</span>
           <span class="hero-badge">Digital Rights</span>
-          <span class="hero-badge">Coming soon</span>
+          <span class="hero-badge">Passco + Slides live</span>
         </div>
-        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Quiz sets covering the ethical and societal dimensions of computing are being developed. Questions will draw from course material and case studies.</p>
+        <p style="margin:0; color: rgba(255,255,255,0.9); line-height:1.7;">Both banks are now available: past questions and the full 100-question slide-based set grouped by topic weeks.</p>
       </div>
     </div>
     <div class="feature-strip">
@@ -44,20 +44,11 @@ import Navbar from '../components/Navbar.astro';
   <section id="quiz-menu" class="panel menu">
     <div class="grid">
       <article class="card">
-        <div class="tag">Privacy & Law</div>
-        <h2>Privacy & Data Protection</h2>
-        <p>Covers privacy rights, data collection ethics, surveillance, GDPR principles, and the legal frameworks governing personal data.</p>
+        <div class="tag">Slides Question Bank</div>
+        <h2>Topic-by-Topic (100 Questions)</h2>
+        <p>Comprehensive slide-based question bank spanning Weeks 1-6, 8, 8b, 9, 10, and 10b with explanations.</p>
         <div class="actions">
-          <span class="btn btn-disabled">Coming soon</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="tag">Professional Ethics</div>
-        <h2>Professional Responsibility</h2>
-        <p>Practice questions on codes of conduct, professional liability, whistleblowing, and ethical decision-making in computing contexts.</p>
-        <div class="actions">
-          <span class="btn btn-disabled">Coming soon</span>
+          <a class="btn" href="/ethical-computing/ethical_slides_100">Open slides bank</a>
         </div>
       </article>
 
@@ -66,13 +57,13 @@ import Navbar from '../components/Navbar.astro';
         <h2>Past Questions</h2>
         <p>Ethical Implications of Computing past exam questions covering theories, case studies, and applied ethics scenarios.</p>
         <div class="actions">
-          <span class="btn btn-disabled">Coming soon</span>
+          <a class="btn" href="/ethical-computing/ethical_computing">Open past questions</a>
         </div>
       </article>
     </div>
 
     <div class="note">
-      Ethical Implications of Computing quizzes are in development. Content is being drawn from course notes, frameworks, and past papers.
+      Ethics flow: Lamla Quiz Hub -> Ethical Computing -> choose Past Questions or Topic-by-Topic Slides Bank.
     </div>
   </section>
 </Layout>

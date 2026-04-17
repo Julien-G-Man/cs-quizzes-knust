@@ -1,3 +1,333 @@
 [
-  { "q": "Placeholder question — replace with real content.", "opts": ["Option A", "Option B", "Option C", "Option D"], "ans": 0, "cat": "Placeholder" }
+  {
+    "q": "An end-user of your IT systems is addicted to watching nude videos from websites that are sources of virus spread. What should be your most responsible cause of action?",
+    "opts": [
+      "Respect the act of utilitarianism to make the end-user always happy",
+      "Block access to harmful sites during the busy working hours",
+      "Allow the principle of Autonomy and respect individual rights to privacy",
+      "Report the end-user to the HR officer for disciplinary action",
+      "Confront the end-user or employee with a strong warning to stop to protect the IT Infrastructure"
+    ],
+    "ans": 1,
+    "cat": "Past Questions",
+    "exp": "Protecting infrastructure from known malware sources is a core professional duty."
+  },
+  {
+    "q": "A village school purchased a single-user copy of a word processing program because of financial difficulties. What will you do to uphold the ethics of the IT profession?",
+    "opts": [
+      "Copy it unto all the computers inside the village school lab",
+      "Install it for use on only one computer inside the lab",
+      "Use it on all the computers in one classroom",
+      "Obey the headteacher to copy on all computers to satisfy human relationship",
+      "Duplicate the disk and give it to everyone in the class to install on their devices"
+    ],
+    "ans": 1,
+    "cat": "Past Questions",
+    "exp": "A single-user license legally and ethically permits one installation only."
+  },
+  {
+    "q": "By 1973, the ACM had adopted its first code of ethics. IT organizations have ensured that every employee knows acceptable or unacceptable behaviour and the consequences of illegal or unethical actions. We call this:",
+    "opts": [
+      "due care standards",
+      "company IT policy",
+      "code of Ethics",
+      "company IT law",
+      "IT staff Operational Guidelines"
+    ],
+    "ans": 2,
+    "cat": "Foundations",
+    "exp": "The ACM document is specifically a professional code of ethics."
+  },
+  {
+    "q": "Computer ethics is the set of commonly agreed principles or standards that govern the use of computers. The theory with three factors informing a hacker's intention to commit a crime is:",
+    "opts": [
+      "Theory of Planned Behaviour",
+      "Planned behaviour abortion"
+    ],
+    "ans": 0,
+    "cat": "Ethical Theory",
+    "exp": "Ajzen's model explains intention through behavioral, normative, and control beliefs."
+  },
+  {
+    "q": "For Immanuel Kant, an action is morally good or right if determined by a principle of pure reason, irrespective of the consequences. Kantianism expands moral laws usage in many courts of competent jurisdiction globally due to:",
+    "opts": [
+      "the inability to derive judgement through a reasoning process",
+      "the ability to resolve a conflict on the basis of the Divine command rule",
+      "the inability to allow exceptions to moral laws",
+      "the ability to derive judgement through a reasoning process",
+      "the ability to derive judgment through morality"
+    ],
+    "ans": 3,
+    "cat": "Ethical Theory",
+    "exp": "Kantian ethics emphasizes rational and consistent moral judgment."
+  },
+  {
+    "q": "If an IT professional charges different prices to different groups of customers on the same scope of work then it is a breach of:",
+    "opts": [
+      "principle of autonomy",
+      "principle of non-maleficence",
+      "principle of beneficence",
+      "principle of justice",
+      "principle of utilitarianism"
+    ],
+    "ans": 3,
+    "cat": "Ethical Principles",
+    "exp": "Justice requires fairness and equal treatment under comparable conditions."
+  },
+  {
+    "q": "In essence, a standard is an agreed way of doing something. Accepted standards of right and wrong behaviours in society are called:",
+    "opts": [
+      "moral",
+      "ethics",
+      "guideline",
+      "code of standard",
+      "standard ethical rules"
+    ],
+    "ans": 1,
+    "cat": "Foundations",
+    "exp": "Ethics refers to accepted right-wrong standards within a group or society."
+  },
+  {
+    "q": "A good friend who sent you the job advert to apply asked you to copy a corporate program file for his/her home use. What will be your most ethical response as an IT officer?",
+    "opts": [
+      "From Kant perspective, I can't copy it because it is against the copyright laws. Sorry friend...",
+      "From virtue ethics perspective, I will copy it for you out of charity, but you can't copy it for anyone else",
+      "I may be sacked from the workplace. Just buy your original copy from the shop",
+      "By principle of Utility or happiness, I will copy it, but you have to promise not to tell anybody",
+      "Pay an amount for me to convince my immediate supervisor to copy it"
+    ],
+    "ans": 0,
+    "cat": "Copyright",
+    "exp": "Copyright compliance should not be bypassed for personal relationships."
+  },
+  {
+    "q": "_______ is a problem, situation, or opportunity requiring an individual, group, or organization to choose among several actions that must be evaluated as right or wrong.",
+    "opts": [
+      "Openness trait",
+      "Ethical dilemma",
+      "Defence Mechanism",
+      "Ethical issue",
+      "Morality"
+    ],
+    "ans": 1,
+    "cat": "Foundations",
+    "exp": "A dilemma specifically involves choosing between alternatives with moral weight."
+  },
+  {
+    "q": "It is an absolutist theory that asserts that what is moral is determined by commands and that for a person to be moral he is to follow deity commands. The .......... provides the cardinal pillars for the formulation of other philosophies and governing laws in countries worldwide.",
+    "opts": [
+      "the Kantianism",
+      "the Divine command theory",
+      "the Judaism command theory",
+      "the Quran beliefs",
+      "the Bible beliefs"
+    ],
+    "ans": 1,
+    "cat": "Ethical Theory",
+    "exp": "Divine Command Theory grounds morality in obedience to deity commands."
+  },
+  {
+    "q": "Computer ethics is essentially a set of philosophical guidelines or moral standards that aim to influence behaviour and prevent harm. Employees at different levels can commit unethical cyber behaviour depending on present needs. Select a theoretical lens as an IT security officer to understand human needs that could trigger unethical behavior in cyberspace.",
+    "opts": [
+      "the behavioural theory",
+      "the Maslow hierarchy theory",
+      "the planned behavioural theory",
+      "self-Actualisation pursuit",
+      "intrinsic motivational needs"
+    ],
+    "ans": 1,
+    "cat": "Human Behavior",
+    "exp": "Maslow is the needs-based framework useful for understanding needs-driven behavior."
+  },
+  {
+    "q": "Majority of the company influencers supported the HR Manager to sack Martinson accused of office romance with the national service lady during office hours. However, the matter was not well investigated. The ethical or unethical decision to sack Martinson was based on the HR Manager's:",
+    "opts": [
+      "Kantianism philosophy",
+      "Utilitarianism philosophy",
+      "Virtue Ethics",
+      "Divine Command rule",
+      "Cultural historical incidence of a junior sister who was once raped"
+    ],
+    "ans": 1,
+    "cat": "Ethical Theory",
+    "exp": "The choice followed majority preference, matching utilitarian logic."
+  },
+  {
+    "q": "Make IT policies that satisfy the greatest happiness for many end-users to limit crime is:",
+    "opts": [
+      "the utilitarian approach to ethical decision making",
+      "the greatest happiness theory",
+      "the rule utilitarian approach to ethical decision making",
+      "Data Protection law and IT Infrastructure Confidentiality, Integrity, Availability",
+      "the comprehensive IT policy to limit cybercrime"
+    ],
+    "ans": 2,
+    "cat": "Ethical Theory",
+    "exp": "Rule utilitarianism evaluates the value of rules or policies by their outcomes."
+  },
+  {
+    "q": "Which ethical theory inspires people to satisfy human relationship to act good or bad?",
+    "opts": [
+      "Virtue Ethics",
+      "Divine moral laws",
+      "Act utilitarianism",
+      "Kant ethics",
+      "Social relationship ethics"
+    ],
+    "ans": 0,
+    "cat": "Ethical Theory",
+    "exp": "Virtue ethics focuses on character and social-relational conduct."
+  },
+  {
+    "q": "Some ethical standards are universal. For example, murder, theft, and assault are actions that deviate from ethical and legal codes worldwide. This is under:",
+    "opts": [
+      "Divine Command theory",
+      "Virtue ethics",
+      "Social contract theory",
+      "Kantianism",
+      "Utilitarianism"
+    ],
+    "ans": 2,
+    "cat": "Ethical Theory",
+    "exp": "Social contract theory explains shared norms that enable social order."
+  },
+  {
+    "q": "The first process of establishing organizational ethics programs is to develop:",
+    "opts": [
+      "codes of conduct",
+      "ethics training programs",
+      "ethics enforcement mechanisms",
+      "hidden agenda",
+      "Rehearse the moral laws of obedience under divine command"
+    ],
+    "ans": 0,
+    "cat": "Governance",
+    "exp": "Organizations define expected conduct first, then train and enforce."
+  },
+  {
+    "q": "The general guidelines of computer ethics are needed to control the following, EXCEPT:",
+    "opts": [
+      "IT professional behaviour",
+      "Subjective control",
+      "Protection of personal data",
+      "Cracking",
+      "Computer crime"
+    ],
+    "ans": 1,
+    "cat": "Foundations",
+    "exp": "Subjective control is a psychological construct, not a direct ethics-control domain."
+  },
+  {
+    "q": "This ethical principle (right or wrong) promotes understanding cultural practices unfamiliar to other cultures such as eating insects, genocides or genital cutting. As long as community members are comfortable with the practice, even the UN missionaries cannot change our mindset. This is an example of:",
+    "opts": [
+      "Cultural relativism",
+      "Subjective relativism",
+      "Ethical Standards",
+      "Moral standards",
+      "Cultural standard values"
+    ],
+    "ans": 0,
+    "cat": "Ethical Theory",
+    "exp": "The scenario is based on group-defined morality, which is cultural relativism."
+  },
+  {
+    "q": "To be successful, IT professional ethics training programs in a company need to:",
+    "opts": [
+      "educate employees on formal ethical frameworks of ethical decision-making",
+      "promote the use of situational emotions in making tough ethical decisions"
+    ],
+    "ans": 0,
+    "cat": "Governance",
+    "exp": "Formal frameworks provide consistency and defensible ethical decisions."
+  },
+  {
+    "q": "While computer ethics work to ward off technology misuse, we can understand the ego of many unethical computer hackers to commit behaviour from:",
+    "opts": [
+      "Bentham's Panopticon theory",
+      "Ajzen's Planned behaviour theory",
+      "Metaphysis under Philosophical abstraction",
+      "Online bullying mechanism theory",
+      "Maslow's egocentric hierarchy theory"
+    ],
+    "ans": 1,
+    "cat": "Human Behavior",
+    "exp": "Planned Behavior Theory is used to analyze intention behind unethical acts."
+  },
+  {
+    "q": "_______ provides norms and principles to computer users and system professionals.",
+    "opts": [
+      "code of ethics",
+      "guidelines",
+      "privacy",
+      "security"
+    ],
+    "ans": 0,
+    "cat": "Foundations",
+    "exp": "A code of ethics formally states professional norms and principles."
+  },
+  {
+    "q": "_______ is a term which refers to the unethical manipulation of a person inside an organization in order to gain access to confidential information.",
+    "opts": [
+      "Covert hacking",
+      "Dumpster diving",
+      "Social engineering",
+      "Cyber manipulation",
+      "Social networking"
+    ],
+    "ans": 2,
+    "cat": "Security",
+    "exp": "Social engineering targets human trust to bypass technical protections."
+  },
+  {
+    "q": "Authorization to perform certain actions on a computer system is known as the users':",
+    "opts": [
+      "Duties",
+      "Identity",
+      "Password",
+      "Authority",
+      "Privileges"
+    ],
+    "ans": 4,
+    "cat": "Security",
+    "exp": "Authorization defines privileges: what authenticated users may do."
+  },
+  {
+    "q": "Knowledge of ethical theories or principles is helpful in the _______ phase of a decision-making process.",
+    "opts": [
+      "Developing Problem Statement",
+      "Identifying alternatives",
+      "Evaluating and choosing alternatives",
+      "Implementing decision",
+      "Evaluating results"
+    ],
+    "ans": 2,
+    "cat": "Decision Making",
+    "exp": "Ethical theories are used to assess and select the most defensible option."
+  },
+  {
+    "q": "Publishing false information on the internet space is an issue classified as:",
+    "opts": [
+      "Computer ethics",
+      "Morality",
+      "Computer equity",
+      "Digital divide",
+      "Legal issue"
+    ],
+    "ans": 4,
+    "cat": "Law",
+    "exp": "False publication can trigger legal liability such as defamation or fraud."
+  },
+  {
+    "q": "Which of the following cyber-issues is ethically right?",
+    "opts": [
+      "Data theft for academic purpose only",
+      "Attaching a virus to your paid-for App that is shared for free via another illegal website",
+      "Damage to data and systems of others in exploring how to develop a new virus program",
+      "Online Identity theft to hide yourself from law IT enforcement agencies",
+      "Non-maleficence in an online space"
+    ],
+    "ans": 4,
+    "cat": "Ethical Principles",
+    "exp": "Non-maleficence means avoiding harm and is the only ethically valid option listed."
+  }
 ]
