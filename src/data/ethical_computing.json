@@ -1,333 +1,1335 @@
 [
   {
-    "q": "An end-user of your IT systems is addicted to watching nude videos from websites that are sources of virus spread. What should be your most responsible cause of action?",
+    "q": "W1-1. What is the difference between morals, ethics, and laws?",
     "opts": [
-      "Respect the act of utilitarianism to make the end-user always happy",
-      "Block access to harmful sites during the busy working hours",
-      "Allow the principle of Autonomy and respect individual rights to privacy",
-      "Report the end-user to the HR officer for disciplinary action",
-      "Confront the end-user or employee with a strong warning to stop to protect the IT Infrastructure"
+      "Morals are personal beliefs, ethics are codes of behavior, and laws are rules",
+      "Morals are enforced by governing bodies, while ethics are based on common fraternity",
+      "Morals govern the conduct of individuals, while laws are personal beliefs",
+      "Morals carry the authority of a governing body, while ethics are philosophical"
     ],
-    "ans": 1,
-    "cat": "Past Questions",
-    "exp": "Protecting infrastructure from known malware sources is a core professional duty."
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
   },
   {
-    "q": "A village school purchased a single-user copy of a word processing program because of financial difficulties. What will you do to uphold the ethics of the IT profession?",
+    "q": "W1-2. What do morals evaluate?",
     "opts": [
-      "Copy it unto all the computers inside the village school lab",
-      "Install it for use on only one computer inside the lab",
-      "Use it on all the computers in one classroom",
-      "Obey the headteacher to copy on all computers to satisfy human relationship",
-      "Duplicate the disk and give it to everyone in the class to install on their devices"
+      "The legal obligations of a person",
+      "The rightness or wrongness of an action or character",
+      "The cultural standards of a group",
+      "The professional code of an organization"
     ],
     "ans": 1,
-    "cat": "Past Questions",
-    "exp": "A single-user license legally and ethically permits one installation only."
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
   },
   {
-    "q": "By 1973, the ACM had adopted its first code of ethics. IT organizations have ensured that every employee knows acceptable or unacceptable behaviour and the consequences of illegal or unethical actions. We call this:",
+    "q": "W1-3. Who defines the standards or codes of behavior in ethics?",
     "opts": [
-      "due care standards",
-      "company IT policy",
-      "code of Ethics",
-      "company IT law",
-      "IT staff Operational Guidelines"
+      "An individual",
+      "The government",
+      "A group",
+      "A religious authority"
     ],
     "ans": 2,
-    "cat": "Foundations",
-    "exp": "The ACM document is specifically a professional code of ethics."
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
   },
   {
-    "q": "Computer ethics is the set of commonly agreed principles or standards that govern the use of computers. The theory with three factors informing a hacker's intention to commit a crime is:",
+    "q": "W1-4. What does policy outline for a government or company?",
     "opts": [
-      "Theory of Planned Behaviour",
-      "Planned behaviour abortion"
+      "What they intend to do",
+      "What the law requires them to do",
+      "What morals demand of them",
+      "What employees personally believe"
     ],
     "ans": 0,
-    "cat": "Ethical Theory",
-    "exp": "Ajzen's model explains intention through behavioral, normative, and control beliefs."
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
   },
   {
-    "q": "For Immanuel Kant, an action is morally good or right if determined by a principle of pure reason, irrespective of the consequences. Kantianism expands moral laws usage in many courts of competent jurisdiction globally due to:",
+    "q": "W1-5. Which philosopher is associated with the study of ethics in computing?",
     "opts": [
-      "the inability to derive judgement through a reasoning process",
-      "the ability to resolve a conflict on the basis of the Divine command rule",
-      "the inability to allow exceptions to moral laws",
-      "the ability to derive judgement through a reasoning process",
-      "the ability to derive judgment through morality"
-    ],
-    "ans": 3,
-    "cat": "Ethical Theory",
-    "exp": "Kantian ethics emphasizes rational and consistent moral judgment."
-  },
-  {
-    "q": "If an IT professional charges different prices to different groups of customers on the same scope of work then it is a breach of:",
-    "opts": [
-      "principle of autonomy",
-      "principle of non-maleficence",
-      "principle of beneficence",
-      "principle of justice",
-      "principle of utilitarianism"
-    ],
-    "ans": 3,
-    "cat": "Ethical Principles",
-    "exp": "Justice requires fairness and equal treatment under comparable conditions."
-  },
-  {
-    "q": "In essence, a standard is an agreed way of doing something. Accepted standards of right and wrong behaviours in society are called:",
-    "opts": [
-      "moral",
-      "ethics",
-      "guideline",
-      "code of standard",
-      "standard ethical rules"
+      "Jeremy Bentham",
+      "M. J. Quinn",
+      "Immanuel Kant",
+      "Abraham Maslow"
     ],
     "ans": 1,
-    "cat": "Foundations",
-    "exp": "Ethics refers to accepted right-wrong standards within a group or society."
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
   },
   {
-    "q": "A good friend who sent you the job advert to apply asked you to copy a corporate program file for his/her home use. What will be your most ethical response as an IT officer?",
+    "q": "W1-6. What is the key difference between laws and ethics?",
     "opts": [
-      "From Kant perspective, I can't copy it because it is against the copyright laws. Sorry friend...",
-      "From virtue ethics perspective, I will copy it for you out of charity, but you can't copy it for anyone else",
-      "I may be sacked from the workplace. Just buy your original copy from the shop",
-      "By principle of Utility or happiness, I will copy it, but you have to promise not to tell anybody",
-      "Pay an amount for me to convince my immediate supervisor to copy it"
+      "Laws are personal beliefs, ethics are enforced by the state",
+      "Ethics are universal, laws are cultural",
+      "Laws carry the authority of a governing body, and ethics are based on a common fraternity",
+      "Ethics are mandatory, laws are optional"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
+  },
+  {
+    "q": "W1-7. What does civil law govern?",
+    "opts": [
+      "Relationships between individuals and organizations",
+      "Conduct harmful to society enforced by the state",
+      "Structure and administration of government agencies",
+      "Personal moral beliefs"
     ],
     "ans": 0,
-    "cat": "Copyright",
-    "exp": "Copyright compliance should not be bypassed for personal relationships."
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
   },
   {
-    "q": "_______ is a problem, situation, or opportunity requiring an individual, group, or organization to choose among several actions that must be evaluated as right or wrong.",
+    "q": "W1-8. Which law addresses conduct harmful to society and is enforced by the state?",
     "opts": [
-      "Openness trait",
-      "Ethical dilemma",
-      "Defence Mechanism",
-      "Ethical issue",
-      "Morality"
+      "Civil law",
+      "Criminal law",
+      "Contract law",
+      "Public law"
     ],
     "ans": 1,
-    "cat": "Foundations",
-    "exp": "A dilemma specifically involves choosing between alternatives with moral weight."
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
   },
   {
-    "q": "It is an absolutist theory that asserts that what is moral is determined by commands and that for a person to be moral he is to follow deity commands. The .......... provides the cardinal pillars for the formulation of other philosophies and governing laws in countries worldwide.",
+    "q": "W1-9. What does public law regulate?",
+    "opts": [
+      "Relationships between individuals and organizations",
+      "Activities and conduct harmful to society",
+      "Structure and administration of government agencies",
+      "Commercial and labor relationships"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
+  },
+  {
+    "q": "W1-10. What is NOT a category of computer law?",
+    "opts": [
+      "Contract law",
+      "Intellectual property law",
+      "Family law",
+      "Computer misuse law"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
+  },
+  {
+    "q": "W1-11. What is the role of IT professionals in maintaining security within an organization?",
+    "opts": [
+      "Establishing and enforcing policies",
+      "Reporting employees to law enforcement",
+      "Writing criminal laws",
+      "Defining personal morals for employees"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
+  },
+  {
+    "q": "W1-12. How are policies described?",
+    "opts": [
+      "Guidelines that describe acceptable and unacceptable employee behaviors",
+      "Legal documents with criminal penalties",
+      "Personal moral codes for individuals",
+      "Government regulations enforced externally"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
+  },
+  {
+    "q": "W1-13. What is the main purpose of policies in the workplace?",
+    "opts": [
+      "To enforce criminal law",
+      "To establish cultural values",
+      "To govern personal beliefs",
+      "To describe acceptable and unacceptable behaviors"
+    ],
+    "ans": 3,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Foundational Concepts"
+  },
+  {
+    "q": "W1-14. What does due diligence require an organization to do?",
+    "opts": [
+      "Ignore employee misconduct",
+      "Protect others and maintain a level of effort",
+      "Avoid establishing policies",
+      "Transfer liability to employees"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Liability, Due Care & Due Diligence"
+  },
+  {
+    "q": "W1-15. How can an organization INCREASE its liability?",
+    "opts": [
+      "By establishing clear policies",
+      "By refusing to take measures known as due care",
+      "By training employees regularly",
+      "By uniformly enforcing policies"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Liability, Due Care & Due Diligence"
+  },
+  {
+    "q": "W1-16. What is the consequence if an employee performs an illegal or unethical act that causes harm?",
+    "opts": [
+      "The employee alone is liable",
+      "The employer is held liable",
+      "No one is legally responsible",
+      "The government absorbs the liability"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Liability, Due Care & Due Diligence"
+  },
+  {
+    "q": "W1-17. What is \"due diligence\" in organizational context?",
+    "opts": [
+      "Making a valid effort to protect others",
+      "Refusing to take measures known as due care",
+      "Encouraging illegal or unethical acts",
+      "Avoiding dissemination of policies"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Liability, Due Care & Due Diligence"
+  },
+  {
+    "q": "W1-18. What does \"liability\" encompass in organizational terms?",
+    "opts": [
+      "Legal obligation extending beyond criminal or contract law",
+      "Criminal obligations only",
+      "Contractual obligations only",
+      "Ethical obligations only"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Liability, Due Care & Due Diligence"
+  },
+  {
+    "q": "W1-19. What is the consequence of an organization refusing to take measures known as due care?",
+    "opts": [
+      "Increased liability",
+      "Reduced employee morale",
+      "Policy violations",
+      "Loss of jurisdiction"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Liability, Due Care & Due Diligence"
+  },
+  {
+    "q": "W1-20. Which factor makes an organization liable for the actions of its employees?",
+    "opts": [
+      "Encouraging unethical behavior",
+      "Refusing to establish policies",
+      "Refusing to take due care measures",
+      "Performing illegal or unethical acts"
+    ],
+    "ans": 3,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Liability, Due Care & Due Diligence"
+  },
+  {
+    "q": "W1-21. What must an organization demonstrate for a policy to become enforceable?",
+    "opts": [
+      "Dissemination, review, comprehension, compliance, and uniform enforcement",
+      "Distribution, understanding, agreement, and flexibility",
+      "Reading, agreement, uniform enforcement, and logon banners",
+      "Compliance, dissemination, review, and uniform enforcement"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-22. What is the key difference between a policy and a law?",
+    "opts": [
+      "Ignorance of a policy is an acceptable defense",
+      "Policies are enforced by the state",
+      "Laws require uniform enforcement, policies do not",
+      "Policies are enforceable without dissemination"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-23. What is the purpose of disseminating policies in an organization?",
+    "opts": [
+      "To punish employees who violate rules",
+      "To reduce organizational liability",
+      "To make policies readily available for review",
+      "To replace criminal law within the organization"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-24. What must an organization demonstrate to show that employees understood a policy?",
+    "opts": [
+      "Uniform enforcement",
+      "Compliance",
+      "Dissemination",
+      "Comprehension of the policy requirements"
+    ],
+    "ans": 3,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-25. How can an organization demonstrate that a policy has been uniformly enforced?",
+    "opts": [
+      "By punishing only junior employees",
+      "By distributing the policy via email",
+      "By treating all employees equally",
+      "By documenting all violations publicly"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-26. What is the relationship between policies and laws within an organization?",
+    "opts": [
+      "Policies function as laws with penalties and sanctions",
+      "Policies are optional while laws are mandatory",
+      "Laws take precedence over policies at all times",
+      "Policies replace laws inside the organization"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-27. A firm implements a \"logon banner\" requiring employees to acknowledge compliance before accessing the system. This demonstrates:",
+    "opts": [
+      "Comprehension",
+      "Compliance",
+      "Dissemination",
+      "Review"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-28. A senior employee violates a policy but is not penalized, while a junior employee is disciplined for the same violation. What policy enforcement criterion is missing?",
+    "opts": [
+      "Dissemination",
+      "Comprehension",
+      "Uniform Enforcement",
+      "Compliance"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Policy Enforceability"
+  },
+  {
+    "q": "W1-29. What is the term for the court's right to hear a case if a wrong is committed in its territory?",
+    "opts": [
+      "Restitution",
+      "Jurisdiction",
+      "Due care",
+      "Long arm jurisdiction"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Jurisdiction & Computer Law",
+    "exp": "Note: Long arm jurisdiction is specifically when the internet extends that right internationally"
+  },
+  {
+    "q": "W1-30. What is the Internet's global reach significant for?",
+    "opts": [
+      "Enforcing international laws",
+      "Protecting individuals from unethical behavior",
+      "Extending the long arm of jurisdiction",
+      "Limiting the authority of courts"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Jurisdiction & Computer Law"
+  },
+  {
+    "q": "W1-31. In computer law, what determines the ownership of intellectual property developed by a professional?",
+    "opts": [
+      "Employment status",
+      "Contractor status",
+      "Role during development",
+      "Geographical location"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Jurisdiction & Computer Law"
+  },
+  {
+    "q": "W1-32. An employee creates a software program during work hours for their company's project. Who owns the intellectual property?",
+    "opts": [
+      "The employee, because they created it",
+      "The employer, because it was developed during employment",
+      "Both the employer and employee equally",
+      "Ownership is unclear"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Jurisdiction & Computer Law"
+  },
+  {
+    "q": "W1-33. What is the primary purpose of ethics, according to M. J. Quinn?",
+    "opts": [
+      "To enforce laws",
+      "To govern personal beliefs",
+      "To study morality philosophically",
+      "To establish cultural values"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Jurisdiction & Computer Law"
+  },
+  {
+    "q": "W1-34. According to Jean Jacques Rousseau, what is the purpose of laws in society?",
+    "opts": [
+      "To enforce ethical standards",
+      "To balance individual rights against societal needs",
+      "To establish universal moral values",
+      "To govern personal beliefs about right and wrong"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Jurisdiction & Computer Law"
+  },
+  {
+    "q": "W1-35. How does the law profession's ethics impact defense attorneys?",
+    "opts": [
+      "They should only defend innocent clients",
+      "They must defend accused clients to the best of their ability",
+      "They can refuse to defend guilty clients",
+      "They can choose not to defend clients in heinous crimes"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Jurisdiction & Computer Law"
+  },
+  {
+    "q": "W1-S1. An employee at a firm copies software they do not own for personal use, believing it is harmless. This action conflicts with the company's rules. Which concept is this most related to?",
+    "opts": [
+      "Morals",
+      "Ethics",
+      "Policy",
+      "Law"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Scenario Questions — Week 1",
+    "exp": "The action conflicts with company rules (policy), not necessarily law."
+  },
+  {
+    "q": "W1-S2. A company requires employees to sign a confidentiality agreement to ensure sensitive client information is not disclosed. This aligns with which principle?",
+    "opts": [
+      "Integrity",
+      "Confidentiality",
+      "Availability",
+      "Reliability"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Scenario Questions — Week 1"
+  },
+  {
+    "q": "W1-S3. A national law prohibits downloading copyrighted music without permission, but an individual believes there is no harm in doing so for personal enjoyment. This highlights the difference between:",
+    "opts": [
+      "Morals and Policy",
+      "Ethics and Law",
+      "Policy and Law",
+      "Law and Integrity"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Scenario Questions — Week 1",
+    "exp": "The individual's personal belief (ethics/morals) conflicts with what the law requires."
+  },
+  {
+    "q": "W1-S4. A hacker accesses an organization's database and views confidential client information without altering or destroying it. Which type of threat does this represent?",
+    "opts": [
+      "Interception",
+      "Modification",
+      "Interruption",
+      "Fabrication"
+    ],
+    "ans": 0,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Scenario Questions — Week 1"
+  },
+  {
+    "q": "W1-S5. A company's server is intentionally taken offline by a cyberattack, preventing clients from accessing services. What type of threat is this?",
+    "opts": [
+      "Interception",
+      "Interruption",
+      "Modification",
+      "Fabrication"
+    ],
+    "ans": 1,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Scenario Questions — Week 1"
+  },
+  {
+    "q": "W1-S6. A fraudulent user creates fake invoices in a financial system to extract money from the company. This action exemplifies which type of security threat?",
+    "opts": [
+      "Modification",
+      "Interception",
+      "Fabrication",
+      "Interruption"
+    ],
+    "ans": 2,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Scenario Questions — Week 1"
+  },
+  {
+    "q": "W1-S7. An organization distributes its policy document via email and ensures employees sign a document confirming they've read and understood it. Which policy enforcement criterion does this fulfill?",
+    "opts": [
+      "Dissemination and Review only",
+      "Comprehension and Compliance only",
+      "Uniform Enforcement only",
+      "All of the above"
+    ],
+    "ans": 3,
+    "cat": "SECTION A — WEEK 1: MORALS, ETHICS, LAWS & POLICY | Scenario Questions — Week 1"
+  },
+  {
+    "q": "W2-1. What is the fundamental connection between computer science and human psychology?",
+    "opts": [
+      "They operate independently without any reciprocal link",
+      "Computer science has no impact on human behavior",
+      "They have a direct reciprocal link",
+      "Human psychology is irrelevant to computer science"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Behavioral Theories"
+  },
+  {
+    "q": "W2-2. How does computer science benefit from psychologists in the Human Computer Interaction course?",
+    "opts": [
+      "Psychologists design computer systems for diverse end-users",
+      "Psychologists develop programming languages",
+      "Psychologists create digital citizenship concepts",
+      "Psychologists enforce ICT ethics control"
+    ],
+    "ans": 0,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Behavioral Theories"
+  },
+  {
+    "q": "W2-3. What does the Panopticon Theory suggest about human behavior in the presence of surveillance?",
+    "opts": [
+      "People tend to rebel against surveillance",
+      "People obey rules when aware of being watched",
+      "Surveillance has no impact on behavior",
+      "The theory encourages unethical behavior"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Behavioral Theories"
+  },
+  {
+    "q": "W2-4. Who created the Panopticon?",
+    "opts": [
+      "Abraham Maslow",
+      "Sigmund Freud",
+      "Jeremy Bentham",
+      "Immanuel Kant"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Behavioral Theories"
+  },
+  {
+    "q": "W2-5. Which behavioral theory factors guide human action according to the Theory of Planned Behavior?",
+    "opts": [
+      "Behavioral Belief, Normative Belief, and Control Beliefs",
+      "Pleasure Principle, Reality Principle, and Death Drive",
+      "Compensation, Denial, and Projection",
+      "Displacement, Identification, and Sublimation"
+    ],
+    "ans": 0,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Behavioral Theories"
+  },
+  {
+    "q": "W2-6. How many factors does the Theory of Planned Behavior have?",
+    "opts": [
+      "Two",
+      "Three",
+      "Four",
+      "Five"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Behavioral Theories"
+  },
+  {
+    "q": "W2-7. How does Trait Theory contribute to setting ICT ethical and legal controls in the workplace?",
+    "opts": [
+      "By encouraging unethical behavior",
+      "By understanding diverse employees",
+      "By promoting aggressive behaviors",
+      "By limiting individual freedom"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Behavioral Theories"
+  },
+  {
+    "q": "W2-8. According to Maslow's Hierarchy of Needs, what is the highest level of psychological development?",
+    "opts": [
+      "Self-actualization",
+      "Esteem needs",
+      "Social needs",
+      "Safety needs"
+    ],
+    "ans": 0,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Maslow's Hierarchy"
+  },
+  {
+    "q": "W2-9. What is the correct order of Maslow's Hierarchy from lowest to highest?",
+    "opts": [
+      "Safety → Physiological → Social → Esteem → Self-actualization",
+      "Physiological → Safety → Social → Esteem → Self-actualization",
+      "Self-actualization → Esteem → Social → Safety → Physiological",
+      "Physiological → Social → Safety → Esteem → Self-actualization"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Maslow's Hierarchy"
+  },
+  {
+    "q": "W2-10. How does Maslow's Hierarchy contribute to both personal development and workplace growth?",
+    "opts": [
+      "By discouraging self-actualization",
+      "By limiting psychological health needs",
+      "By identifying human needs and motivating people",
+      "By promoting workplace conflicts"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Maslow's Hierarchy"
+  },
+  {
+    "q": "W2-11. How does Maslow's Hierarchy contribute to workplace growth and development?",
+    "opts": [
+      "By discouraging self-actualization",
+      "By ignoring innate human needs",
+      "By fulfilling psychological health needs in priority",
+      "By promoting workplace conflicts"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Maslow's Hierarchy"
+  },
+  {
+    "q": "W2-12. What is the Pleasure Principle in Freud's psychoanalytic theory?",
+    "opts": [
+      "Seeking immediate gratification of all needs and urges",
+      "Assessing the reality of the external world",
+      "Driving toward death and destruction",
+      "Separating from unpleasant events using defense mechanisms"
+    ],
+    "ans": 0,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Freud's Psychoanalytic Theory"
+  },
+  {
+    "q": "W2-13. In the Psychoanalytic Theory, what does the Reality Principle assess?",
+    "opts": [
+      "Pleasure and satisfaction",
+      "The external world and appropriate actions",
+      "Death and destruction",
+      "Primitive urges and behaviors"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Freud's Psychoanalytic Theory"
+  },
+  {
+    "q": "W2-14. What does the Death Drive (Thanatos) express in Freudian psychoanalytic theory?",
+    "opts": [
+      "Pleasure and satisfaction",
+      "Seeking immediate gratification",
+      "Drive toward death and destruction",
+      "Separation from unpleasant events"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Freud's Psychoanalytic Theory"
+  },
+  {
+    "q": "W2-15. What is the primary purpose of the Defense Mechanism in Psychoanalytic Theory?",
+    "opts": [
+      "To drive toward death and destruction",
+      "To fulfill basic and primitive urges",
+      "To separate from unpleasant events, actions, or thoughts",
+      "To encourage aggressive behaviors"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Freud's Psychoanalytic Theory"
+  },
+  {
+    "q": "W2-16. How many types of Freudian defense mechanisms are there?",
+    "opts": [
+      "5",
+      "8",
+      "10",
+      "12"
+    ],
+    "ans": 3,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Freud's Psychoanalytic Theory"
+  },
+  {
+    "q": "W2-17. What does the Ego represent in the context of Psychoanalytic Theory?",
+    "opts": [
+      "The drive toward death and destruction",
+      "The view a person has of themselves",
+      "Immediate gratification of needs and urges",
+      "Fulfilling innate human needs"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Freud's Psychoanalytic Theory"
+  },
+  {
+    "q": "W2-18. How does the Psychoanalytic Theory view defense mechanisms?",
+    "opts": [
+      "As behaviors under conscious control",
+      "As mechanisms to encourage aggression",
+      "As behaviors to fulfill basic urges",
+      "As unconscious behaviors to separate from unpleasant events"
+    ],
+    "ans": 3,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Freud's Psychoanalytic Theory"
+  },
+  {
+    "q": "W2-19. What is the primary purpose of the ICT ethical rules for computer users?",
+    "opts": [
+      "To encourage theft of information",
+      "To guide computer users on ethical internet use",
+      "To promote unauthorized access to files",
+      "To limit the use of computer resources"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | ICT Ethical Rules"
+  },
+  {
+    "q": "W2-20. Which of the following is NOT one of the ICT ethical rules for digital citizens?",
+    "opts": [
+      "Do not use computers to harm other users",
+      "Do not access files without prior permission of the owner",
+      "Removing a personal account from a social meeting room because of grievance",
+      "Do not use other users' computer resources without permission"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | ICT Ethical Rules",
+    "exp": "This is the only action that could be considered acceptable."
+  },
+  {
+    "q": "W2-S1. A student decides not to cheat during an online exam because they believe it could lead to serious consequences. Which Planned Behavior factor influences this decision?",
+    "opts": [
+      "Normative Belief",
+      "Control Belief",
+      "Behavioral Belief",
+      "Pleasure Principle"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2",
+    "exp": "The student's own belief about the consequences of their behavior."
+  },
+  {
+    "q": "W2-S2. A company installs cameras in the workplace to ensure employees follow rules. Which theory best explains why this action might deter unethical behavior?",
+    "opts": [
+      "Psychoanalytic Theory",
+      "Trait Theory",
+      "Panopticon Theory",
+      "Maslow's Hierarchy of Needs"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2"
+  },
+  {
+    "q": "W2-S3. An employee frequently bypasses workplace restrictions to access entertainment websites, claiming they are bored and not engaged. Which level of Maslow's hierarchy is likely unmet?",
+    "opts": [
+      "Safety Needs",
+      "Self-Actualization",
+      "Esteem Needs",
+      "Love and Belonging"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2",
+    "exp": "Boredom and disengagement relate to unmet esteem needs (recognition, achievement)."
+  },
+  {
+    "q": "W2-S4. A manager provides training opportunities to help employees grow professionally. This action targets which Maslow's need?",
+    "opts": [
+      "Physiological",
+      "Esteem",
+      "Self-Actualization",
+      "Safety"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2"
+  },
+  {
+    "q": "W2-S5. An employee uses company internet to download movies without permission. Which ethical rule is violated?",
+    "opts": [
+      "Do not access files without permission",
+      "Do not use computers to harm others",
+      "Do not copy copyrighted software without a license",
+      "Do not use the internet unethically"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2",
+    "exp": "Downloading movies without a license is a copyright violation specifically."
+  },
+  {
+    "q": "W2-S6. A user accesses confidential files without permission but claims it was an innocent mistake. Which ICT ethical rule category applies here?",
+    "opts": [
+      "Theft",
+      "Access",
+      "Internet",
+      "Resources"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2"
+  },
+  {
+    "q": "W2-S7. An employee repeatedly procrastinates and misses deadlines, blaming external factors like poor tools or lack of resources. Which Freudian defense mechanism is at play?",
+    "opts": [
+      "Rationalization",
+      "Projection",
+      "Denial",
+      "Regression"
+    ],
+    "ans": 0,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2",
+    "exp": "Rationalization = justifying unacceptable behavior with seemingly logical reasons."
+  },
+  {
+    "q": "W2-S8. During a stressful day at work, an employee lashes out at their colleague. Later, they bring coffee as an apology. Which defense mechanism is this?",
+    "opts": [
+      "Repression",
+      "Displacement",
+      "Reaction Formation",
+      "Ritual and Undoing"
+    ],
+    "ans": 3,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2",
+    "exp": "Performing a ritual act to undo/make up for a previous harmful action."
+  },
+  {
+    "q": "W2-S9. A worker uses company internet to browse explicit content during office hours, arguing it satisfies their personal needs. According to Freud's theory, which principle drives this behavior?",
+    "opts": [
+      "Reality Principle",
+      "Death Drive",
+      "Pleasure Principle",
+      "Defense Mechanisms"
+    ],
+    "ans": 2,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2",
+    "exp": "Seeking immediate gratification regardless of workplace rules."
+  },
+  {
+    "q": "W2-S10. An organization bans the use of personal devices at work but enforces the rule inconsistently among employees. Which policy enforcement criterion is being ignored?",
+    "opts": [
+      "Dissemination",
+      "Uniform Enforcement",
+      "Compliance",
+      "Review"
+    ],
+    "ans": 1,
+    "cat": "SECTION B — WEEK 2: COMPUTING & PSYCHOLOGY | Scenario Questions — Week 2"
+  },
+  {
+    "q": "W3-1. What is the main focus of Relativism theory?",
+    "opts": [
+      "Establishing universal moral norms",
+      "Defining right and wrong objectively",
+      "Allowing diverse views on moral problems",
+      "Rejecting cultural diversity in ethics"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Relativism"
+  },
+  {
+    "q": "W3-2. Which type of Relativism holds that each person decides right and wrong for themselves?",
+    "opts": [
+      "Subjective Relativism",
+      "Cultural Relativism",
+      "Universal Relativism",
+      "Objective Relativism"
+    ],
+    "ans": 0,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Relativism"
+  },
+  {
+    "q": "W3-3. A key criticism of Cultural Relativism is:",
+    "opts": [
+      "It relies heavily on facts and reason",
+      "It does not account for moral guidelines varying over time",
+      "It lacks persuasive power in diverse societies",
+      "It is universally applicable"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Relativism"
+  },
+  {
+    "q": "W3-4. \"Whatever you think is right for you, is right for you.\" Which related ethical philosophy CANNOT be applied to manage IT systems?",
+    "opts": [
+      "Cultural relativism",
+      "Objective relativism",
+      "Subjective relativism",
+      "Traditional relativism"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Relativism",
+    "exp": "If every individual defines their own ethics, no consistent IT governance is possible."
+  },
+  {
+    "q": "W3-5. According to the Divine Command Theory, what determines whether an action is good or bad?",
+    "opts": [
+      "Universal moral norms",
+      "Alignment with the will of God",
+      "Approval of society",
+      "Consequences of the action"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Divine Command Theory"
+  },
+  {
+    "q": "W3-6. What is the primary objection against the Divine Command Theory?",
+    "opts": [
+      "Multicultural society adoption",
+      "Universal agreement on holy books",
+      "Lack of religious-based morality",
+      "Disagreement among holy books"
+    ],
+    "ans": 3,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Divine Command Theory"
+  },
+  {
+    "q": "W3-7. Which of the following is an argument against the Divine Command Theory?",
+    "opts": [
+      "God is all-knowing and the ultimate authority",
+      "Multicultural societies struggle to adopt religious-based morality",
+      "Holy books provide a clear guide to moral behavior",
+      "We owe obedience to our creator"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Divine Command Theory"
+  },
+  {
+    "q": "W3-8. It is an absolutist theory — what is moral is determined by deity commands and provides the cardinal pillars for other philosophies and governing laws worldwide. This is:",
     "opts": [
       "the Kantianism",
       "the Divine command theory",
       "the Judaism command theory",
-      "the Quran beliefs",
-      "the Bible beliefs"
+      "the Quran beliefs"
     ],
     "ans": 1,
-    "cat": "Ethical Theory",
-    "exp": "Divine Command Theory grounds morality in obedience to deity commands."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Divine Command Theory"
   },
   {
-    "q": "Computer ethics is essentially a set of philosophical guidelines or moral standards that aim to influence behaviour and prevent harm. Employees at different levels can commit unethical cyber behaviour depending on present needs. Select a theoretical lens as an IT security officer to understand human needs that could trigger unethical behavior in cyberspace.",
+    "q": "W3-9. Virtue ethics emphasizes:",
     "opts": [
-      "the behavioural theory",
-      "the Maslow hierarchy theory",
-      "the planned behavioural theory",
-      "self-Actualisation pursuit",
-      "intrinsic motivational needs"
-    ],
-    "ans": 1,
-    "cat": "Human Behavior",
-    "exp": "Maslow is the needs-based framework useful for understanding needs-driven behavior."
-  },
-  {
-    "q": "Majority of the company influencers supported the HR Manager to sack Martinson accused of office romance with the national service lady during office hours. However, the matter was not well investigated. The ethical or unethical decision to sack Martinson was based on the HR Manager's:",
-    "opts": [
-      "Kantianism philosophy",
-      "Utilitarianism philosophy",
-      "Virtue Ethics",
-      "Divine Command rule",
-      "Cultural historical incidence of a junior sister who was once raped"
-    ],
-    "ans": 1,
-    "cat": "Ethical Theory",
-    "exp": "The choice followed majority preference, matching utilitarian logic."
-  },
-  {
-    "q": "Make IT policies that satisfy the greatest happiness for many end-users to limit crime is:",
-    "opts": [
-      "the utilitarian approach to ethical decision making",
-      "the greatest happiness theory",
-      "the rule utilitarian approach to ethical decision making",
-      "Data Protection law and IT Infrastructure Confidentiality, Integrity, Availability",
-      "the comprehensive IT policy to limit cybercrime"
+      "Following universal moral laws strictly",
+      "Balancing the interests of all affected parties",
+      "Behaving in ways guided by virtues such as humility and kindness",
+      "Calculating the greatest happiness for the majority"
     ],
     "ans": 2,
-    "cat": "Ethical Theory",
-    "exp": "Rule utilitarianism evaluates the value of rules or policies by their outcomes."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Virtue Ethics"
   },
   {
-    "q": "Which ethical theory inspires people to satisfy human relationship to act good or bad?",
+    "q": "W3-10. A criticism of virtue ethics is that:",
+    "opts": [
+      "It is comprehensive and focuses on happiness",
+      "It provides a fixed formula for ethical decisions",
+      "It ignores circumstances and context in defining virtues",
+      "The definition of virtue depends on the circumstances"
+    ],
+    "ans": 3,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Virtue Ethics"
+  },
+  {
+    "q": "W3-11. What virtue is NOT mentioned as an example of Virtue Ethics?",
+    "opts": [
+      "Chastity",
+      "Diligence",
+      "Deceit",
+      "Patience"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Virtue Ethics",
+    "exp": "Deceit is the opposite of a virtue."
+  },
+  {
+    "q": "W3-12. Which ethical theory inspires people to satisfy human relationship to act good or bad?",
     "opts": [
       "Virtue Ethics",
       "Divine moral laws",
       "Act utilitarianism",
-      "Kant ethics",
-      "Social relationship ethics"
+      "Kant ethics"
     ],
     "ans": 0,
-    "cat": "Ethical Theory",
-    "exp": "Virtue ethics focuses on character and social-relational conduct."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Virtue Ethics"
   },
   {
-    "q": "Some ethical standards are universal. For example, murder, theft, and assault are actions that deviate from ethical and legal codes worldwide. This is under:",
+    "q": "W3-13. According to Kantian ethics, moral laws are:",
     "opts": [
-      "Divine Command theory",
-      "Virtue ethics",
-      "Social contract theory",
-      "Kantianism",
-      "Utilitarianism"
-    ],
-    "ans": 2,
-    "cat": "Ethical Theory",
-    "exp": "Social contract theory explains shared norms that enable social order."
-  },
-  {
-    "q": "The first process of establishing organizational ethics programs is to develop:",
-    "opts": [
-      "codes of conduct",
-      "ethics training programs",
-      "ethics enforcement mechanisms",
-      "hidden agenda",
-      "Rehearse the moral laws of obedience under divine command"
-    ],
-    "ans": 0,
-    "cat": "Governance",
-    "exp": "Organizations define expected conduct first, then train and enforce."
-  },
-  {
-    "q": "The general guidelines of computer ethics are needed to control the following, EXCEPT:",
-    "opts": [
-      "IT professional behaviour",
-      "Subjective control",
-      "Protection of personal data",
-      "Cracking",
-      "Computer crime"
+      "Derived through divine commands",
+      "Based on reason and universally applicable",
+      "Focused on producing the greatest happiness",
+      "Flexible to accommodate exceptions"
     ],
     "ans": 1,
-    "cat": "Foundations",
-    "exp": "Subjective control is a psychological construct, not a direct ethics-control domain."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Kantianism"
   },
   {
-    "q": "This ethical principle (right or wrong) promotes understanding cultural practices unfamiliar to other cultures such as eating insects, genocides or genital cutting. As long as community members are comfortable with the practice, even the UN missionaries cannot change our mindset. This is an example of:",
+    "q": "W3-14. A limitation of Kantian ethics is:",
     "opts": [
-      "Cultural relativism",
-      "Subjective relativism",
-      "Ethical Standards",
-      "Moral standards",
-      "Cultural standard values"
-    ],
-    "ans": 0,
-    "cat": "Ethical Theory",
-    "exp": "The scenario is based on group-defined morality, which is cultural relativism."
-  },
-  {
-    "q": "To be successful, IT professional ethics training programs in a company need to:",
-    "opts": [
-      "educate employees on formal ethical frameworks of ethical decision-making",
-      "promote the use of situational emotions in making tough ethical decisions"
-    ],
-    "ans": 0,
-    "cat": "Governance",
-    "exp": "Formal frameworks provide consistency and defensible ethical decisions."
-  },
-  {
-    "q": "While computer ethics work to ward off technology misuse, we can understand the ego of many unethical computer hackers to commit behaviour from:",
-    "opts": [
-      "Bentham's Panopticon theory",
-      "Ajzen's Planned behaviour theory",
-      "Metaphysis under Philosophical abstraction",
-      "Online bullying mechanism theory",
-      "Maslow's egocentric hierarchy theory"
+      "It treats all persons as moral equals",
+      "It allows no exceptions to moral laws",
+      "It cannot explain conflicting rights in social contracts",
+      "It focuses on self-interest"
     ],
     "ans": 1,
-    "cat": "Human Behavior",
-    "exp": "Planned Behavior Theory is used to analyze intention behind unethical acts."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Kantianism"
   },
   {
-    "q": "_______ provides norms and principles to computer users and system professionals.",
+    "q": "W3-15. According to Kantianism, what is the basis for universal moral guidelines?",
     "opts": [
-      "code of ethics",
-      "guidelines",
-      "privacy",
-      "security"
+      "Divine command",
+      "Reason",
+      "Virtuous behavior",
+      "Cultural traditions"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Kantianism"
+  },
+  {
+    "q": "W3-16. What does Non-Maleficence mean under Kantianism?",
+    "opts": [
+      "Doing no harm to others",
+      "Treating people equally",
+      "Upholding universal moral norms",
+      "Promoting overall happiness"
     ],
     "ans": 0,
-    "cat": "Foundations",
-    "exp": "A code of ethics formally states professional norms and principles."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Kantianism"
   },
   {
-    "q": "_______ is a term which refers to the unethical manipulation of a person inside an organization in order to gain access to confidential information.",
+    "q": "W3-17. What is the focus of Utilitarianism in ethical decision-making?",
     "opts": [
-      "Covert hacking",
-      "Dumpster diving",
-      "Social engineering",
-      "Cyber manipulation",
-      "Social networking"
+      "Following moral laws",
+      "Maximizing individual happiness",
+      "Achieving divine command",
+      "Balancing overall consequences"
+    ],
+    "ans": 3,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Utilitarianism"
+  },
+  {
+    "q": "W3-18. Which type of Utilitarianism considers the net effect of an action on happiness over all affected beings?",
+    "opts": [
+      "Act Utilitarianism",
+      "Rule Utilitarianism",
+      "Subjective Utilitarianism",
+      "Cultural Utilitarianism"
+    ],
+    "ans": 0,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Utilitarianism"
+  },
+  {
+    "q": "W3-19. Rule Utilitarianism differs from Act Utilitarianism in that it:",
+    "opts": [
+      "Evaluates individual actions for their net happiness",
+      "Focuses on rules that promote the greatest happiness",
+      "Ignores long-term consequences of actions",
+      "Rejects the problem of moral luck"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Utilitarianism"
+  },
+  {
+    "q": "W3-20. A criticism of Act Utilitarianism is:",
+    "opts": [
+      "It solves the problem of moral luck",
+      "It simplifies decision-making by focusing on rules",
+      "It is not practical to perform utilitarian calculus for every decision",
+      "It relies on universal moral laws"
     ],
     "ans": 2,
-    "cat": "Security",
-    "exp": "Social engineering targets human trust to bypass technical protections."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Utilitarianism"
   },
   {
-    "q": "Authorization to perform certain actions on a computer system is known as the users':",
+    "q": "W3-21. What does Rule Utilitarianism apply the principle of utility to?",
     "opts": [
-      "Duties",
-      "Identity",
-      "Password",
-      "Authority",
-      "Privileges"
+      "Individual moral actions",
+      "Moral rules",
+      "Cultural norms",
+      "Subjective preferences"
     ],
-    "ans": 4,
-    "cat": "Security",
-    "exp": "Authorization defines privileges: what authenticated users may do."
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Utilitarianism"
   },
   {
-    "q": "Knowledge of ethical theories or principles is helpful in the _______ phase of a decision-making process.",
+    "q": "W3-22. What is NOT a type of Utilitarianism?",
     "opts": [
-      "Developing Problem Statement",
-      "Identifying alternatives",
-      "Evaluating and choosing alternatives",
-      "Implementing decision",
-      "Evaluating results"
+      "Act Utilitarianism",
+      "Rule Utilitarianism",
+      "Subjective Utilitarianism",
+      "Cultural Utilitarianism"
+    ],
+    "ans": 3,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Utilitarianism"
+  },
+  {
+    "q": "W3-23. What is NOT mentioned as a criticism against Rule Utilitarianism?",
+    "opts": [
+      "Ignores the problem of an unjust distribution",
+      "Forces a single scale for evaluation",
+      "Provides clear moral guidelines",
+      "Ignores different consequences for different actions"
     ],
     "ans": 2,
-    "cat": "Decision Making",
-    "exp": "Ethical theories are used to assess and select the most defensible option."
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Utilitarianism",
+    "exp": "\"Provides clear moral guidelines\" is actually an advantage, not a criticism."
   },
   {
-    "q": "Publishing false information on the internet space is an issue classified as:",
+    "q": "W3-24. What is the main idea behind Social Contract Theory?",
     "opts": [
-      "Computer ethics",
-      "Morality",
-      "Computer equity",
-      "Digital divide",
-      "Legal issue"
+      "Cooperation is unnecessary for social living",
+      "Moral rules are arbitrary and subjective",
+      "Guidelines are unnecessary for social living",
+      "Cooperation is essential for social living"
     ],
-    "ans": 4,
-    "cat": "Law",
-    "exp": "False publication can trigger legal liability such as defamation or fraud."
+    "ans": 3,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Social Contract Theory"
   },
   {
-    "q": "Which of the following cyber-issues is ethically right?",
+    "q": "W3-25. Which of the following positions REJECTS the social contract theory of ethics?",
     "opts": [
-      "Data theft for academic purpose only",
-      "Attaching a virus to your paid-for App that is shared for free via another illegal website",
-      "Damage to data and systems of others in exploring how to develop a new virus program",
-      "Online Identity theft to hide yourself from law IT enforcement agencies",
-      "Non-maleficence in an online space"
+      "No one signs a social contract to make it legally binding",
+      "A government has a social contract with citizens to implement policies",
+      "Raises moral issues regarding the relationship between people and government",
+      "Rational people act out of self-interest in the absence of a common agreement"
     ],
-    "ans": 4,
-    "cat": "Ethical Principles",
-    "exp": "Non-maleficence means avoiding harm and is the only ethically valid option listed."
+    "ans": 0,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Social Contract Theory"
+  },
+  {
+    "q": "W3-26. What does Social Contract Theory propose regarding moral rules in a civilized society?",
+    "opts": [
+      "Moral rules are unnecessary",
+      "Moral rules depend on cultural norms",
+      "Moral rules are essential for social living",
+      "Moral rules vary from person to person"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Social Contract Theory"
+  },
+  {
+    "q": "W3-27. What is one objection to Social Contract Theory?",
+    "opts": [
+      "Moral rules are unnecessary",
+      "Some actions can be characterized in multiple ways",
+      "People have signed the social contract explicitly",
+      "Social contract theory is unjust to some people"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Social Contract Theory"
+  },
+  {
+    "q": "W3-28. Which principle of ethics is associated with the idea of autonomy?",
+    "opts": [
+      "Justice",
+      "Autonomy",
+      "Beneficence",
+      "Non-Maleficence"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Ethical Principles in Computing"
+  },
+  {
+    "q": "W3-29. What does the principle of Beneficence focus on in ethical decision-making?",
+    "opts": [
+      "Doing no harm to others",
+      "Treating people equally",
+      "Promoting the well-being of others",
+      "Upholding universal moral norms"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Ethical Principles in Computing"
+  },
+  {
+    "q": "W3-30. What aspect of ethical decision-making does Justice focus on?",
+    "opts": [
+      "Treating people equally",
+      "Upholding universal moral norms",
+      "Promoting overall happiness",
+      "Respecting autonomy"
+    ],
+    "ans": 0,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Ethical Principles in Computing"
+  },
+  {
+    "q": "W3-31. What principle is associated with treating clients/subordinates with freedom in decision-making?",
+    "opts": [
+      "Justice",
+      "Autonomy",
+      "Beneficence",
+      "Non-Maleficence"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Ethical Principles in Computing"
+  },
+  {
+    "q": "W3-32. What is the main criticism against Virtue Ethics?",
+    "opts": [
+      "It ignores the problem of an unjust distribution",
+      "It provides subjective moral guidelines",
+      "The definition of virtue cannot be worked out objectively",
+      "It focuses too much on individual happiness"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Ethical Principles in Computing"
+  },
+  {
+    "q": "W3-33. What is the nature of ethics according to the course material?",
+    "opts": [
+      "A collection of norms specific to a culture",
+      "Feelings and emotions",
+      "A standard of behavior that guides actions",
+      "A set of laws to follow"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Ethical Principles in Computing"
+  },
+  {
+    "q": "W3-34. What principle does the course suggest for computing professionals in treating clients equally?",
+    "opts": [
+      "Autonomy",
+      "Beneficence",
+      "Non-Maleficence",
+      "Justice"
+    ],
+    "ans": 3,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Ethical Principles in Computing"
+  },
+  {
+    "q": "W3-S1. Subjective relativism suggests that:",
+    "opts": [
+      "Moral truths are universal and absolute",
+      "Societal traditions dictate morality",
+      "Each person determines right and wrong for themselves",
+      "Moral decisions are based on religious commands"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Scenario Questions — Week 3"
+  },
+  {
+    "q": "W3-S2. Which is an argument against the Divine Command Theory?",
+    "opts": [
+      "God is all-knowing and the ultimate authority",
+      "Multicultural societies struggle to adopt religious-based morality",
+      "Holy books provide a clear guide to moral behavior",
+      "We owe obedience to our creator"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Scenario Questions — Week 3"
+  },
+  {
+    "q": "W3-S3. According to Kantian ethics, moral laws are:",
+    "opts": [
+      "Derived through divine commands",
+      "Based on reason and universally applicable",
+      "Focused on producing the greatest happiness",
+      "Flexible to accommodate exceptions"
+    ],
+    "ans": 1,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Scenario Questions — Week 3"
+  },
+  {
+    "q": "W3-S4. Which of the following is a criticism of act utilitarianism?",
+    "opts": [
+      "It solves the problem of moral luck",
+      "It simplifies decision-making by focusing on rules",
+      "It is not practical to perform utilitarian calculus for every decision",
+      "It relies on universal moral laws"
+    ],
+    "ans": 2,
+    "cat": "SECTION C — WEEK 3: ETHICAL THEORIES | Scenario Questions — Week 3"
+  },
+  {
+    "q": "W8-1. A financial app stores sensitive client data. A hacker gains unauthorized access to client transaction records. Which security principle has been violated?",
+    "opts": [
+      "Integrity",
+      "Availability",
+      "Confidentiality",
+      "Reliability"
+    ],
+    "ans": 2,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Confidentiality, Integrity, Availability, Reliability"
+  },
+  {
+    "q": "W8-2. A university server crashes during final exams, preventing students from accessing their results. Which security principle has been compromised?",
+    "opts": [
+      "Integrity",
+      "Availability",
+      "Confidentiality",
+      "Safety"
+    ],
+    "ans": 1,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Confidentiality, Integrity, Availability, Reliability"
+  },
+  {
+    "q": "W8-3. A medical database is altered to change a patient's blood type. What type of threat is this?",
+    "opts": [
+      "Interception",
+      "Interruption",
+      "Modification",
+      "Fabrication"
+    ],
+    "ans": 2,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Confidentiality, Integrity, Availability, Reliability"
+  },
+  {
+    "q": "W8-4. A user's messages are intercepted and read by a hacker during transmission. What type of security threat is this?",
+    "opts": [
+      "Interruption",
+      "Interception",
+      "Fabrication",
+      "Modification"
+    ],
+    "ans": 1,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Security Threats"
+  },
+  {
+    "q": "W8-5. A cyberattack prevents employees from accessing the company's payroll system. This is an example of:",
+    "opts": [
+      "Interception",
+      "Interruption",
+      "Fabrication",
+      "Modification"
+    ],
+    "ans": 1,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Security Threats"
+  },
+  {
+    "q": "W8-6. An attacker forges login attempts that never occurred, creating fake logs in the audit trail. What type of threat does this represent?",
+    "opts": [
+      "Modification",
+      "Interception",
+      "Fabrication",
+      "Interruption"
+    ],
+    "ans": 2,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Security Threats"
+  },
+  {
+    "q": "W8-7. A bank uses encryption to ensure that a money transfer message cannot be understood if intercepted. This primarily ensures:",
+    "opts": [
+      "Authentication",
+      "Confidentiality",
+      "Authorization",
+      "Auditing"
+    ],
+    "ans": 1,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Security Mechanisms"
+  },
+  {
+    "q": "W8-8. A company implements fingerprint scans to verify the identity of its employees before granting access to secure areas. What mechanism is this?",
+    "opts": [
+      "Authorization",
+      "Auditing",
+      "Authentication",
+      "Encryption"
+    ],
+    "ans": 2,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Security Mechanisms"
+  },
+  {
+    "q": "W8-9. A user requests access to classified data, but the system first checks whether the user has the proper credentials. This process is an example of:",
+    "opts": [
+      "Authentication",
+      "Authorization",
+      "Auditing",
+      "Encryption"
+    ],
+    "ans": 1,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Security Mechanisms"
+  },
+  {
+    "q": "W8-10. After a data breach, a company reviews logs to determine which files were accessed by the attacker. Which mechanism is being used?",
+    "opts": [
+      "Authorization",
+      "Auditing",
+      "Encryption",
+      "Authentication"
+    ],
+    "ans": 1,
+    "cat": "SECTION D — WEEK 8: SECURITY (CIA TRIAD) | Security Mechanisms"
   }
 ]
