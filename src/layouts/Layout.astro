@@ -3,11 +3,13 @@ interface Props {
   title: string;
   description?: string;
   ogUrl?: string;
+  ogImage?: string;
 }
 const {
   title,
   description = 'Lamla Quiz Hub helps you practice CS past questions in one mobile-friendly learning space.',
   ogUrl = 'https://lamla-quiz-hub.netlify.app/',
+  ogImage = 'https://lamla-quiz-hub.netlify.app/img/hero.png',
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -20,7 +22,7 @@ const {
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
   <meta property="og:url" content={ogUrl}>
-  <meta property="og:image" content="https://lamla-quiz-hub.netlify.app/img/hero.png">
+  <meta property="og:image" content={ogImage}>
   <meta property="og:type" content="website">
   <style is:global>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
